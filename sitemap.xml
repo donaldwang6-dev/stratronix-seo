@@ -114,4 +114,28 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/zh/ai-agent-zhinengti.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/en/china-ai-company.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/en/ai-agent-appliance.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/en/paa-private-ai-agent.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
 </urlset>
