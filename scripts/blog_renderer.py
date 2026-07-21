@@ -39,6 +39,7 @@ LANG_META = {
 }
 
 CSS = """* { box-sizing: border-box; margin: 0; padding: 0; }
+
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.85; color: #1a1a1a; background: #fafafa; }
 header { background: linear-gradient(135deg, #E6417F 0%, #c9296c 100%); color: white; padding: 40px 20px; }
 header h1 { font-size: 2rem; max-width: 900px; margin: 0 auto 12px; line-height: 1.4; }

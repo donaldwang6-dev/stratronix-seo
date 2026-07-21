@@ -1,0 +1,106 @@
+<!--META:{"title":"PAA y Cumplimiento RGPD 2026: Checklist Comprador UE | STRATRONIX","description":"Cómo un appliance de IA Privada (PAA) cubre las obligaciones RGPD en 2026: minimización, art. 9, Schrems II, transferencias transfronterizas, EIPD.","keywords":"PAA RGPD, RGPD appliance IA, cumplimiento RGPD IA on-premise, Schrems II PAA, RGPD art. 9 IA, STRATRONIX","h1":"PAA y Cumplimiento RGPD 2026: Checklist para el Comprador UE","subtitle":"Cómo las appliances de IA Privada cubren las siete obligaciones clave del RGPD — minimización, categorías especiales, Schrems II y EIPD","date":"2026-07-21","read_time":"8 min de lectura","category":"Guía de Cumplimiento"}-->
+<p>Para la mayoría de las empresas europeas en 2026, la cuestión ya no es <em>si</em> usar IA, sino <em>cómo usarla bajo el RGPD</em>. Las appliances de IA Privada (PAA) son la respuesta técnica más limpia porque mantienen los datos personales dentro del entorno del responsable del tratamiento. Esta guía asocia las siete obligaciones clave del RGPD con un despliegue PAA y muestra cómo STRATRONIX STA-100 las cubre.</p>
+
+<h2>Obligación RGPD y entrega PAA de un vistazo</h2>
+<table>
+<tr><th>Obligación RGPD</th><th>Qué entrega la PAA</th></tr>
+<tr><td>Art. 5 Licitud, lealtad, transparencia</td><td>Logs de inferencia completos con procedencia por solicitud</td></tr>
+<tr><td>Art. 5(1)(b) Limitación de finalidad</td><td>Vinculación corpus-rol forzada en la consulta</td></tr>
+<tr><td>Art. 5(1)(c) Minimización</td><td>Capa de redacción local para campos art. 9</td></tr>
+<tr><td>Art. 5(1)(d) Exactitud</td><td>Scores de confianza + fuentes de retrieval por completion</td></tr>
+<tr><td>Art. 5(1)(e) Limitación del plazo</td><td>Reglas de retención por corpus, supresión en un clic</td></tr>
+<tr><td>Art. 5(1)(f) &amp; Art. 32 Integridad y confidencialidad</td><td>LUKS + TLS 1.3 + RBAC + root-of-trust hardware</td></tr>
+<tr><td>Art. 5(2) &amp; Art. 30 Responsabilidad</td><td>Registro autoemitido + exports listos para EIPD</td></tr>
+<tr><td>Art. 9 Categorías especiales</td><td>Datos permanecen en el EEE on-premise</td></tr>
+<tr><td>Art. 22 Decisiones automatizadas</td><td>Gating humano-en-el-bucle configurable</td></tr>
+<tr><td>Art. 35 EIPD</td><td>Appliance exporta registro + contexto de riesgo</td></tr>
+</table>
+
+<h2>Las siete obligaciones del RGPD que importan para la IA</h2>
+<ul>
+<li><strong>Licitud, lealtad, transparencia</strong> (art. 5–6, 13–14)</li>
+<li><strong>Limitación de la finalidad</strong> (art. 5(1)(b))</li>
+<li><strong>Minimización de datos</strong> (art. 5(1)(c))</li>
+<li><strong>Exactitud</strong> (art. 5(1)(d))</li>
+<li><strong>Limitación del plazo de conservación</strong> (art. 5(1)(e))</li>
+<li><strong>Integridad y confidencialidad</strong> (art. 5(1)(f) y art. 32)</li>
+<li><strong>Responsabilidad proactiva y documentación</strong> (art. 5(2), art. 30 registro de actividades)</li>
+</ul>
+<p>Además, los despliegues de IA deben abordar el <strong>art. 9 (categorías especiales)</strong>, el <strong>art. 22 (decisiones automatizadas)</strong>, el <strong>art. 35 (EIPD)</strong> y la cuestión residual de los <strong>transferencias Schrems II</strong>.</p>
+
+<h2>Cómo una PAA aporta cumplimiento RGPD por diseño</h2>
+
+<h3>1. Base jurídica y transparencia</h3>
+<p>La PAA registra cada interacción: prompt, fuente de retrieval, versión del modelo, completion y usuario. Los auditores pueden reconstruir cualquier decisión hasta su base jurídica. STRATRONIX PAA almacena prompts y completions durante un periodo definido por el cliente (24 meses por defecto) y los exporta en un log JSON portable para la responsabilidad.</p>
+
+<h3>2. Limitación de finalidad mediante corpus vinculados al rol</h3>
+<p>Cada corpus RAG en una PAA está vinculado a una finalidad documentada y a un rol. RR. HH. no puede consultar expedientes financieros; los abogados no pueden interrogar archivos de RR. HH. La appliance impone un enlace estricto <em>finalidad → corpus → rol</em> en el momento de la consulta.</p>
+
+<h3>3. Minimización de datos con redacción local</h3>
+<p>Antes de que un prompt llegue al LLM, la capa de redacción de la PAA elimina o aplica hash a los campos del art. 9 que no son estrictamente necesarios para el workflow. La redacción local garantiza que, incluso si se activa el enrutado cloud opt-in, ningún dato del art. 9 salga de la appliance.</p>
+
+<h3>4. Exactitud y humano en el bucle</h3>
+<p>La appliance expone puntuaciones de confianza y fuentes de retrieval en cada completion. STRATRONIX PAA puede configurarse para <em>requerir</em> revisión humana antes de actuar sobre salidas por encima de un umbral de riesgo configurable — cumpliendo directamente el art. 22.</p>
+
+<h3>5. Limitación del plazo de conservación</h3>
+<p>Logs, embeddings y corpus RAG tienen políticas de retención configurables. 24 meses por defecto; la conservación legal y la supresión son un clic. STRATRONIX PAA gestiona las solicitudes de acceso y supresión de los interesados en &lt;1 hora.</p>
+
+<h3>6. Integridad y confidencialidad (art. 32)</h3>
+<ul>
+<li><strong>Cifrado en reposo</strong> — LUKS en el SSD de la appliance; las claves nunca salen de la appliance.</li>
+<li><strong>Cifrado en tránsito</strong> — TLS 1.3 para todo el tráfico API, incluidas las UI internas de admin.</li>
+<li><strong>Acceso basado en roles</strong> — federado vía LDAP / SAML / OIDC; sin contraseñas de admin compartidas.</li>
+<li><strong>Segmentación de red</strong> — VLAN o air-gap para workflows del art. 9.</li>
+<li><strong>Raíz de confianza hardware</strong> — cadena de arranque seguro; firmware firmado por STRATRONIX.</li>
+</ul>
+
+<h3>7. Responsabilidad proactiva y registro de actividades</h3>
+<p>La appliance emite automáticamente un <em>registro de actividades de tratamiento</em> que cubre versiones de modelos, versiones de corpus, reglas de retención, asignaciones de rol y logs de incidentes. El export cubre el art. 30 y reduce la preparación de la EIPD de meses a días.</p>
+
+<div class="callout">
+<strong>Resumen.</strong> Una PAA no solo <em>habilita</em> el cumplimiento RGPD — lo <em>documenta</em>. La appliance se convierte en la principal fuente de evidencia para inspecciones de la AEPD y auditorías internas.
+</div>
+
+<h2>Art. 9 categorías especiales: el caso más fuerte para PAA</h2>
+<p>Los datos sanitarios, biométricos y de antecedentes penales no pueden salir del EEE en la mayoría de los casos. Forzar estos datos por un LLM cloud estadounidense es técnica y legalmente problemático. Con PAA los datos permanecen on-premise; solo los insights derivados (jamás los datos del art. 9 subyacentes) pueden compartirse externamente, y solo con el consentimiento u otra base del art. 9(2).</p>
+
+<h2>Art. 22 decisiones automatizadas</h2>
+<p>Bajo el art. 22, el interesado tiene derecho a no ser objeto de una decisión basada únicamente en tratamiento automatizado con efectos jurídicos o significativos. Una PAA lo mitiga de dos formas:</p>
+<ul>
+<li><strong>Humano en el bucle</strong> configurable por workflow; la appliance rechaza actuar sobre salidas por encima de un umbral sin validación humana.</li>
+<li><strong>Explicaciones</strong> emitidas en cada paso (fuentes de retrieval, razonamiento, scores de confianza), dando al responsable una posición defendible bajo el art. 22(3).</li>
+</ul>
+
+<h2>Schrems II y transferencias transfronterizas</h2>
+<p>Si una PAA mantiene todos los datos personales dentro del EEE, no se requiere análisis Schrems II para <em>ese workflow</em>. Para el enrutado híbrido a la nube, las appliances STRATRONIX soportan por defecto salida solo a la UE y registran cada llamada LLM saliente para la evaluación de impacto de transferencia.</p>
+
+<h2>Checklist EIPD para despliegues PAA</h2>
+<ol>
+<li><strong>Describir el tratamiento</strong> — automatizar vía export de logs PAA.</li>
+<li><strong>Evaluar necesidad y proporcionalidad</strong> — comparar PAA con la alternativa cloud.</li>
+<li><strong>Identificar riesgos</strong> — sesgo, fugas, re-identificación ilícita.</li>
+<li><strong>Mitigaciones</strong> — redacción art. 9, RBAC, air-gap, revisión humana.</li>
+<li><strong>Consulta al DPO</strong> — compartir el export del registro de la appliance.</li>
+</ol>
+
+<h2>Expectativas de los reguladores en 2026</h2>
+<p>CNIL, BfDI, AEPD, Garante, AP y UODO han señalado que la <em>IA local auditable</em> es el estándar de oro para tratamientos de alto riesgo. Ninguno prohíbe los LLM cloud, pero todos subrayan proporcionalidad, minimización y responsabilidad — tres obligaciones para las que una PAA está especialmente posicionada.</p>
+
+<h2>FAQ — PAA y Cumplimiento RGPD</h2>
+<p><strong>P1. ¿Una PAA sustituye al DPO?</strong><br>
+A. No. La PAA aporta evidencia y herramientas; el DPO sigue siendo responsable conforme a los art. 38–39.</p>
+<p><strong>P2. ¿Podemos usar una PAA para datos art. 9 de salud?</strong><br>
+A. Sí — es el caso de uso canónico. Mantenga la appliance on-premise y documente la base art. 9(2).</p>
+<p><strong>P3. ¿Cómo gestiona la appliance las solicitudes de acceso (art. 15)?</strong><br>
+A. STRATRONIX PAA exporta con un clic todos los prompts, completions y documentos recuperados vinculados a un identificador de interesado.</p>
+<p><strong>P4. ¿Qué pasa con los encargados?</strong><br>
+A. Firme un DPA con cada uno (distribuidor del modelo, fabricante de la appliance, soporte). Una PAA reduce la lista drásticamente porque ningún LLM cloud tercero toca los datos.</p>
+<p><strong>P5. ¿Necesito SCC si uso PAA?</strong><br>
+A. No para el workflow PAA en sí. Las SCC siguen siendo necesarias si se usa enrutado cloud opt-in para tareas no sensibles.</p>
+
+<div class="cta">
+<h2 style="color:white;border:none;padding:0;margin:0 0 16px;">Hable con STRATRONIX sobre su plan IA-RGPD</h2>
+<p style="color:white;margin-bottom:24px;">Export del registro · herramientas DSAR · redacción art. 9 · plantilla EIPD</p>
+<a href="https://store.stratonix.ai" class="primary">→ Abrir un piloto PAA alineado con RGPD</a>
+<a href="https://store.stratronix.ai">Visite la tienda STRATRONIX</a>
+</div>

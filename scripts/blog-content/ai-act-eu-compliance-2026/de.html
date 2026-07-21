@@ -1,0 +1,80 @@
+<!--META:{"title":"EU AI Act Compliance 2026: Praktischer Pfad mit PAA | STRATRONIX","description":"EU-AI-Act-Compliance-Roadmap 2026 für Private KI-Appliance-Deployments. Risikoklassifizierung, Hochrisikopflichten, Marktbeobachtung, CE-Kennzeichnung.","keywords":"EU AI Act 2026, AI Act Compliance PAA, AI Act Hochrisikopflichten, AI Act Private KI-Appliance, Marktbeobachtung KI, STRATRONIX","h1":"EU AI Act Compliance 2026: Praktischer Pfad mit PAA","subtitle":"Von der Risikoklassifizierung bis zur Marktbeobachtung — wie Private KI-Appliances jede AI-Act-Pflicht erfüllen","date":"2026-07-21","read_time":"8 Min. Lesedauer","category":"Regulierungsleitfaden"}-->
+<p>Der EU AI Act (Verordnung (EU) 2024/1689) ist seit August 2026 vollständig anwendbar. Private KI-Appliances (PAA) bieten EU-Betreibern einen der saubersten Compliance-Pfade, weil Modellgewichte, Prompts und Vervollständigungen im Verantwortlichenbereich verbleiben. Diese Anleitung durchläuft die Pflichten des Acts in der Reihenfolge, in der sie bei Go-Live greifen, und zeigt, wo eine PAA die schwerste Compliance-Arbeit übernimmt.</p>
+
+<h2>Risikoklassifizierung — die erste Entscheidung</h2>
+<table>
+<tr><th>Risikostufe</th><th>Beispiele</th><th>Pflichten</th></tr>
+<tr><td>Unerlässlich</td><td>Social Scoring, biometrische Massenüberwachung</td><td>Verboten</td></tr>
+<tr><td>Hoch</td><td>Personal, Kredit, Bildung, kritische Infrastruktur, Strafverfolgung</td><td>Vollständige Lebenszyklus-Pflichten (s. u.)</td></tr>
+<tr><td>Begrenzt</td><td>Chatbots, Deepfakes</td><td>Offenlegungspflichten</td></tr>
+<tr><td>Minimal</td><td>Spam-Filter, KI in Spielen</td><td>Keine spezifischen Pflichten</td></tr>
+</table>
+<p>Jeder PAA-Workflow muss klassifiziert und bei Nutzungsänderungen reklassifiziert werden. STRATRONIX PAA liefert eine dokumentierte Risiko-Klassifizierungsvorlage auf Basis von Anhang III des AI Acts.</p>
+
+<h2>Hochrisiko-Pflichten und wie PAA sie liefert</h2>
+<ol>
+<li><strong>Risikomanagementsystem über den gesamten Lebenszyklus</strong> — STRATRONIX-PAA protokolliert jede Modell- und Korpusversion; Risikobewertungen lassen sich zwischen Versionen diff-verfolgen.</li>
+<li><strong>Daten-Governance</strong> — Trainings- und Feintuning-Daten werden vor Ort kuratiert, mit Provenienz-Erfassung direkt in der Appliance.</li>
+<li><strong>Technische Dokumentation (Anhang IV)</strong> — automatisch generierter Export deckt Design, Modell, Verwendungszweck, Risikoanalyse und Einsatzkontext ab.</li>
+<li><strong>Aufzeichnungspflicht</strong> — automatische Logs zu Ereignissen, Prompts, Vervollständigungen, Retrieval-Quellen; Aufbewahrung bis zu 10 Jahre bei Hochrisikosystemen.</li>
+<li><strong>Transparenz &amp; Nutzerinformation</strong> — die Appliance stellt KI-generierte Marker und Offenlegungsbanner pro Workflow konfigurierbar bereit.</li>
+<li><strong>Menschliche Aufsicht</strong> — Konfidenz-Scores und Human-in-the-Loop-Gating der PAA machen die Aufsicht gemäß Art. 14 nachweisbar.</li>
+<li><strong>Genauigkeit, Robustheit, Cybersicherheit</strong> — Appliance überwacht Drift, unterstützt Adversarial-Tests und liefert Hardware-Root-of-Trust.</li>
+<li><strong>Marktbeobachtung</strong> — STRATRONIX-PAA emittiert Live-KPI-Streams (Genauigkeit, Verweigerungsrate, Latenz) für das Marktbeobachtungssystem des Betreibers.</li>
+</ol>
+
+<div class="callout">
+<strong>Warum PAA hilft.</strong> Die meisten Pflichten des Acts sind Nachweispflichten. Eine PAA verwandelt jede Pflicht in ein strukturiertes Log oder einen Export — statt nachträglichem Papieraufwand.
+</div>
+
+<h2>CE-Kennzeichnung und Konformitätsbewertung</h2>
+<p>Für die meisten Hochrisiko-AI-Systeme kann sich der Betreiber auf die Konformitätsbewertung des Appliance-Herstellers stützen, wenn dieser die Technikunterlagen dokumentiert und die EU-Konformitätserklärung unterzeichnet hat. STRATRONIX pflegt eine fortlaufende CE-Datei für die STA-100 PAA gemäß Anhang IV; Betreiber ergänzen ihre Konfiguration als Hosted-Environment-Addendum.</p>
+
+<h2>Marktbeobachtung in der Praxis</h2>
+<p>Nach Art. 72 müssen Betreiber reale Leistung überwachen und schwerwiegende Vorfälle melden. Mit PAA:</p>
+<ul>
+<li><strong>Live-KPI-Streaming</strong> an SIEM / GRC-Plattformen (Genauigkeit, Verweigerungsrate, Time-to-Human-Overturn).</li>
+<li><strong>Incident-Tickets</strong> werden automatisch bei Schwellenwert-Überschreitung eröffnet.</li>
+<li><strong>Jährlicher Marktbeobachtungsbericht</strong> wird automatisch ausgegeben — regulatorentauglich.</li>
+</ul>
+
+<h2>Folgenabschätzung für Grundrechte (FRIA)</h2>
+<p>Nach Art. 27 müssen Betreiber bestimmter Hochrisiko-AI-Systeme (öffentliche Dienste, Kredit, Beschäftigung, Strafverfolgung) eine FRIA durchführen. Eine PAA macht die FRIA zur strukturierten Übung: die Appliance exportiert Einsatzkontext, betroffene Gruppen, Aufsichtsmaßnahmen und Rechtsbehelfe.</p>
+
+<h2>Übertragung in Mitgliedstaaten-Realitäten</h2>
+<p>Nationale AI-Act-Behörden öffnen 2026 (DE: BfDI &amp; BNetzA; FR: CNIL &amp; ARCEP; ES: AESIA &amp; AEPD; IT: AgID &amp; Garante; NL: AP; PL: UODO &amp; UKE). PAA-Deployments speisen deren Reporting-Tools nativ, weil die Nachweise bereits strukturiert sind.</p>
+
+<h2>Bußgeldstufen</h2>
+<ul>
+<li><strong>Verbotene Praxis</strong> — bis zu 35 Mio. € oder 7 % des weltweiten Umsatzes.</li>
+<li><strong>Hochrisiko-Non-Compliance</strong> — bis zu 15 Mio. € oder 3 %.</li>
+<li><strong>Sonstige Pflichten</strong> — bis zu 7,5 Mio. € oder 1 %.</li>
+</ul>
+<p>Eine PAA reduziert das Risiko jeder Kategorie spürbar durch automatisierte Nachweiserzeugung.</p>
+
+<h2>Praktischer 90-Tage-AI-Act-Roadmap</h2>
+<ol>
+<li><strong>Tage 0–14 — Inventur &amp; Klassifizierung.</strong> PAA-Risikoklassifizierungsvorlage je Workflow.</li>
+<li><strong>Tage 15–45 — Pflichten umsetzen.</strong> Logging, RBAC, menschliche Aufsicht, FRIA-Datenexport.</li>
+<li><strong>Tage 46–60 — Konformität &amp; Dokumentation.</strong> Konfiguration an STRATRONIX-CE-Datei anhängen.</li>
+<li><strong>Tage 61–90 — Marktbeobachtung live.</strong> KPI-Streams an GRC-Plattform anschließen.</li>
+</ol>
+
+<h2>FAQ — EU AI Act Compliance mit PAA</h2>
+<p><strong>F1. Ist eine PAA selbst ein AI-System im Sinne des Acts?</strong><br>
+A. Nicht zwangsläufig — der Act reguliert den deployten Use Case. Eine PAA ist Infrastruktur; der darauf laufende Workflow ist das regulierte System. STRATRONIX liefert eine Klassifizierung pro Workflow.</p>
+<p><strong>F2. Brauche ich dennoch eine externe Konformitätsbewertung?</strong><br>
+A. Für die meisten Annex-III-Anwendungen reicht die Konformitätsbewertung des Appliance-Herstellers, wenn der Betreiber seine Konfiguration beifügt. STRATRONIX liefert eine Konformitätscheckliste.</p>
+<p><strong>F3. Wie unterstützt PAA die menschliche Aufsicht nach Art. 14?</strong><br>
+A. Die Appliance zeigt Konfidenz-Scores, Retrieval-Quellen und konfigurierbares Human-in-the-Loop-Gating; Aufsichtsereignisse werden protokolliert.</p>
+<p><strong>F4. Was ist mit Art. 50 Transparenz für Chatbots?</strong><br>
+A. Für Limited-Risk-Workflows kann ein konfigurierbarer „Sie sprechen mit einer KI"-Hinweis jeder von der Appliance erzeugten Antwort vorangestellt werden.</p>
+<p><strong>F5. Was ändert sich 2027 und 2028?</strong><br>
+A. Die meisten Hochrisikopflichten gelten ab 2026; GPAI-Pflichten phasenweise ab Aug 2025/2027. STRATRONIX pflegt einen Regulierungs-Zeitstrahl, der über die Admin-UI zugänglich ist.</p>
+
+<div class="cta">
+<h2 style="color:white;border:none;padding:0;margin:0 0 16px;">AI-Act-Pilot in 30 Tagen</h2>
+<p style="color:white;margin-bottom:24px;">Risikoklassifizierungsvorlage · FRIA-Starter · Marktbeobachtungs-KPI-Export</p>
+<a href="https://store.stratonix.ai" class="primary">→ AI-Act-bereiten PAA-Pilot starten</a>
+<a href="https://store.stratronix.ai">STRATRONIX-Store besuchen</a>
+</div>
