@@ -1,0 +1,91 @@
+<!--META:{"title":"PAA & DSGVO-Compliance 2026: EU-Käufer-Checkliste | STRATRONIX","description":"Wie eine Private KI-Appliance (PAA) 2026 DSGVO-Pflichten abbildet: Datenminimierung, Art. 9, Schrems II, Drittlandtransfer, DSFA.","keywords":"PAA DSGVO, DSGVO KI-Appliance, DSGVO-Compliance On-Premise KI, Schrems II PAA, DSGVO Art. 9 KI, STRATRONIX","h1":"PAA & DSGVO-Compliance 2026: Eine EU-Käufer-Checkliste","subtitle":"Wie Private KI-Appliances die sieben zentralen DSGVO-Pflichten abdecken — Datenminimierung, besondere Kategorien, Schrems II und DSFA","date":"2026-07-21","read_time":"8 Min. Lesedauer","category":"Compliance-Leitfaden"}-->
+<p>Für die meisten europäischen Unternehmen 2026 ist die Frage nicht mehr <em>ob</em>, sondern <em>wie</em> KI DSGVO-konform eingesetzt wird. Private KI-Appliances (PAA) sind die sauberste technische Antwort, weil sie personenbezogene Daten im Verantwortlichenbereich halten. Diese Anleitung ordnet die sieben zentralen DSGVO-Pflichten einer PAA-Bereitstellung zu und zeigt, wie die STRATRONIX STA-100 jede einzelne unterstützt.</p>
+
+<h2>Die sieben DSGVO-Pflichten, die für KI zählen</h2>
+<ul>
+<li><strong>Rechtmäßigkeit, Fairness, Transparenz</strong> (Art. 5–6, 13–14)</li>
+<li><strong>Zweckbindung</strong> (Art. 5(1)(b))</li>
+<li><strong>Datenminimierung</strong> (Art. 5(1)(c))</li>
+<li><strong>Richtigkeit</strong> (Art. 5(1)(d))</li>
+<li><strong>Speicherbegrenzung</strong> (Art. 5(1)(e))</li>
+<li><strong>Integrität &amp; Vertraulichkeit</strong> (Art. 5(1)(f) und Art. 32)</li>
+<li><strong>Rechenschaftspflicht &amp; Dokumentation</strong> (Art. 5(2), Art. 30 Verzeichnis der Verarbeitungstätigkeiten)</li>
+</ul>
+<p>Zusätzlich müssen KI-Deployments <strong>Art. 9 (besondere Datenkategorien)</strong>, <strong>Art. 22 (automatische Entscheidungen)</strong>, <strong>Art. 35 (DSFA)</strong> sowie die residuale <strong>Schrems-II</strong>-Transferfrage adressieren.</p>
+
+<h2>Wie eine PAA DSGVO-Compliance by Design liefert</h2>
+
+<h3>1. Rechtsgrundlage und Transparenz</h3>
+<p>Die PAA protokolliert jede Interaktion: Prompt, Retrieval-Quelle, Modellversion, Vervollständigung und Benutzer. Prüfer können jede Entscheidung auf ihre Rechtsgrundlage zurückführen. STRATRONIX-PAA speichert Prompts und Vervollständigungen kundendefiniert (Standard 24 Monate) und exportiert sie in einem portablen JSON-Log für die Rechenschaftspflicht.</p>
+
+<h3>2. Zweckbindung durch rollenbezogene Corpora</h3>
+<p>Jeder RAG-Korpus auf einer PAA ist an einen dokumentierten Zweck und eine Rolle gebunden. HR-Mitarbeiter können keine Finanzunterlagen abrufen; Anwälte keine HR-Dateien. Die Appliance erzwingt einen strikten <em>Zweck → Korpus → Rolle</em>-Link zur Abfragezeit.</p>
+
+<h3>3. Datenminimierung mit lokaler Redaktion</h3>
+<p>Bevor ein Prompt das LLM erreicht, entfernt oder hasht der PAA-Redaktionslayer Art.-9-Felder, die für den Workflow nicht zwingend nötig sind. Die lokale Redaktion stellt sicher, dass selbst bei später aktiviertem Cloud-Routing keine Art.-9-Daten die Appliance verlassen.</p>
+
+<h3>4. Richtigkeit und Human-in-the-Loop</h3>
+<p>Die Appliance zeigt Konfidenz-Scores und Retrieval-Quellen für jede Vervollständigung an. STRATRONIX-PAA lässt sich so konfigurieren, dass Outputs oberhalb einer Risikoschwelle erst nach menschlicher Freigabe wirksam werden — direkt Art. 22-Anforderung.</p>
+
+<h3>5. Speicherbegrenzung</h3>
+<p>Logs, Embeddings und RAG-Corpora haben konfigurierbare Aufbewahrungsfristen. Standard 24 Monate; Legal Hold und Löschung per Klick. STRATRONIX-Appliances unterstützen Auskunfts- und Löschanträge binnen &lt;1 Stunde.</p>
+
+<h3>6. Integrität und Vertraulichkeit (Art. 32)</h3>
+<ul>
+<li><strong>Verschlüsselung at rest</strong> — LUKS auf der Appliance-SSD; Schlüssel verlassen die Appliance nie.</li>
+<li><strong>Verschlüsselung in transit</strong> — TLS 1.3 für sämtlichen API-Verkehr, einschließlich interner Admin-UIs.</li>
+<li><strong>Rollenbasierter Zugriff</strong> — föderiert über LDAP / SAML / OIDC; keine geteilten Admin-Passwörter.</li>
+<li><strong>Netzwerksegmentierung</strong> — VLAN- oder Air-Gap-Unterstützung für Art.-9-Workflows.</li>
+<li><strong>Hardware-Root-of-Trust</strong> — Secure-Boot-Kette; Firmware von STRATRONIX signiert.</li>
+</ul>
+
+<h3>7. Rechenschaftspflicht &amp; VVT</h3>
+<p>Die Appliance emittiert automatisch einen Export des <em>Verzeichnisses der Verarbeitungstätigkeiten (VVT)</em> mit Modellversionen, Korpus-Versionen, Aufbewahrungsregeln, Rollen und Incident-Logs. Der Export deckt Art. 30 ab und reduziert die DSFA-Vorbereitung von Monaten auf Tage.</p>
+
+<div class="callout">
+<strong>Zusammenfassung.</strong> Eine PAA <em>ermöglicht</em> nicht nur DSGVO-Compliance — sie <em>dokumentiert</em> sie. Die Appliance selbst wird zur wichtigsten Evidenzquelle für Aufsichtsbehörden und interne Audits.
+</div>
+
+<h2>Art. 9 besondere Datenkategorien: stärkster Anwendungsfall für PAA</h2>
+<p>Gesundheits-, biometrische und Strafregister-Daten dürfen in den meisten Fällen die EEA nicht verlassen. Diese Daten durch ein US-Cloud-LLM zu zwingen, ist technisch und rechtlich problematisch. Bei PAA bleiben die Daten vor Ort; nur die resultierenden Erkenntnisse (nie die zugrunde liegenden Art.-9-Daten) können extern geteilt werden — und das nur mit Einwilligung des Betroffenen oder einer anderen Art.-9(2)-Rechtsgrundlage.</p>
+
+<h2>Art. 22 automatische Entscheidungen</h2>
+<p>Nach Art. 22 hat die betroffene Person das Recht, nicht einer ausschließlich automatisierten Entscheidung unterworfen zu werden, die rechtliche oder ähnlich erhebliche Wirkung entfaltet. PAA mildert dies auf zwei Wegen:</p>
+<ul>
+<li><strong>Human-in-the-Loop</strong> ist pro Workflow konfigurierbar; die Appliance verweigert die Wirkung von Outputs oberhalb einer Risikoschwelle bis zur menschlichen Bestätigung.</li>
+<li><strong>Erklärungen</strong> werden zu jedem Schritt ausgegeben (Retrieval-Quellen, Modell-Reasoning, Konfidenz-Scores), was eine verteidigbare Position nach Art. 22(3) liefert.</li>
+</ul>
+
+<h2>Schrems II und Drittlandtransfer</h2>
+<p>Wenn eine PAA alle personenbezogenen Daten in der EEA hält, ist für <em>diesen Workflow</em> keine Schrems-II-Analyse nötig. Für hybrides Cloud-Routing unterstützen STRATRONIX-Appliances EU-only-Egress als Standard und protokollieren jeden ausgehenden LLM-Aufruf für das Transfer-Impact-Assessment.</p>
+
+<h2>DSFA-Checkliste für PAA-Deployments</h2>
+<ol>
+<li><strong>Verarbeitung beschreiben</strong> — über PAA-Log-Export automatisieren.</li>
+<li><strong>Notwendigkeit &amp; Verhältnismäßigkeit</strong> — PAA mit Cloud-Alternative vergleichen.</li>
+<li><strong>Risiken identifizieren</strong> — Bias, Datenabfluss, unzulässige Re-Identifikation.</li>
+<li><strong>Mitigationen</strong> — Art.-9-Redaktion, RBAC, Air-Gap, menschliche Prüfung.</li>
+<li><strong>DPO-Konsultation</strong> — den VVT-Export der Appliance teilen.</li>
+</ol>
+
+<h2>Aufsichtsbehörden-Erwartungen 2026</h2>
+<p>BfDI, CNIL, AEPD, Garante, AP und UODO haben alle signalisiert, dass <em>lokal auditierbare KI</em> der Gold-Standard für Hochrisiko-Verarbeitung ist. Cloud-LLMs werden nicht grundsätzlich verboten, aber alle betonen Verhältnismäßigkeit, Datenminimierung und Rechenschaftspflicht — drei Pflichten, für deren Erfüllung PAA einzigartig positioniert ist.</p>
+
+<h2>FAQ — PAA & DSGVO-Compliance</h2>
+<p><strong>F1. Ersetzt eine PAA die Notwendigkeit eines Datenschutzbeauftragten?</strong><br>
+A. Nein. Die PAA liefert Evidenz und Werkzeuge, der DSB bleibt nach Art. 38–39 verantwortlich.</p>
+<p><strong>F2. Können wir PAA für Art.-9-Gesundheitsdaten nutzen?</strong><br>
+A. Ja — das ist der kanonische PAA-Anwendungsfall. Halten Sie die Appliance vor Ort und dokumentieren Sie die Art.-9(2)-Rechtsgrundlage.</p>
+<p><strong>F3. Wie behandelt die Appliance Auskunftsanfragen (Art. 15)?</strong><br>
+A. STRATRONIX-PAA exportiert mit einem Klick alle Prompts, Vervollständigungen und abgerufenen Dokumente zu einer Betroffenenkennung.</p>
+<p><strong>F4. Was ist mit Auftragsverarbeitern?</strong><br>
+A. Schließen Sie AVV mit jedem (Modell-Distributor, Appliance-Hersteller, Support-Anbieter). Eine PAA reduziert die Subunternehmer-Liste drastisch, weil kein Dritt-Cloud-LLM die Daten berührt.</p>
+<p><strong>F5. Brauche ich SCC, wenn wir PAA nutzen?</strong><br>
+A. Nicht für den PAA-Workflow selbst. SCC sind weiterhin nötig, falls Opt-in-Cloud-Routing für nicht-sensible Aufgaben verwendet wird.</p>
+
+<div class="cta">
+<h2 style="color:white;border:none;padding:0;margin:0 0 16px;">Sprechen Sie mit STRATRONIX über Ihren DSGVO-KI-Plan</h2>
+<p style="color:white;margin-bottom:24px;">VVT-Export · DSAR-Tools · Art.-9-Redaktion · DSFA-Startvorlage</p>
+<a href="https://store.stratonix.ai" class="primary">→ DSGVO-konformen PAA-Pilot starten</a>
+<a href="https://store.stratronix.ai">STRATRONIX-Store besuchen</a>
+</div>

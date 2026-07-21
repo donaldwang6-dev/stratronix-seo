@@ -1,0 +1,91 @@
+<!--META:{"title":"PAA & GDPR Compliance 2026: A European Buyer's Checklist | STRATRONIX","description":"How a Private AI Appliance (PAA) maps to GDPR obligations in 2026: data minimisation, Art. 9 special categories, Schrems II, cross-border transfers, DPIA.","keywords":"PAA GDPR, GDPR AI appliance, GDPR compliance on-premise AI, Schrems II PAA, GDPR Art. 9 AI, STRATRONIX","h1":"PAA & GDPR Compliance 2026: An EU Buyer's Checklist","subtitle":"How Private AI Appliances map to the seven core GDPR obligations — data minimisation, special categories, Schrems II and DPIA","date":"2026-07-21","read_time":"8 min read","category":"Compliance Guide"}-->
+<p>For most European enterprises in 2026 the question is no longer <em>whether</em> to use AI, but <em>how to use it under GDPR</em>. Private AI Appliances (PAA) are emerging as the cleanest technical answer because they keep personal data inside the controller's premises. This guide maps the seven core GDPR obligations onto a PAA deployment and shows how STRATRONIX STA-100 supports each.</p>
+
+<h2>The seven GDPR obligations that matter for AI</h2>
+<ul>
+<li><strong>Lawfulness, fairness, transparency</strong> (Art. 5–6, 13–14)</li>
+<li><strong>Purpose limitation</strong> (Art. 5(1)(b))</li>
+<li><strong>Data minimisation</strong> (Art. 5(1)(c))</li>
+<li><strong>Accuracy</strong> (Art. 5(1)(d))</li>
+<li><strong>Storage limitation</strong> (Art. 5(1)(e))</li>
+<li><strong>Integrity &amp; confidentiality</strong> (Art. 5(1)(f) &amp; Art. 32)</li>
+<li><strong>Accountability &amp; documentation</strong> (Art. 5(2), Art. 30 records of processing)</li>
+</ul>
+<p>On top of that, AI deployments must address <strong>Art. 9 special-category data</strong>, <strong>Art. 22 automated decision-making</strong>, <strong>Art. 35 DPIA</strong>, and the residual <strong>Schrems II</strong> cross-border transfer question.</p>
+
+<h2>How a PAA delivers GDPR compliance by design</h2>
+
+<h3>1. Lawful basis and transparency</h3>
+<p>PAA logs every interaction: prompt, retrieval source, model version, completion and user. Auditors can reconstruct any decision back to its lawful basis. STRATRONIX PAA stores prompts and completions for a customer-defined period (default 24 months) and exports them in a portable JSON log for accountability.</p>
+
+<h3>2. Purpose limitation through role-scoped corpora</h3>
+<p>Each RAG corpus on a PAA is bound to a documented purpose and a role. HR staff cannot retrieve financial filings; legal counsel cannot query HR files. The appliance enforces a strict <em>purpose → corpus → role</em> link at query time.</p>
+
+<h3>3. Data minimisation with local redaction</h3>
+<p>Before any prompt reaches the LLM, the PAA redaction layer strips or hashes Art. 9 fields not strictly necessary for the workflow. Local redaction ensures that even if opt-in cloud routing is later enabled, no Art. 9 data leaves the appliance.</p>
+
+<h3>4. Accuracy and human-in-the-loop</h3>
+<p>The appliance exposes confidence scores and retrieval sources on every completion. STRATRONIX PAA can be configured to <em>require</em> human review before acting on outputs above a configurable risk threshold — directly satisfying Art. 22 safeguards.</p>
+
+<h3>5. Storage limitation</h3>
+<p>Logs, embeddings and RAG corpora have configurable retention policies. Default is 24 months; legal-hold and deletion are one-click operations. STRATRONIX appliances support data subject erasure requests within the appliance in &lt;1 hour.</p>
+
+<h3>6. Integrity and confidentiality (Art. 32)</h3>
+<ul>
+<li><strong>Encryption at rest</strong> — LUKS on the appliance SSD; encryption keys never leave the appliance.</li>
+<li><strong>Encryption in transit</strong> — TLS 1.3 for all API traffic, including internal admin UIs.</li>
+<li><strong>Role-based access</strong> — federated via LDAP / SAML / OIDC; no shared admin passwords.</li>
+<li><strong>Network segmentation</strong> — VLAN or air-gap support for Art. 9 workflows.</li>
+<li><strong>Hardware root-of-trust</strong> — secure-boot chain; firmware signed by STRATRONIX.</li>
+</ul>
+
+<h3>7. Accountability &amp; records of processing</h3>
+<p>The appliance auto-emits a <em>Record of Processing Activities (RoPA)</em> export covering model versions, corpus versions, retention rules, role assignments and incident logs. The export is sufficient as the data-controller's input to Art. 30 records and reduces DPIA preparation to days instead of months.</p>
+
+<div class="callout">
+<strong>Mapping summary.</strong> A PAA does not only <em>enable</em> GDPR compliance — it <em>records</em> it. The appliance itself becomes the primary evidence source for DPA inspections and internal audits.
+</div>
+
+<h2>Art. 9 special-category data: the strongest case for PAA</h2>
+<p>Health, biometric and criminal-record data cannot leave the EEA in most cases. Forcing this data through a US-cloud LLM is technically and legally problematic. The PAA approach keeps the data on premises; only the resulting insights (and never the underlying special-category data) can be shared externally, and only with the data subject's consent or another Art. 9(2) lawful basis.</p>
+
+<h2>Art. 22 automated decisions</h2>
+<p>Under Art. 22 a data subject has the right not to be subject to a decision based solely on automated processing that produces legal or similarly significant effects. A PAA mitigates this in two ways:</p>
+<ul>
+<li><strong>Human-in-the-loop</strong> is configurable per workflow; the appliance refuses to act on outputs above a risk threshold until a human confirms.</li>
+<li><strong>Explanations</strong> are emitted at every step (retrieval sources, model reasoning, confidence scores), giving the data controller a defensible position under Art. 22(3).</li>
+</ul>
+
+<h2>Schrems II and cross-border transfers</h2>
+<p>If a PAA keeps all personal data inside the EEA, no Schrems II analysis is required for <em>that workflow</em>. For hybrid cloud routing, STRATRONIX appliances support EU-only egress by default and log every outbound LLM call for transfer-impact assessment.</p>
+
+<h2>DPIA checklist for PAA deployments</h2>
+<ol>
+<li><strong>Describe processing</strong> — automate via PAA log export.</li>
+<li><strong>Assess necessity &amp; proportionality</strong> — compare PAA with cloud alternative.</li>
+<li><strong>Identify risks</strong> — bias, leakage, unlawful re-identification.</li>
+<li><strong>Mitigations</strong> — Art. 9 redaction, RBAC, air-gap, human review.</li>
+<li><strong>DPO consultation</strong> — share the appliance's RoPA export.</li>
+</ol>
+
+<h2>Regulator expectations in 2026</h2>
+<p>CNIL, BfDI, AEPD, Garante, AP and UODO have all signalled that <em>local auditable AI</em> is the gold standard for high-risk processing. None of them forbids cloud LLMs outright, but each emphasises proportionality, data minimisation and accountability — three obligations a PAA is uniquely positioned to meet.</p>
+
+<h2>FAQ — PAA & GDPR Compliance</h2>
+<p><strong>Q1. Does a PAA replace the need for a Data Protection Officer?</strong><br>
+A. No. The PAA provides evidence and tooling, but the DPO remains accountable under Art. 38–39.</p>
+<p><strong>Q2. Can we use a PAA for Art. 9 health data?</strong><br>
+A. Yes — this is the canonical PAA use case. Keep the appliance on premises and document the Art. 9(2) lawful basis.</p>
+<p><strong>Q3. How does the appliance handle data subject access requests (DSAR)?</strong><br>
+A. STRATRONIX PAA exposes a one-click DSAR export with all prompts, completions and retrieved documents tied to a subject identifier.</p>
+<p><strong>Q4. What about sub-processors?</strong><br>
+A. Sign a DPA with each (model distributor, appliance manufacturer, support vendor). A PAA reduces the sub-processor list dramatically because no third-party cloud LLM touches the data.</p>
+<p><strong>Q5. Do I still need SCCs if we use a PAA?</strong><br>
+A. Not for the PAA workflow itself. SCCs are still needed if opt-in cloud routing is used for non-sensitive tasks.</p>
+
+<div class="cta">
+<h2 style="color:white;border:none;padding:0;margin:0 0 16px;">Talk to STRATRONIX about your GDPR-AI plan</h2>
+<p style="color:white;margin-bottom:24px;">RoPA export · DSAR tools · Art. 9 redaction · DPIA starter template</p>
+<a href="https://store.stratronix.ai" class="primary">→ Open a GDPR-aligned PAA pilot</a>
+<a href="https://store.stratronix.ai">Visit STRATRONIX store</a>
+</div>
