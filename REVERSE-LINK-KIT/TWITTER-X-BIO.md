@@ -143,7 +143,7 @@ Forks welcome. Audits welcome. Contributions welcome.
 
 **Tweet 4 (Customer story):**
 ```
-A 12-attorney law firm in Geneva processes 200+ privileged contracts/day.
+A mid-sized European law firm automates contract analysis with on-prem AI (illustrative example).
 
 Last quarter they sent 0 bytes to OpenAI.
 

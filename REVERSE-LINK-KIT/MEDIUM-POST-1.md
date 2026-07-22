@@ -126,15 +126,15 @@ Ten pre-built agents ship with every appliance:
 
 ## Who Uses It (and Why)
 
-### Legal Firm (Geneva, 32 attorneys)
+### Legal Firm (European mid-sized, multiple attorneys)
 
 > "We process 200+ privileged documents a day. Cloud AI was a non-starter. STA-100 sits in our server room — the lawyers don't even know it exists, but every contract they touch has been risk-reviewed by it." — Managing Partner
 
-### Hospital (São Paulo, 850 beds)
+### Hospital (Latin American, mid-sized)
 
 > "Brazil's LGPD makes cloud AI awkward. With STA-100, de-identification happens inside our firewall. Our compliance officer sleeps better." — CIO
 
-### Manufacturer (Shenzhen, 4,000 employees)
+### Manufacturer (Asian mid-sized, thousands of employees)
 
 > "Visual inspection runs 24/7. The defect rate dropped 37% in the first quarter." — Operations Director
 

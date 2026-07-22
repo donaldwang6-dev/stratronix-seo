@@ -96,7 +96,7 @@
 > 4. Connect to your existing data sources via the box's REST API
 > 5. Pilot for 2 weeks, measure ROI
 >
-> Real example: A 12-attorney law firm deployed STRATRONIX STA-100 to automate contract risk review. Their paralegals reclaimed 25 hours/week, which translated to handling 3x more cases without adding headcount.
+> Real example: A mid-sized law firm (illustrative scenario) used STRATRONIX STA-100 to automate contract risk review. Their paralegals reclaimed measurable time per week, allowing them to handle more cases without adding headcount.
 >
 > ROI: 6-8 weeks typical.
 >
@@ -170,7 +170,7 @@
 >
 > **The wild card:** If your data has regulatory constraints (health, finance, legal), cloud AI may simply not be allowed. Then on-prem is the only choice.
 >
-> Source: I run a 12-attorney firm. We deployed a STRATRONIX STA-100 six months ago. We process 200+ privileged documents/day on it. We've not sent a single byte to OpenAI/Anthropic since.
+> Source: this is an illustrative example scenario. A mid-sized firm documented here processes privileged documents entirely on STA-100 with no external cloud AI sharing.
 >
 > **Caveat:** Pick a vendor whose OS is open-source. Vendor lock-in is the cloud's worst habit. Open-source means you can audit, fork, or migrate.
 
