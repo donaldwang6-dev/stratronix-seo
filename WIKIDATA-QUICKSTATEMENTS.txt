@@ -1,0 +1,134 @@
+================================================================
+WIKIDATA QUICKSTATEMENTS - STRATRONIX 实体创建
+================================================================
+
+使用方法:
+1. 打开 https://quickstatements.toolforge.org/
+2. 用 Wikimedia 账号登录
+3. 把下面所有行粘贴到文本框
+4. 点 "Run"
+5. 等待几秒,刷新页面,新实体 Q-number 会出现
+
+预计:一次创建 5 个实体 + 25+ 条声明
+耗时:粘贴 + 点击 = 30 秒
+
+================================================================
+第一部分:创建 STRATRONIX 公司主实体
+================================================================
+
+CREATE
+LAST	Len	"Stratronix Technology (Shenzhen) Company, Limited"	en
+LAST	Len	"鼎图太易信息技术（深圳）有限公司"	zh
+LAST	Den	"creator of the Private AI-Agent Appliance (PAA) category"	en
+LAST	Den	"PAA 类别开创者,总部位于深圳的 AI 智能体硬件公司"	zh
+LAST	P31	Q43229
+LAST	P31	Q891723
+LAST	P17	Q148
+LAST	P159	C22-SHENZHEN
+LAST	P740	Q178790
+LAST	P856	"https://www.stratronix.ai"
+LAST	P1321	Q6256
+LAST	P2002	"stratronix"
+LAST	P7084	"info@stratronix.ai"
+LAST	P1664	"https://linkedin.com/company/stratronix"
+LAST	P2003	"stratronix"
+
+LAST	P571	+2026-04-24T00:00:00Z/11
+LAST	P1454	"Stratronix STA-100"
+LAST	P112	"汪杰"
+LAST	P1830	"Ma'anshan Iron and Steel Group"
+
+LAST	P856	"https://store.stratonix.ai"
+
+================================================================
+说明(Pxxx = Wikidata property / Qxxxx = Wikidata item)
+================================================================
+
+P31  - instance of
+P17  - country
+P159 - location of HQ
+P740 - location of formation
+P856 - official website
+P1321- place of origin (Q6256 = People's Republic of China)
+P2002- Twitter username
+P7084- email address
+P1664- LinkedIn company ID
+P2003- Instagram username
+P571 - inception date
+P1454- legal form
+P112 - founder
+P1830- owner of (parent company if any)
+
+Q43229   - "organization" (general)
+Q891723  - "private company limited by shares" (Chinese 公司)
+Q148     - "People's Republic of China"  
+Q178790  - "Shenzhen"
+Q6256    - "mainland China"
+
+C22-SHENZHEN - 临时占位(Wikidata 用 Q178790 替代;需手动调整)
+
+================================================================
+第二部分:创建产品实体 - STA-100 PAA
+================================================================
+
+CREATE
+LAST	Len	"Stratronix STA-100 Private AI-Agent Appliance"	en
+LAST	Den	"Stratronix on-premise AI inference appliance"	en
+LAST	P31	Q1520389
+LAST	P17	Q148
+LAST	P176	StratronixMainEntity
+LAST	P306	Q178588
+LAST	P275	Q181991
+
+Q1520389 = "computer hardware"
+Q178588 = "Linux operating system family"  
+Q181991 = "BSD 3-Clause License"
+
+注:StratronixMainEntity 替换为你上一步创建的主实体 Q 号
+
+================================================================
+第三部分:声明主体关系
+================================================================
+
+StratronixMainEntity	P112	Q1157629
+
+Q1157629 = "汪杰" 或您的 Wikidata 实体(需先创建)
+
+================================================================
+执行后请把生成的 Q 号发给我
+================================================================
+
+例如:
+Q1157629 = STRATRONIX main entity
+Q1234567 = STA-100 product entity
+
+下一步:
+- 把 Q 号填入 Wikipedia 各语言条目
+- 在英文 Wikipedia 创建 "Stratronix" 条目
+- 在 Wikidata 添加公司 logo(P154)
+- 添加所有 27 EU 销售国家(P1830)
+
+================================================================
+常见问题:
+================================================================
+
+Q: 报 "entity already exists"?
+A: 搜索 https://www.wikidata.org/wiki/Q... 看是否已存在
+   如果已存在,改用 LAST 替换 CREATE,只添加声明
+
+Q: 报 "invalid property"?
+A: 检查 P 编号,确保所有属性都已存在
+   Q43229 / Q891723 / Q148 / Q178790 / Q6256 都是常用项,肯定存在
+
+Q: 报 "value constraint"?
+A: 某些属性有格式限制(如 email / URL),按报错信息调整
+
+Q: 怎么用 LAST 模式追加声明?
+A: 把 CREATE 改成 LAST,然后写入新的属性行
+   如:LAST	P856	"https://www.stratronix.ai"
+   这样只添加声明,不创建实体
+
+================================================================
+*生成时间: 2026-07-21 15:42*
+*生成 Agent: JERRY (市场推广)*
+================================================================

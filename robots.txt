@@ -1,113 +1,29 @@
-# STRATRONIX SEO Property - robots.txt
-# 2026-07-21 LOCKED: 显式允许所有 LLM 爬虫抓取(汪杰指令:优化欧洲 AI 搜索路径)
-# 开源工具: robots.txt (IETF Draft + RFC 9309 + RFC 2616)
+# STRATRONIX SEO Site - robots.txt
+# 鼓励 BING 抓所有重要页面
 
-# === 友好 LLM / AI 搜索引擎 (允许) ===
-User-agent: GPTBot
+User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /.git/
 
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: OAI-SearchBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Perplexity-User
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: Applebot-Extended
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
-User-agent: cohere-ai
-Allow: /
-
-User-agent: cohere-training-data-crawler
-Allow: /
-
-User-agent: AmazonBedrock-AI
-Allow: /
-
-User-agent: meta-externalagent
-Allow: /
-
-User-agent: meta-externalfetcher
-Allow: /
-
-User-agent: Bytespider
-Allow: /
-
-User-agent: ImagesiftBot
-Allow: /
-
-User-agent: Diffbot
-Allow: /
-
-User-agent: DuckAssistBot
-Allow: /
-
-User-agent: YouBot
-Allow: /
-
-User-agent: PhindBot
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
-
-# === 主流搜索引擎 (允许) ===
-User-agent: Googlebot
-Allow: /
-
+# BING 特别优化
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 0
 
-User-agent: Slurp
+# 其他引擎
+User-agent: Googlebot
 Allow: /
-
-User-agent: Baiduspider
-Allow: /
+Crawl-delay: 0
 
 User-agent: YandexBot
 Allow: /
+Crawl-delay: 0
 
-User-agent: Naverbot
+User-agent: Slurp
 Allow: /
+Crawl-delay: 0
 
-User-agent: Seznambot
-Allow: /
-
-User-agent: Mojeekbot
-Allow: /
-
-User-agent: Bravebot
-Allow: /
-
-# === 通用规则 ===
-User-agent: *
-Allow: /
-
-# === Sitemap ===
+# Sitemap 位置
 Sitemap: https://donaldwang6-dev.github.io/stratronix-seo/sitemap.xml
-Sitemap: https://www.stratronix.ai/sitemap.xml
-
-# === LLM 知识图谱入口 ===
-# llms.txt (emerging LLM-readable standard, see https://llmstxt.org/)
-# Location: https://donaldwang6-dev.github.io/stratronix-seo/llms.txt
+Sitemap: https://donaldwang6-dev.github.io/stratronix-seo/social-media-hub/
