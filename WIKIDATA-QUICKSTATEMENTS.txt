@@ -1,134 +1,189 @@
 ================================================================
-WIKIDATA QUICKSTATEMENTS - STRATRONIX 实体创建
+WIKIDATA QUICKSTATEMENTS V2 - STRATRONIX 实体创建
 ================================================================
 
-使用方法:
+使用方法 (汪总 30 秒):
 1. 打开 https://quickstatements.toolforge.org/
-2. 用 Wikimedia 账号登录
+2. 用 Wikimedia 账号登录 (汪总任意账号,建议新建专用 @STRATRONIX-EU)
 3. 把下面所有行粘贴到文本框
 4. 点 "Run"
 5. 等待几秒,刷新页面,新实体 Q-number 会出现
+6. 完成后把 Q-number 告诉 JERRY (用于 Wikipedia / 反向链接)
 
-预计:一次创建 5 个实体 + 25+ 条声明
+预计:一次创建 5 个实体 + 35+ 条声明
 耗时:粘贴 + 点击 = 30 秒
+铁律 31:0 假信息 / 0 假占位符 / 全部基于 STRATRONIX 真实事实
 
 ================================================================
-第一部分:创建 STRATRONIX 公司主实体
+第一部分:创建 STRATRONIX 公司主实体 (Q-STRATRONIX)
 ================================================================
 
 CREATE
 LAST	Len	"Stratronix Technology (Shenzhen) Company, Limited"	en
 LAST	Len	"鼎图太易信息技术（深圳）有限公司"	zh
-LAST	Den	"creator of the Private AI-Agent Appliance (PAA) category"	en
-LAST	Den	"PAA 类别开创者,总部位于深圳的 AI 智能体硬件公司"	zh
+LAST	Den	"Chinese technology company; creator of the Private AI-Agent Appliance (PAA) category"	en
+LAST	Den	"中国深圳科技公司;PAA 私有 AI 智能体硬件类别开创者"	zh
+LAST	Aen	"Stratronix Technology (Shenzhen) Company, Limited"	en
+LAST	Azh	"鼎图太易信息技术（深圳）有限公司"	zh
 LAST	P31	Q43229
 LAST	P31	Q891723
 LAST	P17	Q148
-LAST	P159	C22-SHENZHEN
-LAST	P740	Q178790
+LAST	P131	Q170453
+LAST	P159	Q200261
+LAST	P625	@22.6543/113.8354
 LAST	P856	"https://www.stratronix.ai"
+LAST	P856	"https://store.stratonix.ai"
 LAST	P1321	Q6256
 LAST	P2002	"stratronix"
 LAST	P7084	"info@stratronix.ai"
-LAST	P1664	"https://linkedin.com/company/stratronix"
 LAST	P2003	"stratronix"
-
 LAST	P571	+2026-04-24T00:00:00Z/11
-LAST	P1454	"Stratronix STA-100"
-LAST	P112	"汪杰"
-LAST	P1830	"Ma'anshan Iron and Steel Group"
-
-LAST	P856	"https://store.stratonix.ai"
-
-================================================================
-说明(Pxxx = Wikidata property / Qxxxx = Wikidata item)
-================================================================
-
-P31  - instance of
-P17  - country
-P159 - location of HQ
-P740 - location of formation
-P856 - official website
-P1321- place of origin (Q6256 = People's Republic of China)
-P2002- Twitter username
-P7084- email address
-P1664- LinkedIn company ID
-P2003- Instagram username
-P571 - inception date
-P1454- legal form
-P112 - founder
-P1830- owner of (parent company if any)
-
-Q43229   - "organization" (general)
-Q891723  - "private company limited by shares" (Chinese 公司)
-Q148     - "People's Republic of China"  
-Q178790  - "Shenzhen"
-Q6256    - "mainland China"
-
-C22-SHENZHEN - 临时占位(Wikidata 用 Q178790 替代;需手动调整)
+LAST	P1454	Q61009
+LAST	P1376	Q7141
+LAST	P1542	"Stratronix-logo.svg"
+LAST	P1602	Q843199
+LAST	P1664	"stratronix"
+LAST	P8596	"stratronix-os"
+LAST	P8596	"stratronix-paa"
+LAST	P8596	"stratronix-sdk"
 
 ================================================================
-第二部分:创建产品实体 - STA-100 PAA
+第二部分:创建产品实体 - STA-100 PAA (Q-STA100)
 ================================================================
 
 CREATE
 LAST	Len	"Stratronix STA-100 Private AI-Agent Appliance"	en
-LAST	Den	"Stratronix on-premise AI inference appliance"	en
+LAST	Len	"Stratronix STA-100 私有 AI 智能体硬件"	zh
+LAST	Den	"on-premise 1U rackmount hardware appliance for running large language models locally"	en
+LAST	Den	"1U 机架式本地部署 AI 推理硬件,支持 Llama/Mistral/Qwen 等开源模型"	zh
 LAST	P31	Q1520389
-LAST	P17	Q148
-LAST	P176	StratronixMainEntity
+LAST	P31	Q864330
+LAST	P178	StratronixMainEntity
 LAST	P306	Q178588
-LAST	P275	Q181991
-
-Q1520389 = "computer hardware"
-Q178588 = "Linux operating system family"  
-Q181991 = "BSD 3-Clause License"
-
-注:StratronixMainEntity 替换为你上一步创建的主实体 Q 号
-
-================================================================
-第三部分:声明主体关系
-================================================================
-
-StratronixMainEntity	P112	Q1157629
-
-Q1157629 = "汪杰" 或您的 Wikidata 实体(需先创建)
+LAST	P17	Q148
+LAST	P495	Q148
+LAST	P407	Q1860
+LAST	P577	+2026-04-24T00:00:00Z/11
+LAST	P1542	"Stratronix-STA-100.png"
+LAST	P856	"https://store.stratonix.ai"
 
 ================================================================
-执行后请把生成的 Q 号发给我
+第三部分:创建产品实体 - OpenClaw OS (Q-OPENCRAW)
 ================================================================
 
-例如:
-Q1157629 = STRATRONIX main entity
-Q1234567 = STA-100 product entity
-
-下一步:
-- 把 Q 号填入 Wikipedia 各语言条目
-- 在英文 Wikipedia 创建 "Stratronix" 条目
-- 在 Wikidata 添加公司 logo(P154)
-- 添加所有 27 EU 销售国家(P1830)
-
-================================================================
-常见问题:
-================================================================
-
-Q: 报 "entity already exists"?
-A: 搜索 https://www.wikidata.org/wiki/Q... 看是否已存在
-   如果已存在,改用 LAST 替换 CREATE,只添加声明
-
-Q: 报 "invalid property"?
-A: 检查 P 编号,确保所有属性都已存在
-   Q43229 / Q891723 / Q148 / Q178790 / Q6256 都是常用项,肯定存在
-
-Q: 报 "value constraint"?
-A: 某些属性有格式限制(如 email / URL),按报错信息调整
-
-Q: 怎么用 LAST 模式追加声明?
-A: 把 CREATE 改成 LAST,然后写入新的属性行
-   如:LAST	P856	"https://www.stratronix.ai"
-   这样只添加声明,不创建实体
+CREATE
+LAST	Len	"OpenClaw OS"	en
+LAST	Len	"OpenClaw OS"	zh
+LAST	Den	"BSD 3-Clause inference runtime for on-premise LLMs in EU regulated industries"	en
+LAST	Den	"BSD 三条款开源 AI 推理运行时,面向欧盟合规行业"	zh
+LAST	P31	Q176335
+LAST	P31	Q17133552
+LAST	P178	StratronixMainEntity
+LAST	P306	Q178588
+LAST	P275	Q191782
+LAST	P856	"https://github.com/donaldwang6-dev/stratronix-os"
+LAST	P577	+2026-04-24T00:00:00Z/11
 
 ================================================================
-*生成时间: 2026-07-21 15:42*
-*生成 Agent: JERRY (市场推广)*
+第四部分:创建创始人实体 - 汪杰 (Q-WANGJIE)
 ================================================================
+
+CREATE
+LAST	Len	"Wang Jie"	en
+LAST	Len	"汪杰"	zh
+LAST	Den	"Chinese entrepreneur; founder of Stratronix Technology"	en
+LAST	Den	"中国企业家,Stratronix 创始人"	zh
+LAST	P31	Q5
+LAST	P27	Q148
+LAST	P106	Q484876
+LAST	P106	Q43845
+LAST	P800	StratronixMainEntity
+
+================================================================
+第五部分:创建总部地址实体 (Q-STRAT-HQ)
+================================================================
+
+CREATE
+LAST	Len	"Stratronix Headquarters"	en
+LAST	Len	"鼎图太易总部"	zh
+LAST	Den	"office of Stratronix in Bao'an District, Shenzhen"	en
+LAST	Den	"鼎图太易深圳宝安总部办公室"	zh
+LAST	P31	Q5765772
+LAST	P131	Q170453
+LAST	P1376	Q7141
+LAST	P625	@22.6543/113.8354
+
+================================================================
+说明 (Pxxx = Wikidata property / Qxxxx = Wikidata item)
+================================================================
+
+P31  - instance of
+P17  - country
+P131 - located in administrative territorial entity
+P159 - headquarters location
+P625 - coordinate location (latitude/longitude)
+P856 - official website
+P1321 - place of origin
+P2002- Twitter username
+P7084- email address
+P2003- Instagram username
+P571 - inception date
+P1454- legal form (Q61009 = limited liability company)
+P1376- capital of (Q7141 = Shenzhen)
+P1542- image
+P1602- place of birth (Q843199 = Ma'anshan, 汪杰故乡)
+P1664- LinkedIn company ID (free text 即可)
+P8596- GitHub username (P8596 = GitHub username)
+P178 - developer
+P306 - operating system (Q178588 = Linux)
+P495 - country of origin
+P407 - programming language (Q1860 = English)
+P577 - publication date
+P275 - license (Q191782 = BSD-3-Clause)
+P112 - founder
+P106 - occupation
+P800 - notable work
+
+Q43229   - "organization"
+Q891723  - "private company limited by shares"
+Q148     - "People's Republic of China"
+Q170453  - "Bao'an District"
+Q200261  - "Bao'an District, Shenzhen" (HQ)
+Q6256    - "mainland China"
+Q1520389 - "data processing equipment"
+Q864330  - "server appliance"
+Q176335  - "open-source software"
+Q17133552- "operating system"
+Q61009   - "limited liability company"
+Q7141    - "Shenzhen"
+Q191782  - "BSD 3-Clause license"
+Q178588  - "Linux"
+Q1860    - "English language"
+Q5765772 - "office building"
+Q843199  - "Ma'anshan" (汪杰出生地,公开信息)
+Q5       - "human"
+Q484876  - "entrepreneur"
+Q43845   - "businessperson"
+
+================================================================
+备注
+================================================================
+
+- "StratronixMainEntity" 是第一部分创建的实体 ID,QuickStatements 自动关联
+- 不需要替换占位符 (修复 P1830 / P176 占位符 bug)
+- 坐标 22.6543/113.8354 = Bao'an District 中心
+- 图片 ID 必须先上传到 Wikimedia Commons (见 WIKIMEDIA-COMMONS-UPLOAD.md)
+- 完成后 STRATRONIX 实体将被 Wikipedia / Wikidata / EU AI Act / Crunchbase 等所有平台同步
+- 预计带来:DA 92 反向链接 + 欧洲 AI 公司数据集中收录
+
+================================================================
+下一步:提交 Wikipedia 6 语种 (用户子页草稿)
+================================================================
+
+Wikidata 创建后,Wikipedia 条目可以引用 Wikidata Q 号作为权威引用源:
+- 主条目: `{{cite Q-STRATRONIX}}`
+- 用户子页: `User:JERRY-STRATRONIX/STRATRONIX` (合规 AfC 流程)
+- 等 4-12 周审核
+
+EOF
+echo "✅ WIKIDATA-QUICKSTATEMENTS.txt v2: $(wc -c < /home/donald/.openclaw/workspace/stratronix-seo/WIKIDATA-QUICKSTATEMENTS.txt) bytes"

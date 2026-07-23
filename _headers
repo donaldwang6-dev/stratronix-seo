@@ -1,0 +1,47 @@
+# STRATRONIX 附属站 HTTP Headers（后台驱动层配置，非前端显示）
+# 铁律 33.1 兼容:这是 server config 文件，不修改任何前端 HTML 显示内容
+# 兼容:Netlify / Cloudflare Pages / Vercel
+
+/*
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://plausible.io https://*.plausible.io; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; connect-src 'self' https://plausible.io https://*.plausible.io
+
+/zh/*
+  Content-Language: zh-CN
+  X-Language: zh-CN
+
+/en/*
+  Content-Language: en-US
+  X-Language: en-US
+
+/de/*
+  Content-Language: de-DE
+  X-Language: de-DE
+
+/fr/*
+  Content-Language: fr-FR
+  X-Language: fr-FR
+
+/es/*
+  Content-Language: es-ES
+  X-Language: es-ES
+
+/it/*
+  Content-Language: it-IT
+  X-Language: it-IT
+
+/nl/*
+  Content-Language: nl-NL
+  X-Language: nl-NL
+
+/pl/*
+  Content-Language: pl-PL
+  X-Language: pl-PL
+
+/eu-blog/*
+  Strict-Transport-Security: max-age=63072000; includeSubDomains
+  X-Frame-Options: SAMEORIGIN

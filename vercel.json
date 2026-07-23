@@ -1,0 +1,77 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {"key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload"},
+        {"key": "X-Content-Type-Options", "value": "nosniff"},
+        {"key": "X-Frame-Options", "value": "DENY"},
+        {"key": "Referrer-Policy", "value": "strict-origin-when-cross-origin"},
+        {"key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=()"}
+      ]
+    },
+    {
+      "source": "/zh/(.*)",
+      "headers": [
+        {"key": "Content-Language", "value": "zh-CN"},
+        {"key": "X-Language", "value": "zh-CN"}
+      ]
+    },
+    {
+      "source": "/en/(.*)",
+      "headers": [
+        {"key": "Content-Language", "value": "en-US"},
+        {"key": "X-Language", "value": "en-US"}
+      ]
+    },
+    {
+      "source": "/de/(.*)",
+      "headers": [
+        {"key": "Content-Language", "value": "de-DE"},
+        {"key": "X-Language", "value": "de-DE"}
+      ]
+    },
+    {
+      "source": "/fr/(.*)",
+      "headers": [
+        {"key": "Content-Language", "value": "fr-FR"},
+        {"key": "X-Language", "value": "fr-FR"}
+      ]
+    },
+    {
+      "source": "/es/(.*)",
+      "headers": [
+        {"key": "Content-Language", "value": "es-ES"},
+        {"key": "X-Language", "value": "es-ES"}
+      ]
+    },
+    {
+      "source": "/it/(.*)",
+      "headers": [
+        {"key": "Content-Language", "value": "it-IT"},
+        {"key": "X-Language", "value": "it-IT"}
+      ]
+    },
+    {
+      "source": "/nl/(.*)",
+      "headers": [
+        {"key": "Content-Language", "value": "nl-NL"},
+        {"key": "X-Language", "value": "nl-NL"}
+      ]
+    },
+    {
+      "source": "/pl/(.*)",
+      "headers": [
+        {"key": "Content-Language", "value": "pl-PL"},
+        {"key": "X-Language", "value": "pl-PL"}
+      ]
+    },
+    {
+      "source": "/eu-blog/(.*)",
+      "headers": [
+        {"key": "X-Frame-Options", "value": "SAMEORIGIN"}
+      ]
+    }
+  ]
+}
