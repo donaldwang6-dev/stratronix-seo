@@ -299,7 +299,7 @@ code {{ background: #f5f5f5; padding: 2px 6px; border-radius: 4px; font-family: 
 <div class="cta">
 <h2 style="color:white;border:none;padding:0;margin:0 0 16px;">Talk to STRATRONIX about EU AI Act compliance</h2>
 <p style="color:white;margin-bottom:24px;">On-premise AI hardware for European enterprises · GDPR / EU AI Act ready · 24 EU languages</p>
-<a href="mailto:europe@stratronix.ai?subject=EU%20AI%20Act%20enquiry" class="primary">→ Email europe@stratronix.ai</a>
+<a href="https://store.stratonix.ai" class="primary">→ View PAA on Storefront</a>
 <a href="https://store.stratonix.ai">View product storefront</a>
 </div>
 

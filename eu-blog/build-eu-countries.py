@@ -436,7 +436,7 @@ footer a {{ color: #E6417F; }}
 <div class="cta">
 <h2 style="color:white;border:none;padding:0;margin:0 0 16px;">STRATRONIX PAA für {country_native}</h2>
 <p style="color:white;margin-bottom:24px;">On-Premise KI-Hardware · {country['gdpr_term']} · EU AI Act</p>
-<a href="mailto:europe@stratronix.ai?subject=PAA%20{cc.upper()}%20enquiry" class="primary">→ Email europe@stratronix.ai</a>
+<a href="https://store.stratonix.ai" class="primary">→ View PAA on Storefront</a>
 <a href="https://store.stratonix.ai">Storefront</a>
 </div>
 
