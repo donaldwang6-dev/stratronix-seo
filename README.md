@@ -1,3 +1,13 @@
+## 🇪🇺 EU SEO Resource Hub
+
+Multilingual SEO assets for European AI search (ChatGPT / Claude / Perplexity / Google SGE / Bing Chat) targeting **EU AI Act 2026**, **GDPR / DSGVO / RGPD / AVG / RODO**, and on-premise Private AI-Agent Appliance (PAA) keywords.
+
+24 official EU languages + EN / ZH / JP / KO / RU / AR.
+
+**European store**: [store.stratonix.ai](https://store.stratonix.ai)
+
+---
+
 # STRATRONIX SEO Resource Hub
 
 > **独立 SEO 资源中心** — 附属于公司主站，符合 Donald 2026-07-15 严令
