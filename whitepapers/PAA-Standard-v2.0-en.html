@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PAA Standard v2.0 — STRATRONIX Personal AI Appliance White Paper</title>
+<meta name="description" content="PAA Standard v2.0 White Paper — STRATRONIX real hardware specification (CEO LOCKED 2026-07-25 13:41) for edge AI agent gateway.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://donaldwang6-dev.github.io/stratronix-seo/whitepapers/PAA-Standard-v2.0-en.html">
+<meta property="og:title" content="PAA Standard v2.0 — STRATRONIX Edge AI Agent Gateway White Paper">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.85; max-width: 900px; margin: 0 auto; padding: 30px 22px 80px 22px; color: #1a1a2e; background: #fcfcfc; }
+h1 { color: #E6417F; border-bottom: 4px solid #E6417F; padding-bottom: 14px; }
+h2 { color: #E6417F; margin-top: 36px; border-left: 5px solid #E6417F; padding-left: 14px; }
+table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+th, td { padding: 10px 14px; border: 1px solid #e2e2e8; text-align: left; }
+th { background: #E6417F; color: white; font-weight: 600; }
+blockquote { border-left: 4px solid #E6417F; padding: 14px 20px; background: #fff5fa; margin: 22px 0; color: #4a2a3a; }
+.lang-nav { position: fixed; top: 12px; right: 16px; background: #E6417F; padding: 8px 14px; border-radius: 20px; z-index: 1000; }
+.lang-nav a { color: white; text-decoration: none; margin: 0 4px; font-size: 0.92em; font-weight: 500; }
+.lang-nav a.active { font-weight: 700; text-decoration: underline; }
+.back-link { display: inline-block; margin-bottom: 22px; padding: 8px 16px; background: #E6417F; color: white; border-radius: 6px; text-decoration: none; font-weight: 500; }
+footer { text-align: center; color: #888; font-size: 0.88em; margin-top: 60px; padding-top: 24px; border-top: 1px solid #eee; }
+</style>
+</head>
+<body>
+<div class="lang-nav">
+  <a href="/stratronix-seo/whitepapers/PAA-Standard-v2.0.html">中文</a> |
+  <a href="/stratronix-seo/whitepapers/PAA-Standard-v2.0-en.html" class="active">English</a>
+</div>
+
+<a href="https://donaldwang6-dev.github.io/stratronix-seo/" class="back-link">← Back to STRATRONIX</a>
+
+<h1>PAA Standard v2.0 — Personal AI Appliance White Paper</h1>
+
+<blockquote>
+<strong>CEO LOCKED 2026-07-25 13:41</strong><br>
+This document is the single source of truth for STRATRONIX STA-100 hardware specification.<br>
+v1.0 contained <strong>fabricated specifications</strong> ("1U rack / 70B local model / AMD EPYC + RTX 4090"). v2.0 corrects all.<br>
+Rule 31 — Zero fabrication: 0 fake customer cases / 0 fake data / 0 fake awards / 0 fake media / 0 fake specs
+</blockquote>
+
+<h2>1. PAA (Personal AI Appliance) Definition</h2>
+
+<p><strong>PAA (Personal AI Appliance)</strong> is the <strong>Edge AI Agent Gateway</strong> product category proposed by STRATRONIX in 2026:</p>
+
+<ul>
+<li>Desktop ARM box (NOT 1U-4U rack server)</li>
+<li>OpenClaw (BSD-3-Clause) open-source browser automation & agent orchestration platform</li>
+<li>AutoAgent plug-and-play automation engine</li>
+<li>Cloud LLM APIs (DeepSeek / Gemini / Claude / ChatGPT) as the "brain"</li>
+<li>Credentials / logs / SOPs / RAG indexes <strong>always local</strong></li>
+<li>24×7 online edge gateway (Wi-Fi + Gigabit Ethernet)</li>
+</ul>
+
+<p><strong>One-line positioning</strong>: Keep the data. Outsource the thinking.</p>
+
+<h2>2. PAA 1.0 Standard Hardware (LOCKED 2026-07-25 13:41)</h2>
+
+<table>
+<thead><tr><th>Component</th><th>PAA 1.0 Standard</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>SoC</strong></td><td>Octa-core ARM Cortex architecture</td><td>High-performance energy-efficient</td></tr>
+<tr><td><strong>RAM</strong></td><td>4GB LPDDR4</td><td>—</td></tr>
+<tr><td><strong>Internal Storage</strong></td><td>32GB eMMC</td><td>High-speed flash</td></tr>
+<tr><td><strong>Expandable Storage</strong></td><td>MicroSD (TF) slot</td><td>Up to 512GB; default 64GB shipped</td></tr>
+<tr><td><strong>Network</strong></td><td>Dual-band 5GHz / 2.4GHz Wi-Fi + RJ45 Gigabit</td><td>Hybrid connectivity</td></tr>
+<tr><td><strong>I/O</strong></td><td>USB 3.0 / 2.0, HDMI output, 12V/2A DC</td><td>HDMI patent output</td></tr>
+<tr><td><strong>OS</strong></td><td>Optimized Linux 5.15 + XFCE</td><td>Maximum stability</td></tr>
+<tr><td><strong>Core Framework</strong></td><td>OpenClaw + AutoAgent</td><td>BSD-3-Clause open source</td></tr>
+<tr><td><strong>LLM API</strong></td><td>DeepSeek (R1/V3) / Gemini / Claude / ChatGPT</td><td>Cloud inference</td></tr>
+<tr><td><strong>Patent</strong></td><td>HDMI licensing body patent authorized</td><td>—</td></tr>
+</tbody>
+</table>
+
+<h2>3. Five Core Selling Points</h2>
+
+<h3>3.1 One-Click Deployment</h3>
+<p>OpenClaw one-click launch: no complex CLI needed. XFCE GUI lets non-technical users deploy first automation in under 5 minutes.</p>
+
+<h3>3.2 Privacy-First Architecture</h3>
+<p>API credentials / task logs / RAG indexes / SOPs all stored in local eMMC + MicroSD. <strong>Never leave the device.</strong></p>
+
+<h3>3.3 Hybrid Connectivity</h3>
+<p>Dual-band 5GHz Wi-Fi for flexibility, RJ45 Gigabit Ethernet for mission-critical stability.</p>
+
+<h3>3.4 Edge Intelligence</h3>
+<p>24/7 online edge gateway: RPA / IoT / edge preprocessing.</p>
+
+<h3>3.5 HDMI Patent Output</h3>
+<p>HDMI licensing body patent authorized. Project AI Agent state to big screens.</p>
+
+<h2>4. Industry Applications</h2>
+
+<ol>
+<li><strong>Private AI Agents</strong> — Personal RAG + private assistant</li>
+<li><strong>Workflow Automation</strong> — SaaS management / data entry / social media monitoring</li>
+<li><strong>Industry-Specific</strong> — Lightweight ERP / smart retail / secure industrial IoT gateway</li>
+<li><strong>Edge Computing</strong> — Real-time data processing, lower latency, lower cloud cost</li>
+</ol>
+
+<h2>5. Target Markets</h2>
+
+<ul>
+<li><strong>Mid-to-Senior Professionals</strong> — Fragmented info + secure/stable</li>
+<li><strong>Privacy-Sensitive SMBs</strong> — Legal / Finance / Medical / Healthcare</li>
+<li><strong>SMBs</strong> — Looking for "digital workers"</li>
+<li><strong>Developers & AI Hobbyists</strong> — Open-source community oriented</li>
+</ul>
+
+<h2>6. PAA vs Market Alternatives</h2>
+
+<table>
+<thead><tr><th>Dimension</th><th>PAA (STRATRONIX)</th><th>Cloud LLM API</th><th>1U AI Server</th></tr></thead>
+<tbody>
+<tr><td><strong>Form Factor</strong></td><td>Desktop ARM box</td><td>No hardware</td><td>Rack-mounted</td></tr>
+<tr><td><strong>Price</strong></td><td>Mid-tier consumer</td><td>Subscription</td><td>High-end enterprise</td></tr>
+<tr><td><strong>Data Localization</strong></td><td>✅ Credentials/logs/SOP local</td><td>❌ All in cloud</td><td>✅ All local</td></tr>
+<tr><td><strong>Model Inference</strong></td><td>Cloud API</td><td>Cloud</td><td>Local LLM</td></tr>
+<tr><td><strong>Network Dependency</strong></td><td>Required (for cloud API)</td><td>Required</td><td>Can be offline</td></tr>
+<tr><td><strong>Deployment Difficulty</strong></td><td>One-click</td><td>Zero</td><td>High (GPU engineer needed)</td></tr>
+<tr><td><strong>Target User</strong></td><td>Pros / SMB / Developers</td><td>General users</td><td>Large enterprise</td></tr>
+</tbody>
+</table>
+
+<h2>7. Future Roadmap (Public)</h2>
+
+<ul>
+<li>2026 Q4: 8GB LPDDR4 + 128GB eMCC upgrade SKU</li>
+<li>2027 Q1: OpenClaw Agent Marketplace (community-driven)</li>
+<li>2027 Q2: Multi-PAA Mesh (home multi-device collaboration)</li>
+<li>2027 Q3: Optional NPU coprocessor SKU (edge inference front-end)</li>
+</ul>
+
+<h2>8. About STRATRONIX</h2>
+
+<table>
+<tbody>
+<tr><td><strong>Full Name (Chinese)</strong></td><td>鼎图太易信息技术（深圳）有限公司</td></tr>
+<tr><td><strong>Full Name (English)</strong></td><td>STRATRONIX Technology (Shenzhen) Company, Limited</td></tr>
+<tr><td><strong>Founded</strong></td><td>2026-04-24</td></tr>
+<tr><td><strong>Unified Social Credit Code</strong></td><td>91440300MAKD20DT6F</td></tr>
+<tr><td><strong>Headquarters</strong></td><td>C6 Building 1203D, Hengfeng Industrial, 739 Zhoushi Road, Hangcheng Street, Baoan District, Shenzhen, Guangdong, China</td></tr>
+<tr><td><strong>Core Product</strong></td><td>PAA (Personal AI Appliance)</td></tr>
+<tr><td><strong>Open Source</strong></td><td>OpenClaw (BSD-3-Clause) / AutoAgent</td></tr>
+<tr><td><strong>Contact</strong></td><td>info@stratronix.ai · +86 13632968417</td></tr>
+<tr><td><strong>Main Site</strong></td><td><a href="https://www.stratronix.ai">https://www.stratronix.ai</a></td></tr>
+</tbody>
+</table>
+
+<footer>
+<p>© 2026 STRATRONIX Technology (Shenzhen) Company, Limited</p>
+<p>PAA Standard v2.0 · CEO LOCKED 2026-07-25 13:41 · Rule 31 — Zero fabrication</p>
+</footer>
+</body>
+</html>

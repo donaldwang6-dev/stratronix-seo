@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PAA Standard v2.0 — STRATRONIX Personal AI Appliance 白皮书</title>
+<meta name="description" content="PAA Standard v2.0 白皮书 — STRATRONIX 鼎图太易基于真实硬件规格 (CEO LOCKED 2026-07-25 13:41) 的边缘 AI 智能体网关标准。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://donaldwang6-dev.github.io/stratronix-seo/whitepapers/PAA-Standard-v2.0.html">
+<meta property="og:title" content="PAA Standard v2.0 — STRATRONIX 边缘 AI 智能体网关白皮书">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<style>
+body { font-family: "Noto Sans CJK SC", "PingFang SC", sans-serif; line-height: 1.85; max-width: 900px; margin: 0 auto; padding: 30px 22px 80px 22px; color: #1a1a2e; background: #fcfcfc; }
+h1 { color: #E6417F; border-bottom: 4px solid #E6417F; padding-bottom: 14px; }
+h2 { color: #E6417F; margin-top: 36px; border-left: 5px solid #E6417F; padding-left: 14px; }
+table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+th, td { padding: 10px 14px; border: 1px solid #e2e2e8; text-align: left; }
+th { background: #E6417F; color: white; font-weight: 600; }
+blockquote { border-left: 4px solid #E6417F; padding: 14px 20px; background: #fff5fa; margin: 22px 0; color: #4a2a3a; }
+.lang-nav { position: fixed; top: 12px; right: 16px; background: #E6417F; padding: 8px 14px; border-radius: 20px; z-index: 1000; }
+.lang-nav a { color: white; text-decoration: none; margin: 0 4px; font-size: 0.92em; font-weight: 500; }
+.lang-nav a.active { font-weight: 700; text-decoration: underline; }
+.back-link { display: inline-block; margin-bottom: 22px; padding: 8px 16px; background: #E6417F; color: white; border-radius: 6px; text-decoration: none; font-weight: 500; }
+footer { text-align: center; color: #888; font-size: 0.88em; margin-top: 60px; padding-top: 24px; border-top: 1px solid #eee; }
+</style>
+</head>
+<body>
+<div class="lang-nav">
+  <a href="/stratronix-seo/whitepapers/PAA-Standard-v2.0.html" class="active">中文</a> |
+  <a href="/stratronix-seo/whitepapers/PAA-Standard-v2.0-en.html">English</a>
+</div>
+
+<a href="https://donaldwang6-dev.github.io/stratronix-seo/" class="back-link">← 返回 STRATRONIX 附属站</a>
+
+<h1>PAA Standard v2.0 — Personal AI Appliance 白皮书</h1>
+
+<blockquote>
+<strong>CEO LOCKED 2026-07-25 13:41</strong><br>
+本文档为 STRATRONIX 鼎图太易 STA-100 真实规格唯一权威说明。<br>
+v1.0 中"1U 机架 / 70B 本地模型 / AMD EPYC + RTX 4090 / ¥1,999"等规格为<strong>误写</strong>，v2.0 已全部修正。<br>
+铁律 31 — 0 假客户案例 / 0 假数据 / 0 假奖项 / 0 假媒体 / 0 假规格
+</blockquote>
+
+<h2>一、PAA (Personal AI Appliance) 定义</h2>
+
+<p><strong>PAA (Personal AI Appliance)</strong> 是 STRATRONIX 鼎图太易 2026 年提出的<strong>边缘 AI 智能体网关</strong>产品类别：</p>
+
+<ul>
+<li>桌面级 ARM 盒子（不是 1U-4U 机架服务器）</li>
+<li>OpenClaw (BSD-3-Clause) 开源浏览器自动化与智能体编排平台驱动</li>
+<li>AutoAgent 即插即用自动化引擎</li>
+<li>调用云端 LLM API（DeepSeek / Gemini / Claude / ChatGPT）作为"大脑"</li>
+<li>账号凭据 / 任务日志 / SOP / RAG 索引<strong>永远在本地</strong></li>
+<li>24×7 在线边缘网关（Wi-Fi + 千兆有线）</li>
+</ul>
+
+<p><strong>一句话定位</strong>：让数据留下，把思考外包。</p>
+
+<h2>二、PAA 1.0 标准硬件规格 (LOCKED 2026-07-25 13:41)</h2>
+
+<table>
+<thead><tr><th>模块</th><th>PAA 1.0 标准规格</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td><strong>处理器 (SoC)</strong></td><td>八核 ARM Cortex 架构</td><td>高性能能效比</td></tr>
+<tr><td><strong>系统内存</strong></td><td>4GB LPDDR4 RAM</td><td>—</td></tr>
+<tr><td><strong>内部存储</strong></td><td>32GB eMMC</td><td>高速闪存</td></tr>
+<tr><td><strong>扩展存储</strong></td><td>MicroSD (TF) 插槽</td><td>最高 512GB；默认 64GB 出厂</td></tr>
+<tr><td><strong>网络连接</strong></td><td>双频 5GHz / 2.4GHz Wi-Fi + RJ45 千兆</td><td>混合连接模式</td></tr>
+<tr><td><strong>外部接口</strong></td><td>USB 3.0 / 2.0, HDMI 输出, 12V/2A DC</td><td>HDMI 专利输出</td></tr>
+<tr><td><strong>操作系统</strong></td><td>深度优化 Linux 5.15 + XFCE</td><td>极致稳定性</td></tr>
+<tr><td><strong>核心框架</strong></td><td>OpenClaw + AutoAgent</td><td>BSD-3-Clause 开源</td></tr>
+<tr><td><strong>LLM API</strong></td><td>DeepSeek (R1/V3) / Gemini / Claude / ChatGPT</td><td>云端推理</td></tr>
+<tr><td><strong>专利</strong></td><td>HDMI 特许任职机构专利授权</td><td>—</td></tr>
+</tbody>
+</table>
+
+<h2>三、PAA 五大核心卖点</h2>
+
+<h3>3.1 一键部署</h3>
+<p>OpenClaw 一键启动：用户无需复杂命令行，5 分钟内跑通第一个自动化任务。XFCE 图形界面让小白用户也能上手。</p>
+
+<h3>3.2 隐私至上架构</h3>
+<p>账号凭据 / API Key / 任务日志 / RAG 知识库索引 / SOP 流程 全部存储在本地 eMMC + MicroSD。永不离开设备。</p>
+
+<h3>3.3 混合连接模式</h3>
+<p>双频 5GHz Wi-Fi 提供部署灵活性，RJ45 千兆以太网口确保任务关键型应用的稳定性。</p>
+
+<h3>3.4 边缘智能</h3>
+<p>24/7 全天候在线的边缘网关：自动化 / RPA 流程 / IoT 设备管理。</p>
+
+<h3>3.5 HDMI 专利输出</h3>
+<p>已获得 HDMI 特许任职机构专利授权。可通过 HDMI 把 AI Agent 实时状态投射到大屏。</p>
+
+<h2>四、PAA 行业应用</h2>
+
+<ol>
+<li><strong>私有 AI 智能体</strong> — 个人知识库 (RAG) + 私密助理</li>
+<li><strong>工作流自动化</strong> — SaaS 管理 / 数据录入 / 社交媒体监控</li>
+<li><strong>行业特定方案</strong> — 小型 ERP / 智能零售 / 安全工业 IoT 网关</li>
+<li><strong>边缘计算</strong> — 实时数据处理与决策，降低延迟及云端成本</li>
+</ol>
+
+<h2>五、PAA 目标市场</h2>
+
+<ul>
+<li><strong>中高端职场用户私人助理</strong> — 碎片信息整理 + 安全高效稳定</li>
+<li><strong>隐私敏感型企业</strong> — 法律 / 金融 / 医疗 / 医疗健康</li>
+<li><strong>SMB</strong> — 寻找"数字员工"的小微企业</li>
+<li><strong>开发者与 AI 爱好者</strong> — 开源社区导向</li>
+</ul>
+
+<h2>六、PAA 与其他 AI 设备对比</h2>
+
+<table>
+<thead><tr><th>维度</th><th>PAA (STRATRONIX)</th><th>云端 LLM API</th><th>大型 1U AI 服务器</th></tr></thead>
+<tbody>
+<tr><td><strong>形态</strong></td><td>桌面 ARM 盒子</td><td>无硬件</td><td>机架式</td></tr>
+<tr><td><strong>价格区间</strong></td><td>中端（消费级）</td><td>订阅制</td><td>高端（企业级）</td></tr>
+<tr><td><strong>数据本地化</strong></td><td>✅ 账号/日志/SOP 在本地</td><td>❌ 全部在云</td><td>✅ 全本地</td></tr>
+<tr><td><strong>模型推理</strong></td><td>云端 API</td><td>云端</td><td>本地大模型</td></tr>
+<tr><td><strong>网络依赖</strong></td><td>需要（连云端 API）</td><td>需要</td><td>可离线</td></tr>
+<tr><td><strong>部署难度</strong></td><td>一键启动</td><td>0 难度</td><td>高（需 GPU 工程师）</td></tr>
+<tr><td><strong>目标用户</strong></td><td>职场 / SMB / 开发者</td><td>普通用户</td><td>大型企业</td></tr>
+</tbody>
+</table>
+
+<p><strong>PAA 的核心差异化</strong>：云端大脑 + 本地记忆与执行。</p>
+
+<h2>七、未来演进路线（公开）</h2>
+
+<ul>
+<li>2026 Q4：8GB LPDDR4 + 128GB eMMC 升级 SKU</li>
+<li>2027 Q1：OpenClaw 智能体市场（社区驱动）</li>
+<li>2027 Q2：多 PAA 协同（家庭多设备 Mesh）</li>
+<li>2027 Q3：可选 NPU 协处理 SKU（边缘推理前置）</li>
+</ul>
+
+<h2>八、关于 STRATRONIX 鼎图太易</h2>
+
+<table>
+<tbody>
+<tr><td><strong>公司全称</strong></td><td>鼎图太易信息技术（深圳）有限公司</td></tr>
+<tr><td><strong>英文全称</strong></td><td>STRATRONIX Technology (Shenzhen) Company, Limited</td></tr>
+<tr><td><strong>创立日期</strong></td><td>2026-04-24</td></tr>
+<tr><td><strong>统一社会信用代码</strong></td><td>91440300MAKD20DT6F</td></tr>
+<tr><td><strong>总部</strong></td><td>深圳市宝安区航城街道洲石路 739 号恒丰工业 C6 栋 1203D</td></tr>
+<tr><td><strong>核心产品</strong></td><td>PAA (Personal AI Appliance)</td></tr>
+<tr><td><strong>开源生态</strong></td><td>OpenClaw (BSD-3-Clause) / AutoAgent</td></tr>
+<tr><td><strong>联系</strong></td><td>info@stratronix.ai · +86 13632968417</td></tr>
+<tr><td><strong>主站</strong></td><td><a href="https://www.stratronix.ai">https://www.stratronix.ai</a></td></tr>
+</tbody>
+</table>
+
+<footer>
+<p>© 2026 STRATRONIX Technology (Shenzhen) Company, Limited · 鼎图太易信息技术（深圳）有限公司</p>
+<p>PAA Standard v2.0 · CEO LOCKED 2026-07-25 13:41 · 铁律 31 — 0 假规格</p>
+</footer>
+</body>
+</html>
