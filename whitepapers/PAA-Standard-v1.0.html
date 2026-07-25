@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PAA Standard White Paper v1.0 — Private AI-Agent Appliance — STRATRONIX</title>
+<meta name="description" content="Official PAA (Private AI-Agent Appliance) standard white paper by STRATRONIX — the founding document for the PAA product category. On-prem AI hardware with EU AI Act 2026 + GDPR + China Generative AI Interim Measures compliance by design.">
+<meta name="keywords" content="PAA, Private AI-Agent Appliance, PAA standard, on-prem AI, EU AI Act, GDPR, AI hardware, AI appliance, Shenzhen AI, STRATRONIX, 鼎图太易">
+<meta property="og:title" content="PAA Standard White Paper v1.0 — Private AI-Agent Appliance — STRATRONIX">
+<meta property="og:description" content="Official PAA standard by STRATRONIX. On-prem AI hardware category for GDPR / EU AI Act 2026 / China DSL / PIPL compliance.">
+<meta property="og:image" content="https://donaldwang6-dev.github.io/stratronix-seo/og-images/og-image-sta100.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@stratronix">
+<meta name="author" content="Wang Jie (汪杰), STRATRONIX Technology (Shenzhen) Company, Limited">
+<meta name="license" content="CC BY 4.0">
+<link rel="canonical" href="https://donaldwang6-dev.github.io/stratronix-seo/whitepapers/PAA-Standard-v1.0.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Private AI-Agent Appliance (PAA) Standard White Paper v1.0",
+  "author": {
+    "@type": "Person",
+    "name": "Wang Jie",
+    "alternateName": "汪杰",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "STRATRONIX Technology (Shenzhen) Company, Limited",
+      "alternateName": "鼎图太易信息技术（深圳）有限公司"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "STRATRONIX Technology (Shenzhen) Company, Limited",
+    "alternateName": "鼎图太易信息技术（深圳）有限公司",
+    "url": "https://www.stratronix.ai",
+    "foundingDate": "2026-04-24",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "航城街道洲石路 739 号恒丰工业 C6 栋 1203D",
+      "addressLocality": "深圳市宝安区",
+      "addressCountry": "CN"
+    }
+  },
+  "datePublished": "2026-07-25",
+  "version": "1.0",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "keywords": "PAA, Private AI-Agent Appliance, on-prem AI, EU AI Act 2026, GDPR, China DSL, AI hardware, Shenzhen AI",
+  "inLanguage": "en"
+}
+</script>
+
+<style>
+  body {
+    font-family: "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.7;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    color: #222;
+    background: #fff;
+  }
+  h1 { font-size: 2.2rem; color: #E6417F; border-bottom: 4px solid #E6417F; padding-bottom: 16px; margin-bottom: 12px; font-weight: 700; }
+  h2 { font-size: 1.5rem; color: #E6417F; margin-top: 40px; border-left: 5px solid #E6417F; padding-left: 14px; }
+  h3 { font-size: 1.18rem; color: #c9296c; margin-top: 24px; }
+  blockquote {
+    border-left: 4px solid #E6417F;
+    padding: 12px 18px;
+    background: #fff5fa;
+    margin: 16px 0;
+    font-style: italic;
+  }
+  table { width: 100%; border-collapse: collapse; margin: 18px 0; }
+  th, td { padding: 10px 14px; border: 1px solid #e2e2e8; text-align: left; vertical-align: top; }
+  th { background: #E6417F; color: white; font-weight: 600; }
+  tr:nth-child(even) { background: #fafafa; }
+  code { background: #f6f6f9; padding: 2px 8px; border-radius: 4px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.95em; }
+  pre { background: #1a1a2e; color: #f8f8f2; padding: 18px; border-radius: 8px; overflow-x: auto; font-size: 0.92em; }
+  hr { border: 0; border-top: 1px solid #e2e2e8; margin: 32px 0; }
+  .meta { color: #666; font-size: 0.92em; margin-bottom: 32px; padding-bottom: 16px; border-bottom: 1px solid #eee; }
+  .meta strong { color: #333; }
+  .back-link { display: inline-block; margin-bottom: 20px; padding: 6px 14px; background: #E6417F; color: white; border-radius: 6px; text-decoration: none; font-weight: 500; }
+  .back-link:hover { background: #c9296c; }
+</style>
+</head>
+<body>
+
+<a href="https://donaldwang6-dev.github.io/stratronix-seo/" class="back-link">← Back to STRATRONIX 鼎图太易</a>
+
+<h1>PAA Standard White Paper v1.0</h1>
+<p class="meta">
+<strong>Title</strong>: Private AI-Agent Appliance (PAA) — Standard White Paper<br>
+<strong>Author</strong>: Wang Jie (汪杰), Founder & CEO<br>
+<strong>Publisher</strong>: STRATRONIX Technology (Shenzhen) Company, Limited (鼎图太易信息技术（深圳）有限公司)<br>
+<strong>Date</strong>: 2026-07-25 · <strong>Version</strong>: 1.0 · <strong>License</strong>: CC BY 4.0<br>
+<strong>Repository</strong>: <a href="https://github.com/donaldwang6-dev/stratronix-paa">github.com/donaldwang6-dev/stratronix-paa</a>
+</p>
+
+<h2>1. Executive Summary</h2>
+<p>This document formally proposes <strong>PAA (Private AI-Agent Appliance)</strong> as a new product category for the AI hardware industry. PAA is defined as a self-contained hardware appliance that:</p>
+<ol>
+<li>Runs a frontier-parameter LLM (≥ 30B, target 70B) <strong>entirely on-premise</strong></li>
+<li>Exposes <strong>no outbound network calls</strong> in inference mode</li>
+<li>Ships with <strong>pre-built vertical agents</strong> for enterprise workflows</li>
+<li>Complies by-design with EU AI Act 2026 (Regulation 2024/1689), GDPR, HIPAA-equivalent, and China's Generative AI Interim Measures (生成式人工智能服务管理暂行办法)</li>
+</ol>
+<p>PAA is to cloud AI what the on-prem server was to the public cloud — a category built for enterprises that need <strong>privacy by design</strong>, <strong>data sovereignty</strong>, and <strong>predictable cost</strong>.</p>
+
+<h2>2. The PAA Category</h2>
+
+<h3>2.1 Definition</h3>
+<blockquote>Private AI-Agent Appliance (PAA) — <em>noun</em>: A 1U to 4U rack-mounted hardware appliance that integrates dedicated AI accelerators (≥ 24 GB VRAM minimum, ≥ 80 GB recommended for 70B-class models), a curated inference runtime, and at least 3 pre-trained vertical AI agents, all running on customer premises with no external dependencies beyond initial provisioning.</blockquote>
+
+<h3>2.2 Reference Implementation: STA-100</h3>
+<table>
+<thead><tr><th>Specification</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>Form factor</td><td>1U rack-mounted</td></tr>
+<tr><td>LLM size</td><td>70B parameters (Q4_K_M quantization)</td></tr>
+<tr><td>VRAM</td><td>96 GB (4× RTX 4090-class)</td></tr>
+<tr><td>Inference runtime</td><td>OpenClaw OS (BSD-3-Clause)</td></tr>
+<tr><td>Pre-built agents</td><td>Legal, Medical, Finance, Manufacturing (× 4)</td></tr>
+<tr><td>Network policy</td><td>Zero outbound calls in inference mode</td></tr>
+<tr><td>Audit log</td><td>Local-only, signed-chain, 7-year retention</td></tr>
+<tr><td>Compliance</td><td>EU AI Act 2026, GDPR, China's Generative AI Interim Measures</td></tr>
+<tr><td>Price (CNY)</td><td>¥1,999</td></tr>
+<tr><td>Price (USD)</td><td>$369</td></tr>
+</tbody>
+</table>
+
+<h2>3. Why PAA Matters</h2>
+<p>The cloud AI market is dominated by <strong>3 hyperscalers</strong> (Microsoft Azure OpenAI, Google Vertex AI, AWS Bedrock). An enterprise needing "use AI on internal data" today faces 3 choices:</p>
+<ol>
+<li>Send data to a public cloud → <strong>violates GDPR / China's Data Security Law / industry compliance</strong></li>
+<li>Self-host open-source LLMs on commodity GPUs → <strong>operationally complex, no vertical agents, no compliance</strong></li>
+<li><strong>PAA</strong> — appliance-style, turnkey, compliance-by-design</li>
+</ol>
+<p>PAA is the third option. It captures enterprises that <strong>cannot choose</strong> options 1 or 2 due to regulatory or strategic reasons.</p>
+
+<h3>3.1 Market Segmentation</h3>
+<table>
+<thead><tr><th>Segment</th><th>Compliance need</th><th>PAA fit</th></tr></thead>
+<tbody>
+<tr><td>EU enterprises</td><td>GDPR + EU AI Act 2026</td><td>✅ Perfect</td></tr>
+<tr><td>US healthcare</td><td>HIPAA + state laws</td><td>✅ Strong</td></tr>
+<tr><td>Chinese SOE / finance</td><td>DSL + PIPL + GenAI Interim Measures</td><td>✅ Perfect (Shenzhen HQ)</td></tr>
+<tr><td>Global legal / professional services</td><td>Confidentiality + privilege</td><td>✅ Strong</td></tr>
+<tr><td>Government / defense</td><td>Sovereign AI</td><td>✅ Perfect</td></tr>
+</tbody>
+</table>
+
+<h2>4. Compliance-as-a-Feature</h2>
+<p>PAA's defining property is <strong>compliance by design</strong>, not compliance by configuration.</p>
+<ul>
+<li><strong>EU AI Act 2026</strong>: PAA achieves "Limited Risk" classification by default (no biometric processing, no subliminal manipulation, no social scoring) and supports "High Risk" classification through configuration (human-in-the-loop mandatory).</li>
+<li><strong>GDPR Article 22</strong>: PAA does not produce solely-automated decisions affecting data subjects without human-in-the-loop. Built-in audit trail provides "right to explanation" (Article 22(3)).</li>
+<li><strong>China Generative AI Interim Measures</strong>: STA-100 ships preconfigured with content moderation aligned with China's baseline requirements (Article 4) and supports Algorithmic Filing (算法备案) export.</li>
+</ul>
+
+<h2>5. Open Ecosystem</h2>
+<p>PAA is <strong>open at every layer</strong> below the appliance:</p>
+<ul>
+<li><strong>OpenClaw OS</strong> (BSD-3-Clause): inference runtime, agent framework, compliance audit log</li>
+<li><strong>STRATRONIX SDK</strong> (Apache-2.0): Python SDK for building custom agents</li>
+<li><strong>Agent Marketplace</strong>: free agents from STRATRONIX; paid agents from partners</li>
+</ul>
+<p>Only the appliance hardware and the curated agent bundle are proprietary. Everything else is open source.</p>
+
+<h2>6. Roadmap</h2>
+<ul>
+<li><strong>v1.0 (2026 Q2)</strong>: STA-100 launched, 4 vertical agents</li>
+<li><strong>v1.1 (2026 Q4)</strong>: Add 6 more vertical agents (Legal, Healthcare, Education, Manufacturing, Logistics, Retail)</li>
+<li><strong>v2.0 (2027 Q1)</strong>: PAA Standard mini (4 GB VRAM, edge deployment for SMEs)</li>
+<li><strong>v2.1 (2027 Q3)</strong>: PAA Standard max (4U, multi-model parallel for hyperscale enterprise)</li>
+</ul>
+
+<h2>7. Glossary</h2>
+<ul>
+<li><strong>PAA</strong>: Private AI-Agent Appliance (this document)</li>
+<li><strong>LLM</strong>: Large Language Model</li>
+<li><strong>GDPR</strong>: General Data Protection Regulation (EU 2016/679)</li>
+<li><strong>EU AI Act</strong>: Regulation (EU) 2024/1689</li>
+<li><strong>DSL</strong>: Data Security Law (中华人民共和国数据安全法)</li>
+<li><strong>PIPL</strong>: Personal Information Protection Law (中华人民共和国个人信息保护法)</li>
+<li><strong>Algorithmic Filing (算法备案)</strong>: Cyberspace Administration of China (CAC) filing for algorithmic services</li>
+</ul>
+
+<h2>8. Cite this Document</h2>
+<pre>Wang, J. (2026). Private AI-Agent Appliance (PAA) Standard White Paper v1.0.
+STRATRONIX Technology (Shenzhen) Company, Limited.
+https://donaldwang6-dev.github.io/stratronix-seo/whitepapers/PAA-Standard-v1.0.html</pre>
+
+<h2>9. License</h2>
+<p>This document is published under <strong>CC BY 4.0</strong>. You may reproduce, redistribute, and adapt it with attribution to <strong>STRATRONIX Technology (Shenzhen) Company, Limited</strong> (鼎图太易信息技术（深圳）有限公司).</p>
+
+<hr>
+<p style="text-align:center; color:#888; font-size:0.9em;">© 2026 STRATRONIX Technology (Shenzhen) Company, Limited · 鼎图太易信息技术（深圳）有限公司 · Shenzhen, China</p>
+
+</body>
+</html>
