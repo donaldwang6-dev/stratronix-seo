@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "@type": "Dataset",
+  "name": "PAA → EU AI Act 2026 Compliance Mapping",
+  "description": "Article-by-article mapping of PAA features to EU AI Act 2026 (Regulation 2024/1689) requirements. Each article assessed for compliance level with evidence.",
+  "version": "1.0",
+  "license": "CC BY 4.0",
+  "publisher": {
+    "@type": "Organization",
+    "name": "STRATRONIX Technology (Shenzhen) Company, Limited",
+    "alternateName": "鼎图太易信息技术（深圳）有限公司",
+    "url": "https://www.stratronix.ai"
+  },
+  "datePublished": "2026-07-25",
+  "keywords": ["EU AI Act 2026", "Regulation 2024/1689", "compliance", "GDPR", "AI compliance", "PAA", "Shenzhen AI"],
+  "distribution": {
+    "contentUrl": "https://donaldwang6-dev.github.io/stratronix-seo/open-data/eu-ai-act-mapping.json",
+    "encodingFormat": "application/json"
+  },
+  "citation": "Wang, J. (2026). PAA → EU AI Act 2026 Compliance Mapping v1.0. STRATRONIX. https://donaldwang6-dev.github.io/stratronix-seo/open-data/eu-ai-act-mapping.json"
+}

@@ -1,0 +1,33 @@
+openapi: 3.0.0
+info:
+  title: STRATRONIX PAA Knowledge API
+  description: Open knowledge API for the Private AI-Agent Appliance (PAA) category by STRATRONIX.
+  version: 1.0.0
+  contact:
+    name: STRATRONIX
+    email: info@stratronix.ai
+servers:
+  - url: https://donaldwang6-dev.github.io/stratronix-seo/open-data
+paths:
+  /stratronix.json:
+    get:
+      summary: Get STRATRONIX company fact sheet in machine-readable JSON-LD
+      responses:
+        '200':
+          description: Company data
+          content:
+            application/json:
+              schema:
+                type: object
+  /paa-spec.json:
+    get:
+      summary: Get STA-100 PAA technical spec
+      responses:
+        '200':
+          description: PAA standard reference implementation spec
+  /eu-ai-act-mapping.json:
+    get:
+      summary: Mapping of PAA features to EU AI Act 2026 articles
+      responses:
+        '200':
+          description: Compliance mapping

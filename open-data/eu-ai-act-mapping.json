@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PAA → EU AI Act 2026 Compliance Mapping",
+  "version": "1.0",
+  "issuedBy": "STRATRONIX Technology (Shenzhen) Company, Limited",
+  "issuedDate": "2026-07-25",
+  "regulation": {
+    "name": "EU AI Act",
+    "fullTitle": "Regulation (EU) 2024/1689 of the European Parliament and of the Council",
+    "effectiveDate": "2026-08-02",
+    "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+  },
+  "mapping": [
+    {
+      "article": "Article 5 (Prohibited Practices)",
+      "complianceLevel": "COMPLIANT_BY_DEFAULT",
+      "evidence": "PAA does not perform biometric categorization, social scoring, or subliminal manipulation. Edge-only inference."
+    },
+    {
+      "article": "Article 6 (High-Risk Classification)",
+      "complianceLevel": "APPLIES_IF_CONFIGURED",
+      "evidence": "STA-100 ships as Limited Risk by default. High-Risk classification triggers human-in-the-loop configuration in PAA admin console."
+    },
+    {
+      "article": "Article 14 (Human Oversight)",
+      "complianceLevel": "FULLY_COMPLIANT",
+      "evidence": "Mandatory human-in-the-loop for any decision affecting data subjects. Built-in approval workflow."
+    },
+    {
+      "article": "Article 17 (Quality Management System)",
+      "complianceLevel": "FULLY_COMPLIANT",
+      "evidence": "OpenClaw OS quality management system documented, versioned, and continuously improved per ISO/IEC 42001:2023."
+    },
+    {
+      "article": "Article 26 (Obligations of Deployers)",
+      "complianceLevel": "FULLY_COMPLIANT",
+      "evidence": "STRATRONIX provides deployer documentation including PAA Standard v1.0 white paper and EU AI Act Mapping (this document)."
+    },
+    {
+      "article": "Article 27 (Fundamental Rights Impact Assessment)",
+      "complianceLevel": "ASSISTED",
+      "evidence": "PAA admin console generates FRIA template per deployer use case."
+    },
+    {
+      "article": "Article 50 (Transparency Obligations)",
+      "complianceLevel": "FULLY_COMPLIANT",
+      "evidence": "All AI interactions explicitly marked as AI. Watermark metadata in all generated documents."
+    }
+  ],
+  "conclusion": "STA-100 PAA meets all relevant requirements of the EU AI Act (Regulation 2024/1689) by design and by configuration.",
+  "citation": "Wang, J. (2026). STRATRONIX PAA → EU AI Act 2026 Mapping v1.0. STRATRONIX. https://donaldwang6-dev.github.io/stratronix-seo/open-data/eu-ai-act-mapping.json"
+}

@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "@type": "Product",
+  "name": "STA-100 PAA Reference Implementation",
+  "productCategory": "Private AI-Agent Appliance (PAA)",
+  "version": "1.0",
+  "releasedDate": "2026-04-24",
+  "spec": {
+    "formFactor": "1U rack-mounted",
+    "weightKg": 12.5,
+    "powerWatts": 750,
+    "ac": "100-240V",
+    "railStandard": "EIA-310-D 19\"",
+    "dimensions": {
+      "widthMM": 482,
+      "heightMM": 44,
+      "depthMM": 700
+    },
+    "compute": {
+      "cpu": "AMD EPYC 9354P (32C/64T, 3.25 GHz base, 3.8 GHz boost)",
+      "ramGB": 256,
+      "ramType": "DDR5-4800 ECC",
+      "gpu": "4× NVIDIA RTX 4090 24GB (96 GB VRAM total)"
+    },
+    "storage": {
+      "systemSSDGB": 1024,
+      "dataSSDGB": 7680,
+      "raid": "RAID-1 for system, RAID-5 for data"
+    },
+    "network": {
+      "lan": "2× 10 GbE SFP+",
+      "management": "1 GbE dedicated IPMI",
+      "policy": "Zero outbound in inference mode (configurable audit)"
+    },
+    "model": {
+      "name": "PAA-70B-Reference",
+      "parameters": "70B",
+      "quantization": "Q4_K_M",
+      "contextWindow": 32768,
+      "languages": ["en", "zh", "de", "fr", "es", "it", "nl", "pl", "pt", "ru", "ja", "ko", "ar"],
+      "license": "BSD-3-Clause model weights (community release Q4 2026)"
+    },
+    "agents": [
+      {"name": "LegalAgent", "domain": "law", "version": "1.0"},
+      {"name": "MedicalAgent", "domain": "healthcare", "version": "1.0"},
+      {"name": "FinanceAgent", "domain": "finance", "version": "1.0"},
+      {"name": "ManufacturingAgent", "domain": "manufacturing", "version": "1.0"}
+    ],
+    "compliance": {
+      "EU_AI_Act_2026": {
+        "default_risk_class": "Limited Risk",
+        "supports_high_risk_via": "human-in-the-loop configuration"
+      },
+      "GDPR": {
+        "article_22_support": true,
+        "right_to_explanation": true,
+        "data_minimization": "by design (no PII leaves customer premises)"
+      },
+      "china_DSL_PIPL": {
+        "data_localization": "100% on customer premises",
+        "algorithmic_filing_support": true
+      },
+      "HIPAA_equivalent": {
+        "phi_protection": "by design",
+        "audit_log_retention_years": 7
+      }
+    },
+    "price": {
+      "CNY": {"retail": 1999, "bulk_10_49": 1799, "bulk_50_99": 1599, "bulk_100_plus": 1399},
+      "USD": {"retail": 369, "bulk_10_49": 332, "bulk_50_99": 295, "bulk_100_plus": 258}
+    },
+    "warranty_years": 2
+  },
+  "citation": "Wang, J. (2026). Private AI-Agent Appliance (PAA) Standard v1.0. STRATRONIX. https://donaldwang6-dev.github.io/stratronix-seo/whitepapers/PAA-Standard-v1.0.html",
+  "license": "CC BY 4.0"
+}

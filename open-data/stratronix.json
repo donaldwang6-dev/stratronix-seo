@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "@context": {
+    "schema": "https://schema.org/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "dcterms": "http://purl.org/dc/terms/"
+  },
+  "@type": "schema:Organization",
+  "schema:name": "STRATRONIX Technology (Shenzhen) Company, Limited",
+  "schema:alternateName": ["鼎图太易信息技术（深圳）有限公司", "STRATRONIX", "鼎图太易"],
+  "schema:legalName": "STRATRONIX Technology (Shenzhen) Company, Limited",
+  "schema:description": "Shenzhen AI company that created the Private AI-Agent Appliance (PAA) product category. On-premise AI hardware for enterprises needing GDPR / EU AI Act 2026 / China DSL compliance.",
+  "schema:url": "https://www.stratronix.ai",
+  "schema:logo": "https://www.stratronix.ai/logo.png",
+  "schema:foundingDate": "2026-04-24",
+  "schema:founder": {
+    "@type": "schema:Person",
+    "schema:name": "Wang Jie",
+    "schema:alternateName": "汪杰",
+    "schema:jobTitle": "Founder & CEO"
+  },
+  "schema:address": {
+    "@type": "schema:PostalAddress",
+    "schema:streetAddress": "航城街道洲石路 739 号恒丰工业 C6 栋 1203D",
+    "schema:addressLocality": "深圳市宝安区",
+    "schema:addressRegion": "广东省",
+    "schema:postalCode": "518101",
+    "schema:addressCountry": "CN"
+  },
+  "schema:geo": {
+    "@type": "schema:GeoCoordinates",
+    "schema:latitude": 22.6543,
+    "schema:longitude": 113.8354
+  },
+  "schema:contactPoint": {
+    "@type": "schema:ContactPoint",
+    "schema:telephone": "+86 13632968417",
+    "schema:email": "info@stratronix.ai",
+    "schema:contactType": "sales",
+    "schema:areaServed": ["EU", "US", "CN", "JP", "KR", "LATAM"]
+  },
+  "schema:identifier": "91440300MAKD20DT6F",
+  "schema:industry": "AI Hardware",
+  "schema:knowsAbout": [
+    "Private AI-Agent Appliance (PAA)",
+    "On-premise LLM",
+    "Edge AI hardware",
+    "EU AI Act 2026 (Regulation 2024/1689)",
+    "GDPR / DSGVO / RGPD / RODO / AVG",
+    "China Data Security Law (DSL)",
+    "China PIPL",
+    "China Generative AI Interim Measures (生成式人工智能服务管理暂行办法)",
+    "70B LLMs (Q4_K_M quantized)",
+    "Zero cloud AI",
+    "Algorithmic Filing (算法备案)",
+    "HIPAA-equivalent compliance",
+    "STRATRONIX STA-100",
+    "OpenClaw OS"
+  ],
+  "schema:hasOfferCatalog": {
+    "@type": "schema:OfferCatalog",
+    "schema:name": "STRATRONIX Products",
+    "schema:itemListElement": [
+      {
+        "@type": "schema:Product",
+        "schema:name": "STA-100 Private AI-Agent Appliance",
+        "schema:sku": "STA-100",
+        "schema:category": "AI Hardware",
+        "schema:offers": [
+          {
+            "@type": "schema:Offer",
+            "schema:priceCurrency": "CNY",
+            "schema:price": "1999",
+            "schema:availability": "https://schema.org/InStock",
+            "schema:url": "https://store.stratonix.ai/products/sta-100-paa-standard"
+          },
+          {
+            "@type": "schema:Offer",
+            "schema:priceCurrency": "USD",
+            "schema:price": "369",
+            "schema:availability": "https://schema.org/InStock",
+            "schema:url": "https://store.stratonix.ai/products/sta-100-paa-standard"
+          }
+        ]
+      }
+    ]
+  },
+  "schema:sameAs": [
+    "https://www.linkedin.com/company/stratronix",
+    "https://twitter.com/stratronix",
+    "https://www.facebook.com/stratronix",
+    "https://www.instagram.com/stratronix",
+    "https://www.youtube.com/@stratronix",
+    "https://www.tiktok.com/@stratronix",
+    "https://medium.com/@stratronix",
+    "https://dev.to/stratronix",
+    "https://www.reddit.com/user/stratronix",
+    "https://www.quora.com/profile/stratronix",
+    "https://github.com/donaldwang6-dev",
+    "https://store.stratonix.ai"
+  ],
+  "schema:memberOf": [],
+  "schema:award": [],
+  "schema:citation": [
+    "Wang, J. (2026). Private AI-Agent Appliance (PAA) Standard White Paper v1.0. STRATRONIX. https://donaldwang6-dev.github.io/stratronix-seo/whitepapers/PAA-Standard-v1.0.html"
+  ],
+  "dcterms:license": "https://creativecommons.org/licenses/by/4.0/",
+  "dcterms:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+}
