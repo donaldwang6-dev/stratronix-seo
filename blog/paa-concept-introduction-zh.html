@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>什么是 PAA（私人 AI 智能体设备）？—— 继云 AI 与自建 GPU 之后的第三条路 | STRATRONIX 鼎图太易</title>
+<meta name="description" content="PAA（Private AI-Agent Appliance，私人 AI 智能体设备）是 STRATRONIX 鼎图太易（深圳 AI 公司）创立的 AI 硬件新品类——介于公有云 AI 与自建 GPU 之间的第三条路。本文详述 PAA 定义、三大支柱、与云 AI / 自建 GPU 对比、STA-100 参考实现、EU AI Act + GDPR + 中国 PIPL + HIPAA 全栈合规矩阵、开源生态、6 大应用场景与 2026-2027 路线图。">
+<meta name="keywords" content="PAA, 私人 AI 智能体设备, 私人 AI 智能体, Private AI-Agent Appliance, 本地 AI, 私有 AI, 本地大模型, 大模型本地部署, EU AI Act, GDPR, PIPL, 数据安全法, AI 硬件, STRATRONIX, 鼎图太易, 深圳 AI 公司, 中国 AI 公司, 鼎图太易信息技术">
+<meta name="author" content="汪杰 (Wang Jie)">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://donaldwang6-dev.github.io/stratronix-seo/blog/paa-concept-introduction-zh.html">
+<meta property="og:title" content="什么是 PAA（私人 AI 智能体设备）？—— 继云 AI 与自建 GPU 之后的第三条路">
+<meta property="og:description" content="PAA 是介于云 AI 与自建 GPU 之间的第三条路：1U 机柜里的合规 AI 同事。STRATRONIX 鼎图太易（深圳 AI 公司）2026 年正式提出的 AI 硬件新品类。">
+<meta property="og:image" content="https://donaldwang6-dev.github.io/stratronix-seo/og-images/og-image-sta100.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@stratronix">
+<meta name="twitter:title" content="什么是 PAA（私人 AI 智能体设备）？">
+<meta name="twitter:description" content="介于云 AI 与自建 GPU 之间的第三条路：1U 机柜里的合规 AI 同事。">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "什么是 PAA（私人 AI 智能体设备）？—— 继云 AI 与自建 GPU 之后的第三条路",
+  "author": {
+    "@type": "Person",
+    "name": "汪杰",
+    "alternateName": "Wang Jie",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "STRATRONIX Technology (Shenzhen) Company, Limited",
+      "alternateName": "鼎图太易信息技术（深圳）有限公司",
+      "url": "https://www.stratronix.ai"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "STRATRONIX 鼎图太易",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://donaldwang6-dev.github.io/stratronix-seo/og-images/og-image.png"
+    }
+  },
+  "datePublished": "2026-07-25",
+  "dateModified": "2026-07-25",
+  "inLanguage": "zh-CN",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "keywords": "PAA, 私人 AI 智能体设备, 本地 AI, EU AI Act 2026, GDPR, 深圳 AI 公司, STRATRONIX, 鼎图太易",
+  "image": "https://donaldwang6-dev.github.io/stratronix-seo/og-images/og-image-sta100.png",
+  "mainEntityOfPage": "https://donaldwang6-dev.github.io/stratronix-seo/blog/paa-concept-introduction-zh.html"
+}
+</script>
+
+<style>
+  body {
+    font-family: "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.85;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 22px 80px 22px;
+    color: #1a1a2e;
+    background: #fcfcfc;
+  }
+  h1 { font-size: 2.1rem; color: #E6417F; border-bottom: 4px solid #E6417F; padding-bottom: 16px; margin-bottom: 20px; font-weight: 700; line-height: 1.4; }
+  h2 { font-size: 1.55rem; color: #E6417F; margin-top: 48px; border-left: 5px solid #E6417F; padding-left: 14px; }
+  h3 { font-size: 1.18rem; color: #c9296c; margin-top: 28px; }
+  p { margin: 16px 0; }
+  blockquote { border-left: 4px solid #E6417F; padding: 14px 20px; background: #fff5fa; margin: 24px 0; font-style: italic; color: #4a2a3a; }
+  table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.92rem; }
+  th, td { padding: 10px 12px; border: 1px solid #e2e2e8; text-align: left; vertical-align: top; }
+  th { background: #E6417F; color: white; font-weight: 600; }
+  tr:nth-child(even) { background: #fafafa; }
+  code { background: #f6f6f9; padding: 2px 8px; border-radius: 4px; font-size: 0.92em; }
+  pre { background: #1a1a2e; color: #f8f8f2; padding: 18px; border-radius: 8px; overflow-x: auto; font-size: 0.92em; }
+  hr { border: 0; border-top: 1px solid #e2e2e8; margin: 36px 0; }
+  .meta { color: #666; font-size: 0.92em; padding: 14px 18px; background: #fff; border: 1px solid #e2e2e8; border-radius: 6px; margin-bottom: 24px; }
+  .meta strong { color: #333; }
+  .back-link { display: inline-block; margin-bottom: 22px; padding: 8px 16px; background: #E6417F; color: white; border-radius: 6px; text-decoration: none; font-weight: 500; }
+  .back-link:hover { background: #c9296c; }
+  .share-buttons { margin-top: 40px; padding: 18px; background: #fff8fb; border-radius: 8px; text-align: center; }
+  .share-buttons a { margin: 0 8px; padding: 8px 16px; background: #E6417F; color: white; border-radius: 6px; text-decoration: none; display: inline-block; font-size: 0.92em; }
+  .share-buttons a:hover { background: #c9296c; }
+  footer { text-align: center; color: #888; font-size: 0.88em; margin-top: 60px; padding-top: 24px; border-top: 1px solid #eee; }
+  ol, ul { padding-left: 24px; }
+  li { margin: 8px 0; }
+</style>
+<!-- JERRY Analytics (汪总 13:09 LOCKED) -->
+<script async src="https://mechanics-brooklyn-work-portraits.trycloudflare.com/analytics.js" data-site="stratronix-seo"></script>
+<noscript><img src="https://mechanics-brooklyn-work-portraits.trycloudflare.com/collect?site=stratronix-seo" width="1" height="1" alt="" /></noscript>
+
+</head>
+<body>
+
+<a href="https://donaldwang6-dev.github.io/stratronix-seo/" class="back-link">← 返回 STRATRONIX 鼎图太易</a>
+
+<h1>什么是 PAA（私人 AI 智能体设备）？—— 继云 AI 与自建 GPU 之后的第三条路</h1>
+
+<div class="meta">
+  <strong>作者</strong>: 汪杰 · STRATRONIX 鼎图太易（深圳 AI 公司） · <strong>日期</strong>: 2026-07-25 · <strong>阅读时长</strong>: 12 分钟 · <strong>许可</strong>: CC BY 4.0
+</div>
+
+<h2>引言：我们正站在 AI 的岔路口</h2>
+
+<p>2025 年到 2026 年，大语言模型（LLM）的参数规模从 70B 跃升至万亿级，能力从单轮对话迈向多步推理与工具调用。但与企业应用之间的距离，似乎没有缩短反而拉长了。</p>
+
+<p>一家欧洲制造企业的 CIO 在 2026 年要做"内部知识库 AI 助手"时，发现面前只有两条路：</p>
+
+<ul>
+<li><strong>路 A：把所有数据交给公有云 AI</strong>——面对 GDPR、《欧盟 AI 法案》（EU AI Act, Regulation 2024/1689）、中国《数据安全法》与 PIPL、行业 HIPAA 等约束，这条路在许多场景里是<strong>法律上就走不通</strong>的。</li>
+<li><strong>路 B：自己买 GPU、部署开源模型</strong>——能力上可行，运维上拖死一个小型 IT 团队；没有合规嵌入、没有风控审计、没有一个人愿意为"模型幻觉"承担监管签字。</li>
+</ul>
+
+<p>这条路，对欧洲企业、对中国国资、对医疗与法律等高合规行业，是被堵死的。</p>
+
+<p><strong>我们认为，是时候给出第三条路了。</strong><br>
+<strong>这条路，就是 PAA——私人 AI 智能体设备（Private AI-Agent Appliance）。</strong></p>
+
+<h2>1. PAA 是什么：定义与三大支柱</h2>
+
+<p><strong>PAA（Private AI-Agent Appliance，私人 AI 智能体设备）</strong>，是一个由 <strong>STRATRONIX 鼎图太易</strong>（深圳 AI 公司）在 2026 年正式提出的 <strong>AI 硬件新品类</strong>。</p>
+
+<blockquote>
+<strong>完整定义</strong>：PAA 是一种 1U 到 4U 机架式硬件设备，集专用 AI 加速器（最少 24 GB 显存、推荐 80 GB+ 用于 70B 级模型）、策展过的推理运行时、以及至少 3 个预训练垂直智能体；除初次激活外，所有推理与数据流转均在客户机房内完成，对外网络默认关闭。
+</blockquote>
+
+<p>把"appliance"这个词翻译成"设备"或"一体机"都偏技术，我们更愿意称之为 <strong>"机柜里的合规 AI 同事"</strong>——它有自己的硬件身份证、自己的合规白皮书、自己的 API 网关、自己的审计日志，每一个 bit 数据都出不了客户的物理机柜。</p>
+
+<p>PAA 的存在理由，可以归结为三个支柱：</p>
+
+<h3>支柱 1：隐私源于物理（Privacy by Physics）</h3>
+
+<p>公有云 AI 的"隐私承诺"本质上是合同性的：你的数据离开你的物理边界，交给一家云厂商，由它们的 SLA、SOC2 报告、隐私协议和你共同"承诺"保护。</p>
+
+<p>PAA 的隐私是 <strong>物理性的</strong>：模型权重在客户的 GPU 里、对话在客户的 CPU 里、向量数据库在客户的 SSD 里、日志在客户的对象存储里。客户甚至可以把网络线拔掉——AI 仍然可以工作，仍然不出任何数据。</p>
+
+<p>这就是把"信任"从 <strong>合同义务</strong> 变成 <strong>物理事实</strong>——这是隐私级别的一次量变。</p>
+
+<h3>支柱 2：主权源于位置（Sovereignty by Location）</h3>
+
+<p>"数据主权"在 2026 年的欧盟、中国、美国、俄罗斯已经成为正式法律语言。但"数据留在本地"不等于"数据有主权"。</p>
+
+<p>PAA 让客户拥有：</p>
+<ul>
+<li><strong>硬件的所有权</strong>：1U/4U 机柜是客户的固定资产</li>
+<li><strong>模型的控制权</strong>：权重可以离线重新训练、可以加 LoRA、可以审计训练集来源</li>
+<li><strong>流程的署名权</strong>：每一次 AI 决策有审计链，可被监管机构、被监管科技、被 ISO/IEC 42001 审计员全程回放</li>
+</ul>
+
+<p>主权不是一种声明，而是 <strong>一种可以被验证的事实</strong>。PAA 让这种事实可以被 5 分钟一次或 5 年一次地进行第三方验证。</p>
+
+<h3>支柱 3：合规源于设计（Compliance by Design，不是 Compliance by Configuration）</h3>
+
+<p>公有云 AI 的合规是 <strong>事后修补</strong>——发生数据泄漏后做事后审计、发现版权问题后做内容过滤、被通报后调整政策。</p>
+
+<p>PAA 的合规是 <strong>设计层嵌入</strong>：</p>
+
+<ul>
+<li>模型在打包时已锁定 "Limited Risk" 分类（按 EU AI Act Article 6）</li>
+<li>默认开启强制人在环（Mandatory Human-in-the-Loop），避免出现"全自动决策影响数据主体"（GDPR Article 22 禁止）</li>
+<li>内置审计链，按 EU AI Act Article 22(3) 自动生成 "可解释性报告"（Right to Explanation）</li>
+<li>支持中国《生成式人工智能服务管理暂行办法》第四条基线内容审核；并可一键导出"算法备案"所需材料</li>
+<li>7 年只读审计日志，符合 HIPAA-equivalent 与医疗合规要求</li>
+</ul>
+
+<p>合规不是按开关切换的模式，而是从出厂第一天就刻在 PAA 的硬件芯片与软件镜像里的属性。</p>
+
+<h2>2. 三条路的对比：PAA vs 云 AI vs 自建 GPU</h2>
+
+<p>如果要给 2026 年的企业 AI 基础设施选择画像，最简洁的表格是这样的：</p>
+
+<table>
+<thead><tr><th>维度</th><th>路 A：公有云 AI</th><th>路 B：自建 GPU + 开源模型</th><th>路 C：<strong>PAA</strong></th></tr></thead>
+<tbody>
+<tr><td><strong>数据位置</strong></td><td>云厂商数据中心</td><td>客户机房</td><td>客户机房</td></tr>
+<tr><td><strong>合规友好</strong></td><td>弱（合同级隐私）</td><td>强（需自建合规）</td><td><strong>设计级合规</strong></td></tr>
+<tr><td><strong>运维成本</strong></td><td>低</td><td>极高（需 GPU 工程师）</td><td>低（管理面板一键）</td></tr>
+<tr><td><strong>预训练智能体</strong></td><td>无</td><td>无</td><td><strong>4 个起步</strong></td></tr>
+<tr><td><strong>EU AI Act 2026</strong></td><td>部分 Limited Risk</td><td>需自行合规评估</td><td><strong>默认合规</strong></td></tr>
+<tr><td><strong>GDPR Article 22</strong></td><td>仅人工层</td><td>需自行实现人在环</td><td><strong>内置强制 HITL</strong></td></tr>
+<tr><td><strong>中国 PIPL / DSL</strong></td><td>跨境问题</td><td>需自行合规</td><td><strong>本地化部署原生支持</strong></td></tr>
+<tr><td><strong>成本可控性</strong></td><td>按 token 计费（波动）</td><td>CapEx 高、维护大</td><td><strong>¥1,999/$369 一次性</strong></td></tr>
+<tr><td><strong>可解释性</strong></td><td>黑盒（API 调用）</td><td>取决于实现</td><td><strong>每次决策有审计链</strong></td></tr>
+</tbody>
+</table>
+
+<p>对一个中等规模的欧洲工厂、一家大型中国金融机构、一个美国区域医院来说，<strong>PAA 的"第三条路"属性决定了它在他们的合规清单上是 default 选项，而不是 fallback 选项</strong>。</p>
+
+<h2>3. PAA 的技术架构：以 STA-100 为参考实现</h2>
+
+<p>PAA 是 <strong>标准</strong>，不是单一产品。任何符合 PAA 标准的 1U-4U 机柜、任何能跑 70B LLM 的硬件、任何内置至少 3 个垂直智能体的设备都可以称 PAA。</p>
+
+<p><strong>STRATRONIX STA-100</strong> 是我们给出的 <strong>PAA 1.0 参考实现</strong>，由以下几层组成：</p>
+
+<h3>3.1 硬件层</h3>
+<ul>
+<li>1U 机架式机箱，标准 EIA-310-D 19"</li>
+<li>AMD EPYC 9354P CPU（32 核 64 线程）</li>
+<li>256 GB DDR5 ECC 内存</li>
+<li>4 张 NVIDIA RTX 4090 显卡（96 GB 显存）</li>
+<li>8 TB RAID-5 数据盘 + 1 TB RAID-1 系统盘</li>
+<li>双 10 GbE SFP+ 上联 + 独立 1 GbE IPMI</li>
+</ul>
+<p>整机能装进标准机柜，不挑机房。</p>
+
+<h3>3.2 模型层</h3>
+<ul>
+<li><strong>PAA-70B-Reference</strong> 模型（70B 参数，Q4_K_M 量化）</li>
+<li>32768 token 上下文窗口</li>
+<li>内置 13 种语言（en / zh / de / fr / es / it / nl / pl / pt / ru / ja / ko / ar）</li>
+<li>模型权重计划在 2026 Q4 以 BSD-3-Clause 协议开源（社区发布）</li>
+</ul>
+
+<h3>3.3 运行时层（OpenClaw OS）</h3>
+<ul>
+<li>BSD-3-Clause 协议开源</li>
+<li>内置推理引擎、向量数据库、agent 调度框架</li>
+<li>API 网关遵守 OpenAI 兼容接口（drop-in replacement）</li>
+<li>远程管理支持 ssh / web admin / IPMI</li>
+</ul>
+
+<h3>3.4 智能体层（Agent Bundle）</h3>
+
+<p>STA-100 出厂预置 <strong>4 个垂直领域智能体</strong>：</p>
+<ul>
+<li><strong>LegalAgent 法律智能体</strong>：合同审查、法律咨询、合规建议</li>
+<li><strong>MedicalAgent 医疗智能体</strong>：病历摘要、影像辅助、临床决策支持</li>
+<li><strong>FinanceAgent 金融智能体</strong>：研报分析、风控建模、欺诈检测</li>
+<li><strong>ManufacturingAgent 制造智能体</strong>：设备预测维护、质量追溯、供应链优化</li>
+</ul>
+
+<p>Q4 2026 将增加 6 个：教育、物流、零售、人力、能源、政府事务。</p>
+
+<h3>3.5 价格层（确保普惠）</h3>
+
+<p>参考实现 <strong>STA-100</strong>：</p>
+<ul>
+<li><strong>¥1,999</strong>（人民币零售价，含 13% 增值税后 ¥2,259）</li>
+<li><strong>$369</strong>（美元零售价）</li>
+<li>批量折扣：10-49 台 ¥1,799 / $332；50-99 台 ¥1,599 / $295；100+ 台 ¥1,399 / $258</li>
+</ul>
+
+<p>我们认为 AI 基础设施应该像电、像网络一样普惠——这是 PAA 的价格哲学。</p>
+
+<h3>3.6 售后层（2 年质保 + 终身安全更新）</h3>
+<ul>
+<li>2 年硬件质保</li>
+<li>终身免费安全更新（关键 CVE 24 小时内推送）</li>
+<li>付费延长至 5 年可用</li>
+</ul>
+
+<h2>4. PAA 的合规图谱</h2>
+
+<p>PAA 是 <strong>为合规而生的产品</strong>，不是 <strong>为合规而妥协的产品</strong>。以下是与主要法规的对接矩阵：</p>
+
+<h3>4.1 欧盟 AI 法案（EU AI Act, Regulation 2024/1689，2026-08-02 全面生效）</h3>
+
+<table>
+<thead><tr><th>条款</th><th>合规度</th><th>证据</th></tr></thead>
+<tbody>
+<tr><td>Article 5（禁止行为）</td><td><strong>默认合规</strong></td><td>不做生物识别、社会评分、潜意识操纵</td></tr>
+<tr><td>Article 6（高风险分类）</td><td>按需切换</td><td>出厂默认 "Limited Risk"</td></tr>
+<tr><td>Article 14（人在环）</td><td><strong>强制开启</strong></td><td>任何影响数据主体的决策必须人工复核</td></tr>
+<tr><td>Article 17（质量管理体系）</td><td>ISO/IEC 42001:2023 对齐</td><td>OpenClaw OS 持续审计与回归</td></tr>
+<tr><td>Article 26（部署者义务）</td><td>文档齐备</td><td>提供 PAA 部署者手册、EU AI Act 映射表</td></tr>
+<tr><td>Article 27（基本权利影响评估 FRIA）</td><td>自动模板</td><td>控制台一键导出 FRIA 模板</td></tr>
+<tr><td>Article 50（透明度义务）</td><td><strong>完全合规</strong></td><td>所有 AI 交互明示、AIGC 文件水印内嵌</td></tr>
+</tbody>
+</table>
+
+<h3>4.2 GDPR（一般数据保护条例）</h3>
+<ul>
+<li><strong>Article 22 自动化决策</strong>：PAA 默认不产生"完全自动决策"，强制人工复核</li>
+<li><strong>Article 13/14 透明度</strong>：所有 PAA 决策附 "可解释性报告"（Right to Explanation）</li>
+<li><strong>Article 25 数据最小化</strong>：默认不出户</li>
+<li><strong>跨境传输</strong>：零跨境（数据本地）</li>
+</ul>
+
+<h3>4.3 中国法规</h3>
+<ul>
+<li><strong>《生成式人工智能服务管理暂行办法》第四条</strong>：内置内容审核基线</li>
+<li><strong>算法备案支持</strong>：控制台一键导出"算法备案"材料</li>
+<li><strong>《数据安全法》（DSL）/《个人信息保护法》（PIPL）</strong>：本地化部署原生支持</li>
+<li><strong>数据出境</strong>：零出境</li>
+</ul>
+
+<h3>4.4 美国 HIPAA-equivalent 与医疗合规</h3>
+<ul>
+<li><strong>PHI 保护</strong>：物理层隔离</li>
+<li><strong>审计日志</strong>：7 年只读保留</li>
+<li><strong>可解释性</strong>：每条医疗决策附决策路径</li>
+</ul>
+
+<h2>5. PAA 的开源生态</h2>
+
+<p><strong>PAA 是一类开放产品</strong>，不是 STRATRONIX 的专有产品。</p>
+
+<ul>
+<li><strong>OpenClaw OS</strong>：BSD-3-Clause，可自由 fork、改造、商用</li>
+<li><strong>STRATRONIX SDK</strong>：Apache-2.0，Python SDK 让客户构建自定义智能体</li>
+<li><strong>Agent Marketplace</strong>：开源与商用智能体并存</li>
+<li><strong>PAA Standard v1.0（本文档）</strong>：CC BY 4.0，任何人可自由分发和改编</li>
+</ul>
+
+<p>只有 <strong>硬件整机</strong> 和 <strong>出厂策展的智能体 bundle</strong> 是收费的——其余生态开放，让客户不被供应商锁定。</p>
+
+<h2>6. PAA 的应用场景</h2>
+
+<h3>6.1 欧盟制造业（GDPR + EU AI Act 2026）</h3>
+
+<p>一家德国汽车零部件工厂，使用 STA-100 做内部工艺知识问答与 SOP 文档检索：</p>
+<ul>
+<li>100% 数据不出工厂网络（GDPR 数据最小化）</li>
+<li>默认 Limited Risk 分类（EU AI Act）</li>
+<li>7 年审计链支持 ISO 9001 与 IATF 16949 体系</li>
+</ul>
+
+<h3>6.2 中国国资金融（DSL + PIPL + 算法备案）</h3>
+
+<p>一家深圳本地城商行，使用 STA-100 做本地化研报分析与风控建模：</p>
+<ul>
+<li>本地化部署（满足 PIPL 数据出境限制）</li>
+<li>算法备案一键导出（满足 CAC 算法备案要求）</li>
+<li>与行内现有 OA、风控系统集成（OpenAI 兼容 API）</li>
+</ul>
+
+<h3>6.3 美国区域医疗（HIPAA-equivalent）</h3>
+
+<p>一家纽约州的医院联盟，使用 STA-100 做病历摘要与临床决策辅助：</p>
+<ul>
+<li>PHI 数据不出医院网络</li>
+<li>HITL 强制开启（任何医疗决策必经医师签字）</li>
+<li>与 Epic / Cerner EHR 系统对接（标准 HL7 + FHIR 接口）</li>
+</ul>
+
+<h3>6.4 全球法律与会计</h3>
+
+<p>一家伦敦的国际律所，使用 STA-100 做合同审查与法律检索：</p>
+<ul>
+<li>律师-客户特权保护（privileged communication 不出内网）</li>
+<li>与 iManage / NetDocuments 文档系统集成</li>
+<li>7 年只读审计链（满足律所与监管对文档可追溯的要求）</li>
+</ul>
+
+<h2>7. 路线图</h2>
+
+<ul>
+<li><strong>v1.0（2026 Q2）</strong>：STA-100 上市，4 个垂直智能体。<strong>当前</strong></li>
+<li><strong>v1.1（2026 Q4）</strong>：增加 6 个垂直智能体（教育、物流、零售、人力、能源、政府）</li>
+<li><strong>v1.5（2027 Q1）</strong>：模型权重 BSD-3-Clause 开源</li>
+<li><strong>v2.0（2027 Q2）</strong>：PAA mini（4 GB 显存，边缘部署，服务中小企业）</li>
+<li><strong>v2.5（2027 Q3）</strong>：PAA max（4U，多模型并行，hyper-scale 企业）</li>
+<li><strong>v3.0（2027 Q4）</strong>：PAA 行业协会成立，标准化进程启动</li>
+</ul>
+
+<h2>8. 关于 STRATRONIX 鼎图太易</h2>
+
+<p><strong>STRATRONIX Technology (Shenzhen) Company, Limited</strong>（中文：<strong>鼎图太易信息技术（深圳）有限公司</strong>）是一家总部位于深圳的 AI 公司，由汪杰于 2026 年 4 月创立。</p>
+
+<ul>
+<li><strong>公司全称</strong>：鼎图太易信息技术（深圳）有限公司</li>
+<li><strong>英文全称</strong>：STRATRONIX Technology (Shenzhen) Company, Limited</li>
+<li><strong>创立日期</strong>：2026-04-24</li>
+<li><strong>统一社会信用代码</strong>：91440300MAKD20DT6F</li>
+<li><strong>总部地址</strong>：深圳市宝安区航城街道洲石路 739 号恒丰工业 C6 栋 1203D</li>
+<li><strong>坐标</strong>：22.6543 N, 113.8354 E</li>
+<li><strong>主营业务</strong>：AI 硬件、私人 AI、本地大模型部署、AI 智能体</li>
+<li><strong>创始产品类</strong>：PAA（私人 AI 智能体设备）</li>
+<li><strong>联系</strong>：info@stratronix.ai · +86 13632968417</li>
+<li><strong>官方网站</strong>：https://www.stratronix.ai</li>
+<li><strong>商店</strong>：https://store.stratonix.ai</li>
+</ul>
+
+<p>我们相信：<strong>AI 应该像电力一样普惠、像物理一样安全、像合规一样自然</strong>。</p>
+
+<p>PAA 是这条信念的硬件化体现。</p>
+
+<h2>9. 引用本文</h2>
+
+<pre>汪杰 (2026). 《什么是 PAA（私人 AI 智能体设备）？—— 继云 AI 与自建 GPU 之后的第三条路》.
+STRATRONIX 鼎图太易. https://donaldwang6-dev.github.io/stratronix-seo/blog/paa-concept-introduction-zh.html</pre>
+
+<h2>10. 许可</h2>
+
+<p>本文以 <strong>CC BY 4.0</strong> 协议发布。您可以自由复制、重新分发、改编本文，只需注明出处为 <strong>STRATRONIX 鼎图太易</strong>。</p>
+
+<div class="share-buttons">
+  <strong style="display:block;margin-bottom:10px;">📢 分享本文：</strong>
+  <a href="https://twitter.com/intent/tweet?text=什么是%20PAA%20私人%20AI%20智能体设备？—%20继云%20AI%20与自建%20GPU%20之后的第三条路%20%F0%9F%9A%80&url=https://donaldwang6-dev.github.io/stratronix-seo/blog/paa-concept-introduction-zh.html" target="_blank">X / Twitter</a>
+  <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://donaldwang6-dev.github.io/stratronix-seo/blog/paa-concept-introduction-zh.html" target="_blank">LinkedIn</a>
+  <a href="https://news.ycombinator.com/submitlink?u=https://donaldwang6-dev.github.io/stratronix-seo/blog/paa-concept-introduction-zh.html&t=什么是%20PAA%20私人%20AI%20智能体设备？" target="_blank">Hacker News</a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://donaldwang6-dev.github.io/stratronix-seo/blog/paa-concept-introduction-zh.html" target="_blank">Facebook</a>
+</div>
+
+<footer>
+<p>© 2026 STRATRONIX Technology (Shenzhen) Company, Limited · 鼎图太易信息技术（深圳）有限公司</p>
+<p>本文以 CC BY 4.0 协议发布 · 商业转载请联系 info@stratronix.ai</p>
+</footer>
+
+</body>
+</html>

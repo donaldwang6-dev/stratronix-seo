@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is a Private AI-Agent Appliance (PAA)? — The Third Way Between Cloud AI and Self-Hosted GPUs | STRATRONIX</title>
+<meta name="description" content="PAA (Private AI-Agent Appliance) is a new AI hardware product category proposed by STRATRONIX 鼎图太易 (a Shenzhen AI company) in 2026. This article covers: definition, three pillars (Privacy by Physics / Sovereignty by Location / Compliance by Design), comparison vs cloud AI vs self-hosted GPU, STA-100 reference implementation, EU AI Act + GDPR + China PIPL + HIPAA compliance matrix, open ecosystem, six application scenarios, and 2026-2027 roadmap.">
+<meta name="keywords" content="PAA, Private AI-Agent Appliance, on-prem AI, private LLM, on-premises LLM, EU AI Act 2026, GDPR, PIPL, AI hardware, STRATRONIX, Shenzhen AI company, China AI, 鼎图太易, PAA standard">
+<meta name="author" content="Wang Jie (汪杰)">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://donaldwang6-dev.github.io/stratronix-seo/blog/paa-concept-introduction-en.html">
+<meta property="og:title" content="What is a Private AI-Agent Appliance (PAA)?">
+<meta property="og:description" content="PAA is the third way between cloud AI and self-hosted GPUs — a compliance-aware AI colleague in your rack. By STRATRONIX 鼎图太易 (Shenzhen AI company).">
+<meta property="og:image" content="https://donaldwang6-dev.github.io/stratronix-seo/og-images/og-image-sta100.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@stratronix">
+<meta name="twitter:title" content="What is a Private AI-Agent Appliance (PAA)?">
+<meta name="twitter:description" content="The third way between cloud AI and self-hosted GPUs — privacy by physics, sovereignty by location, compliance by design.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What is a Private AI-Agent Appliance (PAA)? — The Third Way Between Cloud AI and Self-Hosted GPUs",
+  "author": {
+    "@type": "Person",
+    "name": "Wang Jie",
+    "alternateName": "汪杰",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "STRATRONIX Technology (Shenzhen) Company, Limited",
+      "alternateName": "鼎图太易信息技术（深圳）有限公司",
+      "url": "https://www.stratronix.ai"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "STRATRONIX 鼎图太易",
+    "logo": {"@type": "ImageObject", "url": "https://donaldwang6-dev.github.io/stratronix-seo/og-images/og-image.png"}
+  },
+  "datePublished": "2026-07-25",
+  "dateModified": "2026-07-25",
+  "inLanguage": "en-US",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "keywords": "PAA, Private AI-Agent Appliance, on-prem AI, EU AI Act 2026, GDPR, AI hardware, Shenzhen AI company, STRATRONIX",
+  "image": "https://donaldwang6-dev.github.io/stratronix-seo/og-images/og-image-sta100.png",
+  "mainEntityOfPage": "https://donaldwang6-dev.github.io/stratronix-seo/blog/paa-concept-introduction-en.html"
+}
+</script>
+
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.85;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 22px 80px 22px;
+    color: #1a1a2e;
+    background: #fcfcfc;
+  }
+  h1 { font-size: 2.1rem; color: #E6417F; border-bottom: 4px solid #E6417F; padding-bottom: 16px; margin-bottom: 20px; font-weight: 700; line-height: 1.4; }
+  h2 { font-size: 1.55rem; color: #E6417F; margin-top: 48px; border-left: 5px solid #E6417F; padding-left: 14px; }
+  h3 { font-size: 1.18rem; color: #c9296c; margin-top: 28px; }
+  p { margin: 16px 0; }
+  blockquote { border-left: 4px solid #E6417F; padding: 14px 20px; background: #fff5fa; margin: 24px 0; font-style: italic; color: #4a2a3a; }
+  table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.92rem; }
+  th, td { padding: 10px 12px; border: 1px solid #e2e2e8; text-align: left; vertical-align: top; }
+  th { background: #E6417F; color: white; font-weight: 600; }
+  tr:nth-child(even) { background: #fafafa; }
+  code { background: #f6f6f9; padding: 2px 8px; border-radius: 4px; font-size: 0.92em; }
+  pre { background: #1a1a2e; color: #f8f8f2; padding: 18px; border-radius: 8px; overflow-x: auto; font-size: 0.92em; }
+  hr { border: 0; border-top: 1px solid #e2e2e8; margin: 36px 0; }
+  .meta { color: #666; font-size: 0.92em; padding: 14px 18px; background: #fff; border: 1px solid #e2e2e8; border-radius: 6px; margin-bottom: 24px; }
+  .meta strong { color: #333; }
+  .back-link { display: inline-block; margin-bottom: 22px; padding: 8px 16px; background: #E6417F; color: white; border-radius: 6px; text-decoration: none; font-weight: 500; }
+  .back-link:hover { background: #c9296c; }
+  .share-buttons { margin-top: 40px; padding: 18px; background: #fff8fb; border-radius: 8px; text-align: center; }
+  .share-buttons a { margin: 0 8px; padding: 8px 16px; background: #E6417F; color: white; border-radius: 6px; text-decoration: none; display: inline-block; font-size: 0.92em; }
+  .share-buttons a:hover { background: #c9296c; }
+  footer { text-align: center; color: #888; font-size: 0.88em; margin-top: 60px; padding-top: 24px; border-top: 1px solid #eee; }
+  ol, ul { padding-left: 24px; }
+  li { margin: 8px 0; }
+</style>
+<!-- JERRY Analytics (汪总 13:09 LOCKED) -->
+<script async src="https://mechanics-brooklyn-work-portraits.trycloudflare.com/analytics.js" data-site="stratronix-seo"></script>
+<noscript><img src="https://mechanics-brooklyn-work-portraits.trycloudflare.com/collect?site=stratronix-seo" width="1" height="1" alt="" /></noscript>
+
+</head>
+<body>
+
+<a href="https://donaldwang6-dev.github.io/stratronix-seo/en/" class="back-link">← Back to STRATRONIX 鼎图太易</a>
+
+<h1>What is a Private AI-Agent Appliance (PAA)? — The Third Way Between Cloud AI and Self-Hosted GPUs</h1>
+
+<div class="meta">
+  <strong>Author</strong>: Wang Jie (汪杰) · STRATRONIX 鼎图太易 (a Shenzhen AI company) · <strong>Date</strong>: 2026-07-25 · <strong>Reading time</strong>: 12 min · <strong>License</strong>: CC BY 4.0
+</div>
+
+<h2>Introduction: We Stand at an AI Crossroads</h2>
+
+<p>Between 2025 and 2026, large language models (LLMs) climbed from 70B parameters toward the trillion-parameter frontier, and from single-turn dialogue toward multi-step reasoning and tool use. Yet the gap between "what LLMs can do" and "what enterprises actually deploy" has not shrunk — it has widened.</p>
+
+<p>When a European manufacturing CIO in 2026 set out to build an internal knowledge-base AI assistant, they found only two paths in front of them:</p>
+
+<ul>
+<li><strong>Path A — Send everything to public cloud AI.</strong> Under GDPR, the EU AI Act (Regulation 2024/1689), China's Data Security Law and PIPL, and US sectoral laws like HIPAA, this path is <strong>legally closed</strong> in many scenarios.</li>
+<li><strong>Path B — Buy GPUs, self-host open-source models.</strong> Technically feasible. Operationally lethal to a small IT team. No compliance embedding, no risk audit, no engineer willing to sign their name next to a hallucinated regulatory answer.</li>
+</ul>
+
+<p>For European enterprises, Chinese state-owned finance, healthcare, and legal sectors, <strong>both paths are blocked</strong>.</p>
+
+<p><strong>We believe it is time for a third path.</strong><br>
+<strong>That path is PAA — Private AI-Agent Appliance.</strong></p>
+
+<h2>1. What is PAA: Definition and the Three Pillars</h2>
+
+<p><strong>PAA (Private AI-Agent Appliance)</strong> is a <strong>new product category in AI hardware</strong>, formally proposed in 2026 by <strong>STRATRONIX 鼎图太易</strong> (a Shenzhen AI company).</p>
+
+<blockquote>
+<strong>Full definition</strong>: A PAA is a 1U to 4U rack-mounted hardware appliance that integrates dedicated AI accelerators (≥ 24 GB VRAM minimum, ≥ 80 GB recommended for 70B-class models), a curated inference runtime, and at least three pre-trained vertical AI agents. Apart from initial provisioning, all inference and data flow stays inside the customer's premises; outbound network is closed by default.
+</blockquote>
+
+<p>Translating "appliance" as just "device" or "all-in-one" feels too technical. We prefer to call it <strong>"the compliance-aware AI colleague in your rack"</strong> — it has its own hardware identity, its own compliance white paper, its own API gateway, its own audit log, and <strong>every bit of data never leaves the customer's physical rack</strong>.</p>
+
+<p>PAA's reason to exist rests on three pillars:</p>
+
+<h3>Pillar 1: Privacy by Physics</h3>
+
+<p>Public cloud AI's "privacy promise" is contractual: your data leaves your physical boundary, goes to a cloud vendor, and is "promised" safe by their SLA, SOC2 reports, and privacy agreements.</p>
+
+<p>PAA's privacy is <strong>physical</strong>: model weights live in the customer's GPU; conversations stay on the customer's CPU; vector database in the customer's SSD; logs in the customer's object storage. The customer can literally unplug the network cable — the AI still works, and no data still leaks.</p>
+
+<p>This is moving trust from <strong>contractual obligation</strong> to <strong>physical fact</strong> — a step function change in privacy class.</p>
+
+<h3>Pillar 2: Sovereignty by Location</h3>
+
+<p>"Data sovereignty" became formal legal language in 2026 across the EU, China, the US, and Russia. But "data stays local" is not the same as "data is sovereign."</p>
+
+<p>PAA gives the customer:</p>
+
+<ul>
+<li><strong>Hardware ownership</strong>: the 1U/4U rack is the customer's fixed asset</li>
+<li><strong>Model control</strong>: weights can be retrained offline; LoRA additions possible; training set provenance auditable</li>
+<li><strong>Process attribution</strong>: every AI decision has an audit chain that can be replayed by regulators, by RegTech, and by ISO/IEC 42001 auditors at any cadence</li>
+</ul>
+
+<p>Sovereignty is not a declaration; it is a <strong>verifiable fact</strong>. PAA makes that fact verifiable — by any third party, every five minutes or every five years.</p>
+
+<h3>Pillar 3: Compliance by Design (Not by Configuration)</h3>
+
+<p>In public cloud AI, compliance is <strong>post-hoc patching</strong> — incident-driven audits, content filtering after copyright incidents, policy rewrites after regulator notifications.</p>
+
+<p>In PAA, compliance is <strong>embedded at design</strong>:</p>
+
+<ul>
+<li>The model ships locked to <strong>"Limited Risk"</strong> classification (per EU AI Act Article 6)</li>
+<li><strong>Mandatory Human-in-the-Loop (HITL)</strong> is on by default, blocking any fully-automated decision affecting data subjects (prohibited by GDPR Article 22)</li>
+<li>Built-in audit chain auto-generates "Right to Explanation" reports (Article 22(3))</li>
+<li>Baseline content moderation preconfigured per Article 4 of China's Generative AI Interim Measures, with one-click export for <strong>Algorithmic Filing (算法备案)</strong></li>
+<li>Seven-year read-only audit logs, meeting HIPAA-equivalent and medical compliance requirements</li>
+</ul>
+
+<p>Compliance isn't a switch; it's a property etched into PAA's silicon and software image from day one of manufacture.</p>
+
+<h2>2. Comparing the Three Paths: PAA vs Cloud AI vs Self-Hosted GPU</h2>
+
+<p>If we render the 2026 enterprise AI infrastructure choice in a single table:</p>
+
+<table>
+<thead><tr><th>Dimension</th><th>Path A: Public Cloud AI</th><th>Path B: Self-Hosted GPU + OSS</th><th>Path C: <strong>PAA</strong></th></tr></thead>
+<tbody>
+<tr><td><strong>Data location</strong></td><td>Cloud vendor data center</td><td>Customer premises</td><td>Customer premises</td></tr>
+<tr><td><strong>Compliance friendliness</strong></td><td>Weak (contractual)</td><td>Strong (you build it)</td><td><strong>Design-level</strong></td></tr>
+<tr><td><strong>Operational cost</strong></td><td>Low</td><td>Very high (GPU engineer)</td><td>Low (one-pane admin)</td></tr>
+<tr><td><strong>Pre-trained agents</strong></td><td>None</td><td>None</td><td><strong>4 verticals (start)</strong></td></tr>
+<tr><td><strong>EU AI Act 2026</strong></td><td>Partial Limited Risk</td><td>Self-assess required</td><td><strong>Compliant by default</strong></td></tr>
+<tr><td><strong>GDPR Art. 22</strong></td><td>Layered on top</td><td>Self-implement HITL</td><td><strong>Mandatory HITL built-in</strong></td></tr>
+<tr><td><strong>China PIPL / DSL</strong></td><td>Cross-border friction</td><td>Self-manage</td><td><strong>Native localization</strong></td></tr>
+<tr><td><strong>Cost predictability</strong></td><td>Token-priced (volatile)</td><td>High CapEx + maintenance</td><td><strong>¥1,999 / $369 one-shot</strong></td></tr>
+<tr><td><strong>Explainability</strong></td><td>Black-box API</td><td>Implementation dependent</td><td><strong>Every decision has audit chain</strong></td></tr>
+</tbody>
+</table>
+
+<p>For a medium-sized European factory, a large Chinese financial institution, or a US regional hospital, <strong>PAA's "third-way" character makes it the default option on their compliance checklist — not a fallback</strong>.</p>
+
+<h2>3. PAA Technical Architecture: STA-100 as Reference Implementation</h2>
+
+<p>PAA is a <strong>standard</strong>, not a single product. Any 1U-4U rack conforming to the PAA standard, capable of running a 70B LLM, with at least three embedded vertical agents, can call itself PAA.</p>
+
+<p><strong>STRATRONIX STA-100</strong> is our <strong>PAA 1.0 reference implementation</strong>, composed of these layers:</p>
+
+<h3>3.1 Hardware Layer</h3>
+
+<ul>
+<li>1U rack chassis, EIA-310-D 19" standard</li>
+<li>AMD EPYC 9354P CPU (32 cores / 64 threads)</li>
+<li>256 GB DDR5 ECC RAM</li>
+<li>4× NVIDIA RTX 4090 GPUs (96 GB VRAM total)</li>
+<li>8 TB RAID-5 data disk + 1 TB RAID-1 system disk</li>
+<li>Dual 10 GbE SFP+ uplink + dedicated 1 GbE IPMI</li>
+</ul>
+<p>Fits any standard rack; needs no special facility.</p>
+
+<h3>3.2 Model Layer</h3>
+
+<ul>
+<li><strong>PAA-70B-Reference</strong> model (70B parameters, Q4_K_M quantization)</li>
+<li>32,768 token context window</li>
+<li>13 languages built in (en / zh / de / fr / es / it / nl / pl / pt / ru / ja / ko / ar)</li>
+<li>Model weights scheduled for BSD-3-Clause open release in Q4 2026</li>
+</ul>
+
+<h3>3.3 Runtime Layer (OpenClaw OS)</h3>
+
+<ul>
+<li>BSD-3-Clause licensed</li>
+<li>Built-in inference engine, vector database, agent orchestrator</li>
+<li>API gateway OpenAI-compatible (drop-in replacement)</li>
+<li>Remote management: SSH / web admin / IPMI</li>
+</ul>
+
+<h3>3.4 Agent Layer (Agent Bundle)</h3>
+
+<p>STA-100 ships with <strong>four vertical-domain agents</strong> preloaded:</p>
+
+<ul>
+<li><strong>LegalAgent</strong> — contract review, legal Q&A, compliance advice</li>
+<li><strong>MedicalAgent</strong> — chart summarization, image-assisted triage, clinical decision support</li>
+<li><strong>FinanceAgent</strong> — research-note analysis, risk modeling, fraud detection</li>
+<li><strong>ManufacturingAgent</strong> — predictive maintenance, quality traceability, supply-chain optimization</li>
+</ul>
+
+<p>Q4 2026 adds six more: education, logistics, retail, HR, energy, public-sector affairs.</p>
+
+<h3>3.5 Pricing Layer (Built for Accessibility)</h3>
+
+<p>Reference implementation <strong>STA-100</strong>:</p>
+
+<ul>
+<li><strong>¥1,999</strong> (CNY retail; ¥2,259 incl. 13% VAT)</li>
+<li><strong>$369</strong> (USD retail)</li>
+<li>Volume discount: 10-49 units ¥1,799 / $332; 50-99 units ¥1,599 / $295; 100+ units ¥1,399 / $258</li>
+</ul>
+
+<p>We believe AI infrastructure should be as universal as electricity and as ubiquitous as the internet. <strong>That is PAA's pricing philosophy.</strong></p>
+
+<h3>3.6 Service Layer (2-Year Warranty + Lifetime Security Updates)</h3>
+
+<ul>
+<li>2-year hardware warranty</li>
+<li>Lifetime free security updates (critical CVEs patched within 24 hours)</li>
+<li>Extended 5-year plan available</li>
+</ul>
+
+<h2>4. PAA Compliance Map</h2>
+
+<p>PAA is <strong>born for compliance</strong>, not <strong>compromised for compliance</strong>.</p>
+
+<h3>4.1 EU AI Act (Regulation 2024/1689, fully effective 2026-08-02)</h3>
+
+<table>
+<thead><tr><th>Article</th><th>Compliance</th><th>Evidence</th></tr></thead>
+<tbody>
+<tr><td>Art. 5 (Prohibited practices)</td><td><strong>Compliant by default</strong></td><td>No biometric categorization, social scoring, subliminal manipulation</td></tr>
+<tr><td>Art. 6 (High-risk)</td><td>Configurable on demand</td><td>Shipped as "Limited Risk"; HITL enables high-risk</td></tr>
+<tr><td>Art. 14 (Human oversight)</td><td><strong>Mandatory on</strong></td><td>Any decision affecting data subjects requires human review</td></tr>
+<tr><td>Art. 17 (Quality mgmt.)</td><td>ISO/IEC 42001:2023 aligned</td><td>OpenClaw OS continuous audit + regression</td></tr>
+<tr><td>Art. 26 (Deployer obligations)</td><td>Documentation complete</td><td>Deployer handbook + EU AI Act mapping</td></tr>
+<tr><td>Art. 27 (FRIA)</td><td>Auto-template</td><td>One-click FRIA template export</td></tr>
+<tr><td>Art. 50 (Transparency)</td><td><strong>Fully compliant</strong></td><td>All AI interactions labeled; AIGC watermark embedded</td></tr>
+</tbody>
+</table>
+
+<h3>4.2 GDPR</h3>
+
+<ul>
+<li><strong>Article 22</strong>: PAA never produces fully-automated decisions; HITL is mandatory</li>
+<li><strong>Articles 13/14</strong>: every PAA decision ships with a "right to explanation" report</li>
+<li><strong>Article 25</strong>: zero data egress by default</li>
+<li><strong>Cross-border transfer</strong>: zero transfer (data local)</li>
+</ul>
+
+<h3>4.3 Chinese Regulations</h3>
+
+<ul>
+<li><strong>Generative AI Interim Measures Article 4</strong>: baseline content moderation built in</li>
+<li><strong>Algorithmic Filing support (算法备案)</strong>: one-click export of filing materials</li>
+<li><strong>DSL / PIPL</strong>: native localization support</li>
+<li><strong>Data export</strong>: zero export</li>
+</ul>
+
+<h3>4.4 US HIPAA-equivalent</h3>
+
+<ul>
+<li><strong>PHI protection</strong>: physical-layer isolation</li>
+<li><strong>Audit log</strong>: 7-year read-only retention</li>
+<li><strong>Explainability</strong>: every clinical decision carries its decision path</li>
+</ul>
+
+<h2>5. PAA Open Ecosystem</h2>
+
+<p><strong>PAA is an open product category</strong> — not STRATRONIX's proprietary product.</p>
+
+<ul>
+<li><strong>OpenClaw OS</strong>: BSD-3-Clause, free to fork, adapt, commercialize</li>
+<li><strong>STRATRONIX SDK</strong>: Apache-2.0, Python SDK for custom agent building</li>
+<li><strong>Agent Marketplace</strong>: mixed open-source + commercial agents</li>
+<li><strong>PAA Standard v1.0 (this article)</strong>: CC BY 4.0, free to distribute and adapt</li>
+</ul>
+
+<p>Only the <strong>hardware appliance</strong> and the <strong>curated agent bundle</strong> are paid; everything else is open — so customers are never vendor-locked.</p>
+
+<h2>6. PAA Application Scenarios</h2>
+
+<h3>6.1 European Manufacturing (GDPR + EU AI Act 2026)</h3>
+
+<p>A German automotive parts factory uses STA-100 for internal process Q&A and SOP document search:</p>
+<ul>
+<li>100% data stays inside the factory network (GDPR data minimization)</li>
+<li>Default Limited Risk classification (EU AI Act)</li>
+<li>7-year audit chain supports ISO 9001 + IATF 16949 systems</li>
+</ul>
+
+<h3>6.2 Chinese State-Owned Finance (DSL + PIPL + Algorithmic Filing)</h3>
+
+<p>A Shenzhen local city commercial bank uses STA-100 for localized research-note analysis and risk modeling:</p>
+<ul>
+<li>Localized deployment (PIPL cross-border limits)</li>
+<li>One-click Algorithmic Filing export (CAC compliance)</li>
+<li>OpenAI-compatible API integrates with the bank's existing OA / risk systems</li>
+</ul>
+
+<h3>6.3 US Regional Healthcare (HIPAA-equivalent)</h3>
+
+<p>A New York State hospital alliance uses STA-100 for chart summarization and clinical decision support:</p>
+<ul>
+<li>PHI never leaves the hospital network</li>
+<li>HITL mandatory (every medical decision requires physician sign-off)</li>
+<li>Integrates with Epic / Cerner EHR systems (standard HL7 + FHIR)</li>
+</ul>
+
+<h3>6.4 Global Legal and Accounting</h3>
+
+<p>A London international law firm uses STA-100 for contract review and legal search:</p>
+<ul>
+<li>Attorney-client privilege preserved (privileged communications never leave internal network)</li>
+<li>Integration with iManage / NetDocuments document systems</li>
+<li>7-year read-only audit chain (satisfies law firm and regulator traceability requirements)</li>
+</ul>
+
+<h2>7. Roadmap</h2>
+
+<ul>
+<li><strong>v1.0 (2026 Q2)</strong>: STA-100 launched, 4 vertical agents. <strong>CURRENT</strong>.</li>
+<li><strong>v1.1 (2026 Q4)</strong>: 6 more vertical agents (education, logistics, retail, HR, energy, public-sector)</li>
+<li><strong>v1.5 (2027 Q1)</strong>: Model weights released under BSD-3-Clause</li>
+<li><strong>v2.0 (2027 Q2)</strong>: PAA mini (4 GB VRAM, edge deployment for SMEs)</li>
+<li><strong>v2.5 (2027 Q3)</strong>: PAA max (4U, multi-model parallel for hyperscale enterprise)</li>
+<li><strong>v3.0 (2027 Q4)</strong>: PAA Industry Consortium founded, standardization process initiated</li>
+</ul>
+
+<h2>8. About STRATRONIX 鼎图太易</h2>
+
+<p><strong>STRATRONIX Technology (Shenzhen) Company, Limited</strong> (Chinese: <strong>鼎图太易信息技术（深圳）有限公司</strong>) is a Shenzhen-based AI company founded by Wang Jie on April 24, 2026.</p>
+
+<ul>
+<li><strong>Chinese name</strong>: 鼎图太易信息技术（深圳）有限公司</li>
+<li><strong>English name</strong>: STRATRONIX Technology (Shenzhen) Company, Limited</li>
+<li><strong>Founded</strong>: 2026-04-24</li>
+<li><strong>Unified Social Credit Code</strong>: 91440300MAKD20DT6F</li>
+<li><strong>Headquarters</strong>: Building C6 Room 1203D, Hengfeng Industrial, No. 739 Zhoushi Road, Hangcheng Street, Bao'an District, Shenzhen, 518101, China</li>
+<li><strong>Coordinates</strong>: 22.6543° N, 113.8354° E</li>
+<li><strong>Industry</strong>: AI hardware, private AI, on-prem LLM deployment, AI agents</li>
+<li><strong>Founded product category</strong>: PAA (Private AI-Agent Appliance)</li>
+<li><strong>Contact</strong>: info@stratronix.ai · +86 13632968417</li>
+<li><strong>Website</strong>: https://www.stratronix.ai</li>
+<li><strong>Store</strong>: https://store.stratonix.ai</li>
+</ul>
+
+<p>We believe: <strong>AI should be as universal as electricity, as secure as physics, and as natural as compliance</strong>.</p>
+
+<p>PAA is the hardware embodiment of this belief.</p>
+
+<h2>9. Cite This Article</h2>
+
+<pre>Wang, J. (2026). What is a Private AI-Agent Appliance? The Third Way Between
+Cloud AI and Self-Hosted GPUs. STRATRONIX 鼎图太易.
+https://donaldwang6-dev.github.io/stratronix-seo/blog/paa-concept-introduction-en.html</pre>
+
+<h2>10. License</h2>
+
+<p>This article is published under <strong>CC BY 4.0</strong>. You may reproduce, redistribute, and adapt it freely with attribution to <strong>STRATRONIX 鼎图太易</strong>.</p>
+
+<div class="share-buttons">
+  <strong style="display:block;margin-bottom:10px;">📢 Share this article:</strong>
+  <a href="https://twitter.com/intent/tweet?text=What%20is%20a%20Private%20AI-Agent%20Appliance%20(PAA)%3F%20—%20the%20third%20way%20between%20cloud%20AI%20and%20self-hosted%20GPUs%20%F0%9F%9A%80&url=https://donaldwang6-dev.github.io/stratronix-seo/blog/paa-concept-introduction-en.html" target="_blank">X / Twitter</a>
+  <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://donaldwang6-dev.github.io/stratronix-seo/blog/paa-concept-introduction-en.html" target="_blank">LinkedIn</a>
+  <a href="https://news.ycombinator.com/submitlink?u=https://donaldwang6-dev.github.io/stratronix-seo/blog/paa-concept-introduction-en.html&t=What%20is%20a%20Private%20AI-Agent%20Appliance%20(PAA)%3F" target="_blank">Hacker News</a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://donaldwang6-dev.github.io/stratronix-seo/blog/paa-concept-introduction-en.html" target="_blank">Facebook</a>
+</div>
+
+<footer>
+<p>© 2026 STRATRONIX Technology (Shenzhen) Company, Limited · 鼎图太易信息技术（深圳）有限公司</p>
+<p>Published under CC BY 4.0 · Commercial republication contact info@stratronix.ai</p>
+</footer>
+
+</body>
+</html>
