@@ -1,0 +1,8 @@
+*.pyc
+__pycache__/
+test-*.py
+j-anubis-pow.py
+j_anubis_pow.py
+j-codeberg-reg.py
+j-auto-register.py
+j-imap-activate.py
