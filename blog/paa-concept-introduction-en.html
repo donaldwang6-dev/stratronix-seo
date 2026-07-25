@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>What is PAA? STRATRONIX Real Specification</title>
-<meta name="description" content="What is PAA? STRATRONIX Real Specification — STRATRONIX 鼎图太易真实规格说明.">
+<title>What is PAA? STRATRONIX — Private AI Agent Device, All Data and Inference Local</title>
+<meta name="description" content="What is PAA? STRATRONIX — Private AI Agent Device, All Data and Inference Local — STRATRONIX 鼎图太易 私有智能体设备 (PAA) — 所有数据和推理本地.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://donaldwang6-dev.github.io/stratronix-seo/blog/paa-concept-introduction-en.html">
-<meta property="og:title" content="What is PAA? STRATRONIX Real Specification">
+<meta property="og:title" content="What is PAA? STRATRONIX — Private AI Agent Device, All Data and Inference Local">
 <meta property="og:type" content="article">
 <meta name="twitter:card" content="summary_large_image">
 <style>
-body { font-family: "Noto Sans CJK SC", "PingFang SC", -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.85; max-width: 900px; margin: 0 auto; padding: 30px 22px 80px 22px; color: #1a1a2e; background: #fcfcfc; }
+body { font-family: -apple-system, "PingFang SC", "Noto Sans CJK SC", sans-serif; line-height: 1.85; max-width: 900px; margin: 0 auto; padding: 30px 22px 80px 22px; color: #1a1a2e; background: #fcfcfc; }
 h1 { color: #E6417F; border-bottom: 4px solid #E6417F; padding-bottom: 14px; margin-bottom: 22px; }
 h2 { color: #E6417F; font-size: 1.55rem; margin-top: 36px; border-left: 5px solid #E6417F; padding-left: 14px; }
 h3 { color: #c9296c; font-size: 1.2rem; margin-top: 26px; }
@@ -32,35 +32,53 @@ ul li, ol li { margin: 6px 0; }
 </head>
 <body>
 <div class="lang-nav">
-  <a href="/stratronix-seo/blog/paa-concept-introduction-zh.html" class="">中文</a> |
+  <a href="/stratronix-seo/blog/paa-concept-introduction-zh.html" class="">English</a> |
   <a href="/stratronix-seo/blog/paa-concept-introduction-en.html" class="active">English</a>
 </div>
 
 <a href="https://donaldwang6-dev.github.io/stratronix-seo/" class="back-link">← Back to STRATRONIX</a>
 
-<h1 id="what-is-paa-stratronix-real-specification">《What is PAA? — STRATRONIX Real Specification》</h1>
+<h1 id="what-is-paa-stratronix-personal-ai-appliance">《What is PAA? — STRATRONIX Personal AI Appliance》</h1>
 <blockquote>
-<p><strong>CEO LOCKED 2026-07-25 13:41</strong>
-Previous PAA articles contained <strong>incorrect specifications</strong> (1U rack / 70B local model / AMD EPYC were fabrications).
-This document is the <strong>only authoritative specification</strong> based on STA-100's actual hardware.</p>
+<p><strong>CEO LOCKED 2026-07-25 13:42</strong></p>
+<p>PAA core definition:
+- <strong>PAA = Personal AI Appliance (Private AI Agent Device)</strong>
+- <strong>All data and inference stay local</strong></p>
+<p>Higher-end models will be introduced separately when released. This document is strictly based on STA-100's actual specification.</p>
 </blockquote>
 <hr />
-<h2 id="1-the-real-definition-edge-ai-agent-gateway">1. The Real Definition: Edge AI Agent Gateway</h2>
-<p><strong>PAA (Personal AI Appliance)</strong> is the <strong>Edge AI Agent Gateway</strong> that STRATRONIX (Shenzhen) launched in 2026 for <strong>mid-to-senior professionals + privacy-sensitive SMBs + developers</strong>.</p>
-<p>PAA is <strong>NOT</strong> a 1U-4U rack server.
-PAA is <strong>NOT</strong> an on-premise 70B LLM inference box.</p>
-<p><strong>It is a small ARM box</strong> that sits on your desk / in your network cabinet / at the edge node. Its three core responsibilities:</p>
-<ol>
-<li><strong>Host OpenClaw + AutoAgent</strong> — Run the open-source browser automation &amp; agent orchestration platform with one-click</li>
-<li><strong>Bridge to Cloud LLMs</strong> — Use DeepSeek / Gemini / Claude / ChatGPT APIs as the "brain", while keeping API credentials, task logs, automation SOPs <strong>permanently local</strong></li>
-<li><strong>24×7 Edge Gateway</strong> — Dual-band Wi-Fi + Gigabit Ethernet for RPA / IoT / edge computing</li>
-</ol>
-<p><strong>One-line positioning:</strong></p>
-<blockquote>
-<p>PAA is OpenClaw's "local brain" — Cloud LLMs do the thinking; the device keeps the memory and execution local.</p>
-</blockquote>
+<h2 id="1-paa-core-definition-private-ai-agent-device">1. PAA Core Definition: Private AI Agent Device</h2>
+<p><strong>PAA (Personal AI Appliance)</strong> is the product category launched by STRATRONIX in 2026.</p>
+<p><strong>PAA's core is a private AI agent device.</strong></p>
+<p><strong>All data and inference stay local</strong> — this is the key differentiator between PAA and virtually all "AI devices" on the market.</p>
+<h3 id="three-core-principles-of-paa">Three Core Principles of PAA</h3>
+<table>
+<thead>
+<tr>
+<th>Principle</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data Local</strong></td>
+<td>API credentials, task logs, RAG knowledge base indexes, SOP workflows, personal notes, customer files — all stored on local storage, never leave the device</td>
+</tr>
+<tr>
+<td><strong>Inference Local</strong></td>
+<td>OpenClaw AutoAgent orchestration, tool calling, automation decisions — all executed on the local ARM Cortex SoC</td>
+</tr>
+<tr>
+<td><strong>Device Private</strong></td>
+<td>User owns physical hardware; software is open source (OpenClaw BSD-3-Clause); does not depend on any cloud service for ongoing operation</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="2-sta-100-current-real-hardware-specifications">2. STA-100 Current Real Hardware Specifications</h2>
+<h2 id="2-sta-100-current-actual-hardware-specification">2. STA-100 Current Actual Hardware Specification</h2>
+<blockquote>
+<p><strong>CEO LOCKED 2026-07-25 13:42</strong> — Strict factual description, no exaggeration</p>
+</blockquote>
 <table>
 <thead>
 <tr>
@@ -94,18 +112,63 @@ PAA is <strong>NOT</strong> an on-premise 70B LLM inference box.</p>
 <td>USB 3.0 / 2.0, HDMI output, DC power input (12V/2A)</td>
 </tr>
 <tr>
+<td><strong>OS</strong></td>
+<td>Heavily optimized Linux (kernel 5.15, XFCE GUI)</td>
+</tr>
+<tr>
+<td><strong>Core Framework</strong></td>
+<td>OpenClaw + AutoAgent (OpenClaw BSD-3-Clause open source)</td>
+</tr>
+<tr>
 <td><strong>Patent</strong></td>
 <td>HDMI licensing body patent authorized</td>
 </tr>
 </tbody>
 </table>
+<h3 id="sta-100-capability-boundary-factual">STA-100 Capability Boundary (Factual)</h3>
+<table>
+<thead>
+<tr>
+<th>Can</th>
+<th>Cannot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Browser automation, SaaS batch operations</td>
+<td>Run 70B local LLM (hardware insufficient)</td>
+</tr>
+<tr>
+<td>OpenClaw AutoAgent orchestration</td>
+<td>Run dozens of AI inferences simultaneously</td>
+</tr>
+<tr>
+<td>24×7 workflow automation</td>
+<td>Replace enterprise data centers</td>
+</tr>
+<tr>
+<td>Personal RAG (local document indexing)</td>
+<td>Replace cloud LLM API</td>
+</tr>
+<tr>
+<td>IoT gateway / edge preprocessing</td>
+<td>Train large models</td>
+</tr>
+<tr>
+<td>HDMI big-screen dashboard</td>
+<td>Offline LLM inference (hardware limit)</td>
+</tr>
+</tbody>
+</table>
 <blockquote>
-<p>⚠️ <strong>Rule 31 (Zero Fabrication) Statement</strong></p>
-<p>Before 2026-07-25 13:41, marketing materials described STA-100 as "1U rack server / 70B local model / AMD EPYC + RTX 4090 / ¥1,999". <strong>These descriptions are NOT released by STRATRONIX.</strong>
-This document is the single source of truth.</p>
+<p><strong>Rule 31 Statement</strong>:
+- STA-100 is NOT a rack server
+- STA-100 is NOT a 1U-4U enterprise AI server
+- STA-100 is a <strong>desktop-level ARM edge agent gateway</strong>
+- All data and inference stay local, but <strong>inference capability is bounded by 4GB LPDDR4 + ARM Cortex hardware</strong></p>
 </blockquote>
 <hr />
-<h2 id="3-software-ai-ecosystem">3. Software &amp; AI Ecosystem</h2>
+<h2 id="3-paa-software-agent-ecosystem">3. PAA Software &amp; Agent Ecosystem</h2>
 <table>
 <thead>
 <tr>
@@ -116,91 +179,81 @@ This document is the single source of truth.</p>
 <tbody>
 <tr>
 <td><strong>OS</strong></td>
-<td>Heavily optimized Linux (kernel 5.15, XFCE GUI)</td>
+<td>Heavily optimized Linux 5.15 + XFCE GUI</td>
 </tr>
 <tr>
-<td><strong>Core Framework</strong></td>
-<td>OpenClaw: open-source browser automation &amp; agent orchestration (BSD-3-Clause)</td>
+<td><strong>OpenClaw</strong></td>
+<td>BSD-3-Clause open-source browser automation &amp; agent orchestration</td>
 </tr>
 <tr>
-<td><strong>Automation Engine</strong></td>
-<td>AutoAgent: plug-and-play automation runtime</td>
+<td><strong>AutoAgent</strong></td>
+<td>Plug-and-play automation task runtime</td>
 </tr>
 <tr>
-<td><strong>LLM API Compatibility</strong></td>
-<td>DeepSeek (R1/V3 optimized) / Gemini / Claude / ChatGPT</td>
-</tr>
-<tr>
-<td><strong>Data Storage</strong></td>
-<td>Local SOP + task logs + API credentials — <strong>never leave the device</strong></td>
+<td><strong>Local Storage</strong></td>
+<td>32GB eMMC + 64GB MicroSD (expandable to 512GB)</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Important</strong>: PAA is <strong>NOT an on-premise LLM</strong>. It does NOT run 70B / 175B models locally.</p>
-<p>LLM inference happens in the cloud. PAA is responsible for:</p>
-<ul>
-<li>✅ Storing API credentials locally (4GB eMMC + MicroSD)</li>
-<li>✅ Storing automation SOPs and task logs locally</li>
-<li>✅ Storing RAG knowledge base indexes locally</li>
-<li>✅ Running browser automation / RPA workflows 24×7</li>
-<li>✅ Visualizing AI Agent state on big screen via HDMI</li>
-</ul>
+<p><strong>All components run on the local ARM Cortex SoC, without depending on any cloud service for ongoing operation.</strong></p>
 <hr />
-<h2 id="4-five-core-selling-points">4. Five Core Selling Points</h2>
-<h3 id="41-one-click-deployment-openclaw-one-click-launch">4.1 One-Click Deployment — OpenClaw "One-Click Launch"</h3>
-<p>Designed for OpenClaw, the <strong>one-click launch</strong> feature lets users run agents without complex CLI. XFCE GUI means a non-technical user can deploy their first automation in under 5 minutes.</p>
-<h3 id="42-privacy-first-architecture-local-data-processing-sop-storage">4.2 Privacy-First Architecture — Local Data Processing &amp; SOP Storage</h3>
-<p>Your <strong>API credentials, task logs, RAG indexes, SOP workflows</strong> all live in local eMMC + MicroSD.
-<strong>They never leave the device</strong> — even when calling DeepSeek / Gemini / Claude / ChatGPT APIs, only the "question" goes out. The "answer + history" stays local.</p>
-<h3 id="43-hybrid-connectivity-5ghz-wi-fi-gigabit-ethernet-dual-link">4.3 Hybrid Connectivity — 5GHz Wi-Fi + Gigabit Ethernet Dual-Link</h3>
-<ul>
-<li><strong>Dual-band 5GHz / 2.4GHz Wi-Fi</strong>: Flexible deployment, no location constraint</li>
-<li><strong>RJ45 Gigabit Ethernet</strong>: Mission-critical stability for finance / medical / legal</li>
-</ul>
-<h3 id="44-edge-intelligence-247-edge-gateway">4.4 Edge Intelligence — 24×7 Edge Gateway</h3>
-<p>PAA is not a "use-and-close" device. It's designed as a <strong>24/7 always-on edge gateway</strong>:</p>
-<ul>
-<li>RPA workflows</li>
-<li>IoT device management</li>
-<li>Web monitoring / SaaS data entry</li>
-<li>Edge AI inference preprocessing</li>
-</ul>
-<h3 id="45-hdmi-patent-output-big-screen-visualization">4.5 HDMI Patent Output — Big-Screen Visualization</h3>
-<p>PAA has received <strong>HDMI licensing body patent authorization</strong>, allowing real-time AI Agent state projection on big screens via HDMI:</p>
-<ul>
-<li>SMB "digital worker" dashboard in stores</li>
-<li>IoT gateway monitoring in factory workshops</li>
-<li>Smart assistant screens in living rooms</li>
-</ul>
+<h2 id="4-five-core-selling-points-of-paa">4. Five Core Selling Points of PAA</h2>
+<h3 id="41-local-data-storage">4.1 Local Data Storage</h3>
+<p>API credentials, task logs, RAG indexes, SOP workflows all stored in local eMMC + MicroSD. <strong>Never leave the device.</strong></p>
+<h3 id="42-local-inference-execution">4.2 Local Inference Execution</h3>
+<p>OpenClaw AutoAgent executes on local ARM Cortex SoC: browser automation, tool calling, automation decisions. <strong>Inference does not depend on cloud.</strong></p>
+<h3 id="43-device-privacy">4.3 Device Privacy</h3>
+<p>User owns physical hardware, OpenClaw is open source (BSD-3-Clause). <strong>No cloud service dependency for ongoing operation.</strong></p>
+<h3 id="44-one-click-deployment">4.4 One-Click Deployment</h3>
+<p>Designed for OpenClaw's "one-click launch". XFCE GUI means a non-technical user can deploy their first local automation in under 5 minutes.</p>
+<h3 id="45-hdmi-big-screen-visualization">4.5 HDMI Big-Screen Visualization</h3>
+<p>HDMI licensing body patent authorized. Project local agent status to big screens.</p>
 <hr />
-<h2 id="5-industry-applications">5. Industry Applications</h2>
-<h3 id="51-private-ai-agents-personal-rag-private-assistant">5.1 Private AI Agents — Personal RAG + Private Assistant</h3>
-<p>Index personal documents / notes / emails / chats into local MicroSD. Use OpenClaw AutoAgent to call DeepSeek / Gemini / Claude / ChatGPT. <strong>Knowledge base always stays local.</strong></p>
+<h2 id="5-five-application-scenarios-of-paa">5. Five Application Scenarios of PAA</h2>
+<h3 id="51-private-agents-personal-rag-private-assistant">5.1 Private Agents — Personal RAG + Private Assistant</h3>
+<p>Index personal documents / notes / emails to local MicroSD. OpenClaw AutoAgent executes queries and orchestration locally. <strong>All knowledge base, query history, personal data stay local.</strong></p>
 <h3 id="52-workflow-automation-automated-web-tasks">5.2 Workflow Automation — Automated Web Tasks</h3>
-<p>Automate repetitive web tasks:
-- SaaS management (CRM / ERP / support console batch operations)
-- Data entry (multi-platform data aggregation)
-- Social media monitoring (multi-account auto-reply / content scraping)</p>
+<p>OpenClaw executes browser automation on local ARM Cortex: SaaS management / data entry / social media monitoring. <strong>All credentials, operation logs, automation SOPs stay local.</strong></p>
 <h3 id="53-industry-specific-solutions">5.3 Industry-Specific Solutions</h3>
 <ul>
-<li><strong>Lightweight ERP Automation</strong>: SMB manufacturing / retail ERP workflows</li>
-<li><strong>Smart Retail Assistant</strong>: POS / inventory / customer management</li>
-<li><strong>Secure Industrial IoT Gateway</strong>: Factory floor data collection + edge preprocessing</li>
+<li><strong>Lightweight ERP Automation</strong> — SMB manufacturing / retail local ERP workflows</li>
+<li><strong>Smart Retail Assistant</strong> — POS / inventory / customer management local processing</li>
+<li><strong>Secure Industrial IoT Gateway</strong> — Factory floor local data collection &amp; preprocessing</li>
 </ul>
-<h3 id="54-edge-computing-real-time-data-processing-decisions">5.4 Edge Computing — Real-Time Data Processing &amp; Decisions</h3>
-<p>Real-time data processing at the network edge, <strong>reducing latency and cloud costs</strong>.</p>
+<h3 id="54-edge-computing-local-real-time-processing">5.4 Edge Computing — Local Real-Time Processing</h3>
+<p>All data processed locally at the network edge. <strong>Lower latency, zero cloud cost.</strong></p>
+<h3 id="55-hdmi-big-screen-dashboard">5.5 HDMI Big-Screen Dashboard</h3>
+<p>HDMI patent output, local agent real-time status projection, SMB digital worker dashboard.</p>
 <hr />
-<h2 id="6-target-markets">6. Target Markets</h2>
-<h3 id="mid-to-senior-professionals">🅐 Mid-to-Senior Professionals</h3>
-<p>Fragmented information consolidation + secure, efficient, stable. Let white-collar workers hand off 3 hours of daily repetitive work to PAA.</p>
-<h3 id="privacy-sensitive-smbs">🅑 Privacy-Sensitive SMBs</h3>
-<p><strong>Legal / Finance / Medical</strong> SMBs — case files, patient records, transaction data cannot go to the cloud. PAA enables "cloud brain + local memory" architecture.</p>
-<h3 id="smbs-looking-for-digital-workers">🅒 SMBs Looking for "Digital Workers"</h3>
-<p>Don't need to understand AI. HDMI → big screen = "digital worker dashboard". 5GHz Wi-Fi → one-click deployment.</p>
-<h3 id="developers-ai-hobbyists">🅓 Developers &amp; AI Hobbyists</h3>
-<p>Open-source community oriented: OpenClaw BSD-3-Clause + AutoAgent plug-and-play + MicroSD expandable storage = personal AI lab.</p>
+<h2 id="6-four-target-user-groups">6. Four Target User Groups</h2>
+<table>
+<thead>
+<tr>
+<th>User Group</th>
+<th>Core Need</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mid-to-Senior Professionals</strong></td>
+<td>Private assistant (fragmented info consolidation + secure/stable)</td>
+</tr>
+<tr>
+<td><strong>Privacy-Sensitive SMBs</strong></td>
+<td>Legal / Finance / Medical / Healthcare (case files, patient records, transaction data local)</td>
+</tr>
+<tr>
+<td><strong>SMBs Looking for "Digital Workers"</strong></td>
+<td>Don't need to understand AI (HDMI big screen = digital worker dashboard)</td>
+</tr>
+<tr>
+<td><strong>Developers &amp; AI Hobbyists</strong></td>
+<td>Open-source community oriented (OpenClaw BSD-3-Clause)</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="7-paa-vs-market-alternatives">7. PAA vs Market Alternatives</h2>
+<h2 id="7-paa-vs-other-ai-devices">7. PAA vs Other AI Devices</h2>
 <table>
 <thead>
 <tr>
@@ -218,34 +271,34 @@ This document is the single source of truth.</p>
 <td>Rack-mounted</td>
 </tr>
 <tr>
+<td><strong>Data Localization</strong></td>
+<td>✅ Data local</td>
+<td>❌ Data in cloud</td>
+<td>✅ Data local</td>
+</tr>
+<tr>
+<td><strong>Inference Localization</strong></td>
+<td>✅ Inference local (within hardware capability)</td>
+<td>❌ Inference in cloud</td>
+<td>✅ Inference local (GPU)</td>
+</tr>
+<tr>
+<td><strong>Network Dependency</strong></td>
+<td>Partial needed (updates / clock sync)</td>
+<td>Strong dependency</td>
+<td>Can be offline</td>
+</tr>
+<tr>
 <td><strong>Price Range</strong></td>
 <td>Mid-tier (consumer)</td>
 <td>Subscription</td>
 <td>High-end (enterprise)</td>
 </tr>
 <tr>
-<td><strong>Data Localization</strong></td>
-<td>✅ Credentials/logs/SOP local</td>
-<td>❌ Everything in cloud</td>
-<td>✅ All local</td>
-</tr>
-<tr>
-<td><strong>Model Inference</strong></td>
-<td>Cloud API</td>
-<td>Cloud</td>
-<td>Local LLM</td>
-</tr>
-<tr>
-<td><strong>Network Dependency</strong></td>
-<td>Required (for cloud API)</td>
-<td>Required</td>
-<td>Can be offline</td>
-</tr>
-<tr>
 <td><strong>Deployment Difficulty</strong></td>
 <td>One-click</td>
 <td>Zero</td>
-<td>High (needs GPU engineer)</td>
+<td>High (GPU engineer needed)</td>
 </tr>
 <tr>
 <td><strong>Target User</strong></td>
@@ -255,20 +308,9 @@ This document is the single source of truth.</p>
 </tr>
 </tbody>
 </table>
-<p><strong>PAA's Core Differentiation</strong>: <strong>Cloud brain + local memory and execution</strong>.</p>
+<p><strong>PAA's Core Differentiation</strong>: Private AI agent device — data local + inference local + device private.</p>
 <hr />
-<h2 id="8-future-roadmap-public">8. Future Roadmap (Public)</h2>
-<blockquote>
-<p>⚠️ Directional statement, not released product specs</p>
-</blockquote>
-<ul>
-<li>2026 Q4: 8GB LPDDR4 + 128GB eMMC upgraded SKU</li>
-<li>2027 Q1: OpenClaw Agent Marketplace (community-driven)</li>
-<li>2027 Q2: Multi-PAA Mesh (home multi-device collaboration)</li>
-<li>2027 Q3: Optional NPU coprocessor SKU (edge inference front-end)</li>
-</ul>
-<hr />
-<h2 id="9-about-stratronix">9. About STRATRONIX</h2>
+<h2 id="8-about-stratronix">8. About STRATRONIX</h2>
 <table>
 <thead>
 <tr>
@@ -299,7 +341,7 @@ This document is the single source of truth.</p>
 </tr>
 <tr>
 <td><strong>Core Product</strong></td>
-<td>PAA (Personal AI Appliance) — OpenClaw + AutoAgent Edge AI Agent Gateway</td>
+<td>PAA (Personal AI Appliance) — Private AI Agent Device</td>
 </tr>
 <tr>
 <td><strong>Open Source</strong></td>
@@ -316,20 +358,21 @@ This document is the single source of truth.</p>
 </tbody>
 </table>
 <hr />
-<h2 id="10-conclusion">10. Conclusion</h2>
-<p>PAA is not a rack server. PAA is not an on-premise LLM inference box.
-PAA is a <strong>personal / SMB edge AI agent gateway</strong> that sits on your desk, runs on OpenClaw, uses cloud LLMs as the brain, and keeps data local.</p>
-<p>Its whole meaning is:</p>
-<blockquote>
-<p><strong>Keep the data. Outsource the thinking.</strong></p>
-</blockquote>
+<h2 id="9-conclusion">9. Conclusion</h2>
+<p><strong>PAA is a private AI agent device. All data and inference stay local.</strong></p>
+<p>This is not marketing rhetoric — this is the fundamental product design principle:
+- Data local: User owns complete data ownership
+- Inference local: User owns complete inference execution
+- Device private: User owns complete hardware ownership</p>
+<p>STA-100 is the PAA 1.0 standard's first reference implementation. Based on current hardware capability (4GB ARM Cortex), it can complete browser automation, RAG queries, workflow orchestration, IoT gateway tasks.</p>
+<p><strong>Factual Note</strong>: Hardware-limited, STA-100 is not a 70B LLM inference machine. Higher-spec products will be introduced separately when released.</p>
 <hr />
 <p><em>© 2026 STRATRONIX Technology (Shenzhen) Company, Limited</em>
-<em>This document is CEO LOCKED 2026-07-25 13:41 — single source of truth</em></p>
+<em>This document is CEO LOCKED 2026-07-25 13:42 — single source of truth</em></p>
 
 <footer>
 <p>© 2026 STRATRONIX Technology (Shenzhen) Company, Limited · 鼎图太易信息技术（深圳）有限公司</p>
-<p>This document is CEO LOCKED 2026-07-25 13:41 — single source of truth</p>
+<p>This document is CEO LOCKED 2026-07-25 13:42 — single source of truth</p>
 </footer>
 </body>
 </html>
