@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://donaldwang6-dev.github.io/stratronix-seo/sv/</loc></url>
-  <url><loc>https://donaldwang6-dev.github.io/stratronix-seo/sv/ai-act-eu-efterlevnad.html</loc></url>
-  <url><loc>https://donaldwang6-dev.github.io/stratronix-seo/sv/ai-offentlig-sektor.html</loc></url>
-  <url><loc>https://donaldwang6-dev.github.io/stratronix-seo/sv/industries/finance.html</loc></url>
-  <url><loc>https://donaldwang6-dev.github.io/stratronix-seo/sv/industries/healthcare.html</loc></url>
-  <url><loc>https://donaldwang6-dev.github.io/stratronix-seo/sv/industries/legal.html</loc></url>
-  <url><loc>https://donaldwang6-dev.github.io/stratronix-seo/sv/industries/manufacturing.html</loc></url>
-  <url><loc>https://donaldwang6-dev.github.io/stratronix-seo/sv/industries/saas.html</loc></url>
-  <url><loc>https://donaldwang6-dev.github.io/stratronix-seo/sv/lokal-ai-foretag.html</loc></url>
-  <url><loc>https://donaldwang6-dev.github.io/stratronix-seo/sv/lokal-llm-sverige-2026.html</loc></url>
-  <url><loc>https://donaldwang6-dev.github.io/stratronix-seo/sv/lokal-llm-sverige.html</loc></url>
+  <url>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/sv/use-cases-2026.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
 </urlset>

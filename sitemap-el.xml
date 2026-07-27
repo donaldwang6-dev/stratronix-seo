@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://donaldwang6-dev.github.io/stratronix-seo/el/</loc></url>
-  <url><loc>https://donaldwang6-dev.github.io/stratronix-seo/el/topiko-llm-ellada-2026.html</loc></url>
+  <url>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/el/pricing-2026.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/el/use-cases-2026.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
 </urlset>
