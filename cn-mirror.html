@@ -114,7 +114,7 @@
 
         <div id="loading" class="loading">
             <div class="spinner"></div>
-            <h2 style="color: #E6417F; margin-bottom: 10px;">正在测速 6 个 CDN 镜像...</h2>
+            <h2 style="color: #E6417F; margin-bottom: 10px;">正在测速 8 个 CDN 镜像...</h2>
             <p style="color: rgba(255,255,255,0.7);">铁律 42 LOCKED：全部 0 token 0 手动</p>
         </div>
 
@@ -143,13 +143,16 @@
         </div>
 
         <div class="info-box">
-            <h3 style="color: #4CAF50; margin-bottom: 10px;">🎯 6 个 0 TOKEN CDN 镜像（实测 22:50）</h3>
+            <h3 style="color: #4CAF50; margin-bottom: 10px;">🎯 8 个 0 TOKEN CDN 镜像（23:20 实测）</h3>
             <ul style="list-style: none; padding: 0;">
                 <li>🟢 <strong>GitHub Raw</strong> — 0.80s 最快</li>
                 <li>🇨🇳 <strong>GitHack 国内镜像</strong> — 1.01s</li>
                 <li>☁️ <strong>GitHub Pages</strong> — 1.17s</li>
                 <li>⚡ <strong>jsDelivr Fastly</strong> — 1.53s</li>
                 <li>🚀 <strong>jsDelivr Cloudflare</strong> — 1.65s</li>
+                <li>🚀 <strong>ghfast.top GitHub 代理</strong> — 1.35s（新增）</li>
+                <li>🌏 <strong>tvv.tw GitHub 代理</strong> — 1.6s（新增）</li>
+                <li>🔄 <strong>gh-proxy.com GitHub 代理</strong> — 1.7s（新增）</li>
                 
             </ul>
         </div>
@@ -162,7 +165,7 @@
     </div>
 
     <script>
-    // 6 个 0 token CDN 镜像（实测可用 - 22:50）
+    // 8 个 0 token CDN 镜像（实测可用 - 23:20）
     const MIRRORS = [
         {
             name: "GitHub Raw（最快）",
@@ -199,6 +202,23 @@
             base: "https://esm.sh/gh/donaldwang6-dev/stratronix-seo@master/cn-access.html",
             icon: "🌐",
             desc: "esm.sh 全球 CDN，备用"
+        },        {
+            name: "ghfast.top（GitHub 代理）",
+            base: "https://ghfast.top/https://raw.githubusercontent.com/donaldwang6-dev/stratronix-seo/master/",
+            icon: "🚀",
+            desc: "GitHub 公共代理，1.35s（稳定）"
+        },
+        {
+            name: "tvv.tw（GitHub 代理）",
+            base: "https://tvv.tw/https://raw.githubusercontent.com/donaldwang6-dev/stratronix-seo/master/",
+            icon: "🌏",
+            desc: "GitHub 公共代理，1.6s"
+        },
+        {
+            name: "gh-proxy.com（GitHub 代理）",
+            base: "https://gh-proxy.com/https://raw.githubusercontent.com/donaldwang6-dev/stratronix-seo/master/",
+            icon: "🔄",
+            desc: "GitHub 公共代理，1.7s"
         }
     ];
 
