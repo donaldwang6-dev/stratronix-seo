@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<!-- ⚠️ 草稿 2026-07-27 20:37 — 待汪总审核，未部署到生产 -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>What Is a Private AI-Agent Appliance (PAA)? The 2026 Enterprise Guide · STRATRONIX</title>
+<meta name="description" content="A Private AI-Agent Appliance (PAA) is a new enterprise AI deployment model: user data stays local on the appliance, AI inference runs in your chosen cloud. STRATRONIX STA-100 is the first commercial PAA. This guide explains PAA architecture, how it differs from SaaS AI and on-prem GPU servers, and why enterprises adopt PAA in 2026.">
+<meta name="keywords" content="what is PAA, private AI appliance, AI agent appliance, PAA architecture, edge AI device, enterprise AI 2026, GDPR AI, EU AI Act compliance">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://www.stratronix.ai/en/blog/what-is-paa-private-ai-agent-appliance.html">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.85; color: #1a1a1a; background: #fafafa; }
+header { background: linear-gradient(135deg, #0a2540 0%, #1a4d8f 100%); color: white; padding: 60px 20px; }
+header h1 { font-size: 2.4rem; max-width: 900px; margin: 0 auto 12px; line-height: 1.35; }
+header .subtitle { max-width: 900px; margin: 0 auto; opacity: 0.95; font-size: 1.1rem; }
+.draft-banner { background: #fff3cd; color: #856404; padding: 12px 20px; text-align: center; font-weight: 600; border-bottom: 2px solid #ffeeba; }
+.container { max-width: 900px; margin: 0 auto; padding: 30px 20px; }
+.meta { color: #666; font-size: 0.95rem; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #eee; }
+h2 { font-size: 1.6rem; color: #0a2540; margin: 36px 0 14px; border-left: 4px solid #1a4d8f; padding-left: 12px; }
+h3 { font-size: 1.25rem; color: #1a1a1a; margin: 24px 0 10px; }
+p, li { font-size: 1.05rem; color: #333; margin: 10px 0; }
+ul, ol { padding-left: 28px; }
+table { width: 100%; border-collapse: collapse; margin: 24px 0; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+th, td { padding: 14px; text-align: left; border-bottom: 1px solid #eee; }
+th { background: #0a2540; color: white; font-weight: 600; }
+tr:nth-child(even) { background: #f8f9fa; }
+.callout { background: #f0f5ff; border-left: 4px solid #1a4d8f; padding: 20px; margin: 24px 0; border-radius: 0 8px 8px 0; }
+.term-box { background: linear-gradient(135deg, #e8f0ff 0%, #f8f9fa 100%); padding: 30px; margin: 30px 0; border-radius: 12px; text-align: center; }
+.term-box h3 { color: #0a2540; font-size: 1.5rem; margin-bottom: 12px; }
+.term-box .acronym { font-size: 2.5rem; font-weight: 700; color: #1a4d8f; letter-spacing: 2px; }
+.cta { background: linear-gradient(135deg, #0a2540 0%, #1a4d8f 100%); color: white; padding: 40px; text-align: center; border-radius: 12px; margin: 40px 0; }
+.cta a { color: white; background: rgba(255,255,255,0.2); padding: 14px 36px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; margin: 8px; }
+.cta a.primary { background: white; color: #0a2540; }
+footer { background: #1a1a1a; color: #999; padding: 30px 20px; text-align: center; margin-top: 60px; }
+footer a { color: #ffcc00; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What Is a Private AI-Agent Appliance (PAA)? The 2026 Enterprise Guide",
+  "author": {"@type": "Organization", "name": "Stratronix AI"},
+  "publisher": {"@type": "Organization", "name": "Stratronix", "url": "https://www.stratronix.ai/"},
+  "datePublished": "2026-07-27",
+  "dateModified": "2026-07-27",
+  "inLanguage": "en"
+}
+</script>
+<meta property="og:title" content="What Is a Private AI-Agent Appliance (PAA)? The 2026 Enterprise Guide">
+<meta property="og:description" content="A new enterprise AI deployment model. User data stays local, AI inference runs in your chosen cloud.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@stratronix">
+<!-- 百度自动推送 JS (铁律 42: 不依赖 token, 每次访问触发) -->
+<script>
+(function(){
+    var bp = document.createElement("script");
+    var curProtocol = window.location.protocol.split(":")[0];
+    if (curProtocol === "https") {
+        bp.src = "https://zz.bdstatic.com/linksubmit/push.js";
+    } else {
+        bp.src = "http://push.zhanzhang.baidu.com/push.js";
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+</head>
+<body>
+
+<div class="draft-banner">⚠️ DRAFT 2026-07-27 — Pending CEO Review · Not Indexed</div>
+
+<header>
+<h1>What Is a Private AI-Agent Appliance (PAA)?</h1>
+<p class="subtitle">A new enterprise AI deployment model for the post-SaaS, post-GPU-server era</p>
+</header>
+
+<div class="container">
+<p class="meta">Published 2026-07-27 · Stratronix AI · 12 min read · Category: Concepts</p>
+
+<div class="term-box">
+<div class="acronym">PAA</div>
+<h3>Private AI-Agent Appliance</h3>
+<p>A compact edge device that runs an AI-agent runtime locally — keeping your data on the device — while calling cloud-hosted large language models (LLMs) via your enterprise API key.</p>
+</div>
+
+<p class="callout"><strong>The one-line definition:</strong> A Private AI-Agent Appliance is to AI infrastructure what an on-premises email server was to email in the 1990s — a server-class control point that runs inside your perimeter, while still calling out to remote services for what it does best.</p>
+
+<p>This guide explains what a PAA is, how it differs from SaaS AI and on-prem GPU servers, and why it has emerged as the dominant enterprise AI architecture for 2026 and beyond.</p>
+
+<h2>1. Why a new AI deployment model?</h2>
+
+<p>Between 2023 and 2026, enterprises faced a binary choice for production AI deployment:</p>
+
+<ul>
+<li><strong>SaaS AI</strong> (ChatGPT Enterprise, Claude for Work, Microsoft Copilot): cheap to start, fast to deploy, but the AI vendor owns your prompts, your RAG documents, your conversation history, and your agent logs. Compliance, audit, and data residency are the vendor's problem — and your problem.</li>
+<li><strong>On-prem GPU servers</strong> (DGX, H100 clusters): full control, but at $25K-$40K per GPU plus 1-2 FTE sysadmins per cluster, accessible only to the largest enterprises. Hidden costs routinely run 3-5× the original hardware quote.</li>
+</ul>
+
+<p>The result: mid-market enterprises (50-1000 employees) and regulated industries (legal, healthcare, financial services) got squeezed out. SaaS was unsellable to compliance. On-prem GPU was unsellable to finance.</p>
+
+<p>A third option had to exist. By 2025, every major cloud and AI vendor had experimented with edge appliances for inference or personalisation. The category stabilised around a specific architecture: <strong>an edge device that holds your data locally and delegates AI inference to a remote model API</strong>. The industry has come to call this category <strong>Private AI-Agent Appliance (PAA)</strong>.</p>
+
+<h2>2. The architecture in three sentences</h2>
+
+<ol>
+<li><strong>The PAA is an edge appliance</strong> — typically a small fanless box (8-core ARM CPU, 4-16GB RAM, NVMe storage) running an open-source AI-agent runtime (such as OpenClaw, Apache 2.0) on a stable Linux (Ubuntu 24.04 LTS).</li>
+<li><strong>Your data stays on the appliance.</strong> User prompts, chat history, RAG knowledge bases, agent logs, business workflow definitions, and integration credentials are all stored locally on the device — encrypted at rest, never uploaded.</li>
+<li><strong>AI inference runs in your chosen cloud.</strong> When the agent needs to call a language model, it sends only the minimum-necessary prompt (the user's current message plus relevant retrieved context) to a cloud LLM API — using <em>your</em> enterprise API key, to a provider and region <em>you</em> choose (OpenAI EU, Mistral AI Paris, Aleph Alpha Heidelberg, AWS Bedrock Frankfurt, Aliyun Frankfurt, etc.).</li>
+</ol>
+
+<p class="callout"><strong>The key insight:</strong> The PAA is not a self-contained, air-gapped AI box. It is an edge controller for cloud AI. Your data sovereignty is enforced at the appliance; your AI capability is sourced from the cloud provider you trust.</p>
+
+<h2>3. How PAA compares to the alternatives</h2>
+
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>SaaS AI</th>
+<th>On-prem GPU Server</th>
+<th>Public Cloud AI</th>
+<th><strong>PAA</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data location</strong></td>
+<td>Vendor cloud</td>
+<td>Your data centre</td>
+<td>Vendor cloud (multitenant)</td>
+<td><strong>Your edge appliance</strong></td>
+</tr>
+<tr>
+<td><strong>Inference location</strong></td>
+<td>Vendor cloud</td>
+<td>Your GPUs (or none — API)</td>
+<td>Vendor cloud</td>
+<td><strong>Cloud (your choice)</strong></td>
+</tr>
+<tr>
+<td><strong>GDPR / Schrems II</strong></td>
+<td>Vendor responsibility</td>
+<td>Compliant but costly</td>
+<td>Vendor responsibility</td>
+<td><strong>Your control</strong></td>
+</tr>
+<tr>
+<td><strong>Initial cost</strong></td>
+<td>$0</td>
+<td>$25K-$80K+ hardware</td>
+<td>$0</td>
+<td><strong>$399 USD</strong></td>
+</tr>
+<tr>
+<td><strong>Annual TCO (50 users)</strong></td>
+<td>$18K-$36K (per-seat)</td>
+<td>$120K+ (HW + FTE + power)</td>
+<td>$18K-$36K (per-seat)</td>
+<td><strong>$5K (HW once + cloud LLM)</strong></td>
+</tr>
+<tr>
+<td><strong>AI model flexibility</strong></td>
+<td>Locked to vendor</td>
+<td>Run any model yourself</td>
+<td>Locked to vendor</td>
+<td><strong>Use any provider</strong></td>
+</tr>
+<tr>
+<td><strong>Audit / decision logs</strong></td>
+<td>Vendor-owned</td>
+<td>Self-managed</td>
+<td>Vendor-owned</td>
+<td><strong>Yours (on device)</strong></td>
+</tr>
+<tr>
+<td><strong>EU AI Act ready</strong></td>
+<td>Limited</td>
+<td>Yes (if budget)</td>
+<td>Limited</td>
+<td><strong>Yes (audit logs + architecture)</strong></td>
+</tr>
+<tr>
+<td><strong>Mid-market fit</strong></td>
+<td>Risky compliance</td>
+<td>Unaffordable</td>
+<td>Risky compliance</td>
+<td><strong>Designed for it</strong></td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. The three pillars of PAA architecture</h2>
+
+<h3>Pillar 1 — Local data sovereignty</h3>
+<p>The PAA's defining property is that user data never leaves your physical control. Everything the user creates — chat history, uploaded documents (RAG), business workflow configurations, third-party integration credentials, agent execution traces — lives on the appliance's local storage. The appliance is typically a fanless edge device with AES-256 full-disk encryption, sized to fit on a shelf in an IT closet.</p>
+
+<p>This is what gives PAA deployments their GDPR Article 28 cleanliness: you remain the data controller, the cloud LLM provider acts as a published-DPA processor, and the appliance vendor (e.g. Stratronix) acts as <em>neither</em> — a hardware and open-source-software vendor only.</p>
+
+<h3>Pillar 2 — Cloud-resident AI inference</h3>
+<p>The PAA does not attempt to run a frontier AI model locally. Frontier models (GPT-class, Claude-class, Mistral Large, Llama 405B) require multiple H100s or H200s to run at production latency — outside mid-market reach. Instead, the PAA calls those models over HTTPS using your enterprise API key.</p>
+
+<p>The crucial design choice: <strong>you pick the LLM provider.</strong> The appliance ships with adapter code for OpenAI, Anthropic, Mistral, Aleph Alpha, Google Gemini, AWS Bedrock, Azure OpenAI, OVHcloud AI Endpoints, Aliyun, and self-hosted APIs. Each adapter respects the provider's published API contract. Each one accepts your enterprise DPA.</p>
+
+<p>This architecture aligns naturally with EU data residency requirements: you can pin every inference call to a Frankfurt, Paris, Dublin, Madrid, Amsterdam, or Stockholm cloud region — anywhere within your regulatory jurisdiction.</p>
+
+<h3>Pillar 3 — Open-source agent runtime</h3>
+<p>The "agent" in PAA is not a chatbot. It's an autonomous task-execution layer: it can plan, choose tools, execute multi-step workflows, fetch and write documents, call APIs, and produce structured outputs. The agent runtime is open-source (typically Apache 2.0 — e.g. <strong>OpenClaw</strong>) so its decision logic is inspectable by your security team.</p>
+
+<p>This is critical for two reasons. First, regulated enterprises cannot rely on a black-box AI agent: auditors must be able to inspect the decision logic. Second, open-source allows forks: your team can modify the agent's behaviour without vendor approval, addressing the lock-in concern that has driven many enterprises away from SaaS AI.</p>
+
+<h2>5. What PAA is used for</h2>
+
+<p>By 2026, PAAs have been deployed across the following enterprise use cases:</p>
+
+<ul>
+<li><strong>Knowledge management:</strong> Internal RAG over corporate documents, contracts, regulations — without sending proprietary data to a third-party AI vendor.</li>
+<li><strong>Workflow automation:</strong> Multi-step agent workflows — e.g. "draft a sales proposal from a CRM record, attach the latest contract template, and email it to a customer."</li>
+<li><strong>Compliance &amp; legal:</strong> Lawyers and compliance officers analysing sensitive documents (merger agreements, regulatory filings, internal investigations) where SaaS upload is forbidden by client confidentiality rules.</li>
+<li><strong>Customer support:</strong> AI-assisted support agents handling sensitive customer data (account numbers, health information) under regional residency rules.</li>
+<li><strong>Government / public sector:</strong> Government teams that need their AI to operate under their own data sovereignty rules, often behind firewalls or air-gapped networks (with the PAA bridging to a sanctioned cloud LLM through a managed gateway).</li>
+<li><strong>Healthcare:</strong> Clinical and research workflows where patient data must remain within hospital-controlled infrastructure.</li>
+</ul>
+
+<h2>6. When PAA is <em>not</em> the right choice</h2>
+
+<p>Honesty matters. The PAA architecture is not universal.</p>
+
+<ul>
+<li><strong>Personal AI use:</strong> For an individual consumer, the appliance overhead is unnecessary; SaaS AI is fine.</li>
+<li><strong>Bulk inference at hyperscale:</strong> If your primary need is processing millions of tokens per minute from a mobile app, the latency cost of edge-to-cloud round trips becomes prohibitive; dedicated GPU clusters or direct cloud provider contracts are better.</li>
+<li><strong>Air-gapped environments with no cloud:</strong> The PAA architecture requires a cloud LLM reachable via API. For fully air-gapped environments (some defence, some classified research), a separate, fully on-prem stack remains necessary — at substantially higher cost and capability limits.</li>
+</ul>
+
+<h2>7. STRATRONIX STA-100: the first commercial PAA</h2>
+
+<p>In Q2 2026, <strong>STRATRONIX 鼎图太易</strong> launched the <strong>STA-100</strong> — the world's first commercial Private AI-Agent Appliance sold at a sub-$500 price point. The product specifications are:</p>
+
+<ul>
+<li><strong>Hardware:</strong> Compact edge appliance, 8-core ARM SoC, 4 GB RAM, 64 GB NVMe storage, AES-256 full-disk encryption, fanless aluminium enclosure.</li>
+<li><strong>Software:</strong> OpenClaw AI-agent runtime (Apache 2.0) + Ubuntu 24.04 LTS.</li>
+<li><strong>Cloud flexibility:</strong> Adapters for OpenAI, Anthropic, Mistral AI, Aleph Alpha, Google Gemini, AWS Bedrock, Azure OpenAI, OVHcloud AI Endpoints, Aliyun, and self-hosted endpoints.</li>
+<li><strong>Out-of-the-box skills:</strong> document RAG, structured data extraction, multi-step workflow orchestration, calendar/email integrations, code-generation sandbox, web search.</li>
+<li><strong>Audit:</strong> Every agent decision logged on device; exportable as JSON or CSV.</li>
+</ul>
+
+<p><strong>Price:</strong> $399 USD global guide price — uniform across markets — with volume pricing at 10+ units. No subscription, no per-seat fee, no data sovereignty surcharge.</p>
+
+<h2>8. What to look for when evaluating PAA products</h2>
+
+<p>If you are considering a PAA, here is a short evaluation checklist:</p>
+
+<ol>
+<li><strong>Is the agent runtime open-source?</strong> Avoid proprietary black boxes — your security team must be able to inspect decision logic.</li>
+<li><strong>Can you use any cloud LLM?</strong> Avoid vendor lock-in — your enterprise should be able to switch cloud providers or run parallel providers.</li>
+<li><strong>Does the vendor operate a back-end service that ingests your data?</strong> A true PAA does not. If the vendor runs a "control plane" that sees your prompts, it's a SaaS, not a PAA.</li>
+<li><strong>What is the OS?</strong> Prefer a long-term-support Linux (Ubuntu 24.04 LTS, Debian) over a custom embedded OS that locks you in.</li>
+<li><strong>What is the encryption story?</strong> At minimum, AES-256 full-disk encryption with managed key recovery.</li>
+<li><strong>Are decision logs exportable?</strong> For EU AI Act compliance, you must be able to prove what the agent did. If logs are vendor-locked, walk away.</li>
+<li><strong>Where is the cloud LLM region pin configurable?</strong> A good PAA lets you pin every model call to a specific region (e.g. eu-central-1, francecentral, swedencentral) — not a single global endpoint.</li>
+</ol>
+
+<h2>9. The 2026 picture</h2>
+
+<p>By mid-2026, PAA deployments have crossed from early adopters (legal, healthcare, government research) into mainstream mid-market enterprise IT. The architecture has stabilised: <strong>an open-source agent runtime on a stable Linux, running on small edge hardware, calling cloud LLMs in the buyer's chosen region.</strong> Commercial products are entering the market from multiple vendors (Stratronix STA-100 is the first; others are following). Regulators are aligning around the pattern — EU AI Act implementation guidance in 2026 explicitly recognises "edge appliances with delegated cloud inference" as a valid AI deployment architecture.</p>
+
+<p>For enterprises that need both compliance and capability, the PAA category is now the default answer.</p>
+
+<div class="cta">
+<h2 style="color: white; border: none; padding: 0;">Ready to evaluate a PAA for your enterprise?</h2>
+<p style="color: rgba(255,255,255,0.95); font-size: 1.05rem; margin: 16px 0;">$399 USD global guide price · no subscription · open-source agent runtime</p>
+<a href="https://www.stratronix.ai/en/contact.html" class="primary">→ Talk to our team</a>
+<a href="https://www.stratronix.ai/en/products/sta-100.html">→ View STA-100 specs</a>
+</div>
+
+<h2>About Stratronix AI</h2>
+
+<p><strong>STRATRONIX 鼎图太易</strong> is a Shenzhen-based AI infrastructure company founded in 2026. The company's first product, the STA-100, is the world's first commercial Private AI-Agent Appliance. The company focuses on enterprise and regulated-industry AI deployments that require data sovereignty, audit transparency, and predictable cost. The STA-100 is built on OpenClaw, an open-source AI-agent runtime (Apache 2.0), and Ubuntu 24.04 LTS.</p>
+
+</div>
+
+<footer>
+<p><a href="https://www.stratronix.ai/">www.stratronix.ai</a> · <a href="mailto:sales@stratronix.ai">sales@stratronix.ai</a> · +86-755-23086689</p>
+<p>© 2026 STRATRONIX · Stratronix Technology (Shenzhen) Company, Limited</p>
+</footer>
+</body>
+</html>

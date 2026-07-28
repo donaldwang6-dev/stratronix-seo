@@ -53,6 +53,20 @@ th { background: #E6417F; color: white; font-weight: 600; }
 .principle-box { background: linear-gradient(135deg, #fff5fa 0%, #ffd6e5 100%); border: 3px solid #E6417F; padding: 24px; border-radius: 12px; margin: 24px 0; }
 footer { text-align: center; color: #888; font-size: 0.88em; margin-top: 60px; padding-top: 24px; border-top: 1px solid #eee; }
 </style>
+<!-- 百度自动推送 JS (铁律 42: 不依赖 token, 每次访问触发) -->
+<script>
+(function(){
+    var bp = document.createElement("script");
+    var curProtocol = window.location.protocol.split(":")[0];
+    if (curProtocol === "https") {
+        bp.src = "https://zz.bdstatic.com/linksubmit/push.js";
+    } else {
+        bp.src = "http://push.zhanzhang.baidu.com/push.js";
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
 </head>
 <body>
 <div class="lang-nav">
