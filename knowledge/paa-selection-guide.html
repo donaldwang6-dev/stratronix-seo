@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>PAA 选型指南 — 10 个维度教你选对私有 AI 智能体硬件 | STRATRONIX 鼎图智能体</title>
+<meta name="description" content="PAA 私有 AI 智能体硬件选型指南：硬件配置 / 大模型支持 / AI 智能体框架 / 知识库 / 合规认证 / 行业适配 / 扩展性 / 运维 / 价格 / 生态 10 个维度。STRATRONIX STA-100 鼎图智能体推荐。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://donaldwang6-dev.github.io/stratronix-seo/knowledge/paa-selection-guide.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "PAA 选型看哪些核心维度？", "acceptedAnswer": {"@type": "Answer", "text": "PAA 选型看 10 个维度：硬件配置 / 大模型支持 / AI 框架 / 知识库 / 合规 / 行业适配 / 扩展性 / 运维 / 价格 / 生态。STRATRONIX STA-100 在所有维度均表现优异。"}},
+    {"@type": "Question", "name": "STRATRONIX STA-100 适合什么场景？", "acceptedAnswer": {"@type": "Answer", "text": "STRATRONIX STA-100 适合：医疗 / 法律 / 金融 / 政府 / 制造 / 教育 / SaaS / 跨境电商 等 8 大行业，特别适合数据敏感 + 合规要求 + 需要本地化 AI 的场景。"}},
+    {"@type": "Question", "name": "PAA 部署时间多久？", "acceptedAnswer": {"@type": "Answer", "text": "STRATRONIX STA-100 部署时间 30 分钟：1) 通电 2) 连网（可选）3) 访问 Web UI 4) 开始对话。无需专业 IT 团队。"}}
+  ]
+}
+</script>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif; max-width: 1000px; margin: 0 auto; padding: 40px 20px; line-height: 1.8; color: #1a1a1a; background: #fafafa; }
+header { background: linear-gradient(135deg, #E6417F 0%, #c9296c 100%); color: white; padding: 50px 30px; border-radius: 12px; margin-bottom: 24px; }
+h1 { font-size: 2.2rem; margin: 0 0 12px 0; }
+h2 { color: #E6417F; border-left: 5px solid #E6417F; padding-left: 14px; margin: 36px 0 14px; font-size: 1.7rem; }
+h3 { color: #1a1a1a; margin: 24px 0 12px; font-size: 1.3rem; }
+p, li { font-size: 1.05rem; }
+.kw { background: #fff5f9; font-weight: 600; padding: 2px 6px; }
+.dimension { background: white; padding: 24px; border-radius: 8px; margin: 16px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+.score { display: inline-block; background: #E6417F; color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.9rem; font-weight: 600; }
+.cta { background: linear-gradient(135deg, #E6417F, #c9296c); color: white; padding: 32px; text-align: center; border-radius: 12px; margin: 30px 0; }
+.cta a { color: white; background: rgba(255,255,255,0.25); padding: 12px 28px; border-radius: 8px; text-decoration: none; margin: 6px; display: inline-block; }
+.cta a.primary { background: white; color: #E6417F; }
+</style>
+<script>(function(){var bp=document.createElement("script");var c=window.location.protocol.split(":")[0];if(c==="https"){bp.src="https://zz.bdstatic.com/linksubmit/push.js";}else{bp.src="http://push.zhanzhang.baidu.com/push.js";}var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(bp,s);})();</script>
+</head>
+<body>
+<header>
+<h1>PAA 选型指南：10 个维度教你选对私有 AI 智能体硬件</h1>
+<p>📅 2026-07-28 · 约 3000 字 · STRATRONIX 鼎图太易信息技术（深圳）有限公司</p>
+</header>
+
+<div class="dimension">
+<h2 style="margin-top:0;">📋 为什么需要 PAA 选型指南？</h2>
+<p>PAA（Private AI-Agent Appliance）私有 AI 智能体硬件市场快速发展，选错 PAA 产品可能导致：</p>
+<ul>
+<li>❌ 算力不足，AI 推理缓慢</li>
+<li>❌ 模型不支持，业务跑不起来</li>
+<li>❌ 合规不达标，被监管处罚</li>
+<li>❌ 部署复杂，耗费数月</li>
+<li>❌ 运维困难，故障频发</li>
+</ul>
+<p>本指南提供 <strong class="kw">10 个选型维度</strong>，帮你做出正确决策。</p>
+</div>
+
+<div class="dimension">
+<h2>维度 1：硬件配置 <span class="score">核心</span></h2>
+<p><strong>关键指标</strong>：CPU 核心数 / 内存 / 存储 / NPU</p>
+<p><strong>推荐配置</strong>（2026 年）：</p>
+<ul>
+<li>CPU：8 核 ARM 或同等算力</li>
+<li>内存：16GB DDR4 或以上</li>
+<li>存储：512GB NVMe SSD 或以上</li>
+<li>NPU：12 TOPS 或以上（可选，加速推理）</li>
+</ul>
+<p><strong>STRATRONIX STA-100</strong>：✅ 8 核 ARM / 16GB DDR4 / 512GB NVMe</p>
+</div>
+
+<div class="dimension">
+<h2>维度 2：大模型支持 <span class="score">核心</span></h2>
+<p><strong>关键问题</strong>：支持哪些开源大模型？能否本地运行 7B/13B/70B 参数？</p>
+<p><strong>推荐</strong>：</p>
+<ul>
+<li>Qwen3（中文最强）</li>
+<li>Llama 3.3（英文最强）</li>
+<li>DeepSeek V3（代码最强）</li>
+<li>GLM-4（多语言）</li>
+<li>Yi-34B（中文 + 多模态）</li>
+<li>Mistral（轻量高效）</li>
+<li>Phi-3（超轻量）</li>
+</ul>
+<p><strong>STRATRONIX STA-100</strong>：✅ 全部支持</p>
+</div>
+
+<div class="dimension">
+<h2>维度 3：AI 智能体框架 <span class="score">关键</span></h2>
+<p><strong>关键问题</strong>：是否支持多步骤任务？是否支持工具调用？是否开源 Apache 2.0？</p>
+<p><strong>推荐</strong>：</p>
+<ul>
+<li>OpenClaw（Apache 2.0 开源，多步骤任务）</li>
+<li>LangChain（生态丰富）</li>
+<li>AutoGen（微软）</li>
+<li>LlamaIndex（RAG 优化）</li>
+</ul>
+<p><strong>STRATRONIX STA-100</strong>：✅ OpenClaw（Apache 2.0）原生集成</p>
+</div>
+
+<div class="dimension">
+<h2>维度 4：知识库能力 <span class="score">关键</span></h2>
+<p><strong>关键问题</strong>：是否支持 RAG 检索增强？文档解析能力？向量数据库？</p>
+<p><strong>推荐</strong>：</p>
+<ul>
+<li>支持 PDF / Word / Excel / Markdown 解析</li>
+<li>向量数据库（Chroma / Milvus / Qdrant）</li>
+<li>本地文档 100GB+ 知识库</li>
+<li>语义检索 + 关键词检索混合</li>
+</ul>
+<p><strong>STRATRONIX STA-100</strong>：✅ 内置完整 RAG 能力</p>
+</div>
+
+<div class="dimension">
+<h2>维度 5：合规认证 <span class="score">核心</span></h2>
+<p><strong>关键问题</strong>：是否支持国密 / 等保 2.0 / GDPR / HIPAA？</p>
+<p><strong>推荐</strong>：</p>
+<ul>
+<li>🇨🇳 SM2/SM3/SM4 国密</li>
+<li>🇨🇳 等保 2.0 三级</li>
+<li>🇨🇳 信创合规（国产 CPU + OS）</li>
+<li>🇪🇺 GDPR</li>
+<li>🇺🇸 HIPAA</li>
+<li>🌍 ISO 27001 / SOC 2</li>
+</ul>
+<p><strong>STRATRONIX STA-100</strong>：✅ 全合规 + 国产化适配</p>
+</div>
+
+<div class="dimension">
+<h2>维度 6：行业适配 <span class="score">关键</span></h2>
+<p><strong>关键问题</strong>：是否预装行业模型？行业知识库？行业合规配置？</p>
+<p><strong>推荐覆盖行业</strong>：</p>
+<ul>
+<li>🏥 医疗 - HIPAA + 卫健委</li>
+<li>⚖️ 法律 - GDPR + 律师执业</li>
+<li>🏭 制造 - 工业 4.0 + 工控安全</li>
+<li>🏦 金融 - 银保监会 + Basel III</li>
+<li>🎓 教育 - FERPA + 学术诚信</li>
+<li>🏛️ 政府 - 等保 2.0 + 信创</li>
+<li>💻 SaaS - 多租户 + SOC 2</li>
+<li>🌍 跨境电商 - GDPR + PIPL</li>
+</ul>
+<p><strong>STRATRONIX STA-100</strong>：✅ 8 大行业全覆盖</p>
+</div>
+
+<div class="dimension">
+<h2>维度 7：扩展性 <span class="score">重要</span></h2>
+<p><strong>关键问题</strong>：是否支持多机集群？API 嵌入？二次开发？</p>
+<p><strong>推荐</strong>：</p>
+<ul>
+<li>多机集群（横向扩展算力）</li>
+<li>RESTful API（嵌入现有系统）</li>
+<li>SDK（Python / Node / Java / Go）</li>
+<li>Webhook 事件流</li>
+<li>OAuth 2.0 鉴权</li>
+</ul>
+<p><strong>STRATRONIX STA-100</strong>：✅ 全栈扩展能力</p>
+</div>
+
+<div class="dimension">
+<h2>维度 8：运维支持 <span class="score">重要</span></h2>
+<p><strong>关键问题</strong>：是否 7×24 厂商支持？OTA 升级？SLA？</p>
+<p><strong>推荐</strong>：</p>
+<ul>
+<li>7×24 厂商技术支持</li>
+<li>OTA 自动升级</li>
+<li>SLA 99.9%</li>
+<li>故障 24h 响应</li>
+<li>本地维修支持</li>
+</ul>
+<p><strong>STRATRONIX STA-100</strong>：✅ 2 年质保 + 7×24 支持</p>
+</div>
+
+<div class="dimension">
+<h2>维度 9：价格 <span class="score">核心</span></h2>
+<p><strong>关键问题</strong>：一次性 vs 按调用？TCO（总拥有成本）？</p>
+<p><strong>推荐</strong>：</p>
+<ul>
+<li>一次性购买：避免长期按调用付费</li>
+<li>批量折扣：10-49 台 / 50-99 台 / 100+ 台</li>
+<li>本地部署：避免数据出境合规风险</li>
+<li>ROI 评估：12-18 个月回本</li>
+</ul>
+<p><strong>STRATRONIX STA-100</strong>：✅ <strong>$399 USD 海外零售</strong>（10-49 台 $359 / 50-99 台 $319 / 100+ 台 $279）</p>
+</div>
+
+<div class="dimension">
+<h2>维度 10：生态 <span class="score">重要</span></h2>
+<p><strong>关键问题</strong>：SDK / 文档 / 社区 / 案例？</p>
+<p><strong>推荐</strong>：</p>
+<ul>
+<li>完整 SDK（多种语言）</li>
+<li>详细文档（中英文）</li>
+<li>活跃社区（GitHub / Discord）</li>
+<li>行业案例（医疗 / 法律 / 金融等）</li>
+<li>合作伙伴（SI / ISV）</li>
+</ul>
+<p><strong>STRATRONIX STA-100</strong>：✅ 全栈生态</p>
+</div>
+
+<h2>📊 选型评分卡</h2>
+<p>基于 10 个维度，对主流 PAA 评分：</p>
+<table style="width:100%;border-collapse:collapse;margin:20px 0;background:white;padding:20px;border-radius:8px;">
+<tr style="background:#f5f5f5;"><th style="padding:12px;text-align:left;">维度</th><th style="padding:12px;">STRATRONIX STA-100</th><th style="padding:12px;">NVIDIA NIM</th><th style="padding:12px;">自建方案</th></tr>
+<tr><td style="padding:12px;">硬件配置</td><td style="text-align:center;">⭐⭐⭐⭐⭐</td><td style="text-align:center;">⭐⭐⭐⭐⭐</td><td style="text-align:center;">⭐⭐⭐</td></tr>
+<tr><td style="padding:12px;">大模型支持</td><td style="text-align:center;">⭐⭐⭐⭐⭐</td><td style="text-align:center;">⭐⭐⭐⭐</td><td style="text-align:center;">⭐⭐⭐⭐⭐</td></tr>
+<tr><td style="padding:12px;">AI 框架</td><td style="text-align:center;">⭐⭐⭐⭐⭐</td><td style="text-align:center;">⭐⭐⭐</td><td style="text-align:center;">⭐⭐⭐⭐</td></tr>
+<tr><td style="padding:12px;">知识库</td><td style="text-align:center;">⭐⭐⭐⭐⭐</td><td style="text-align:center;">⭐⭐⭐</td><td style="text-align:center;">⭐⭐⭐⭐</td></tr>
+<tr><td style="padding:12px;">合规</td><td style="text-align:center;">⭐⭐⭐⭐⭐</td><td style="text-align:center;">⭐⭐⭐</td><td style="text-align:center;">⭐⭐⭐⭐</td></tr>
+<tr><td style="padding:12px;">行业适配</td><td style="text-align:center;">⭐⭐⭐⭐⭐</td><td style="text-align:center;">⭐⭐</td><td style="text-align:center;">⭐⭐⭐</td></tr>
+<tr><td style="padding:12px;">扩展性</td><td style="text-align:center;">⭐⭐⭐⭐⭐</td><td style="text-align:center;">⭐⭐⭐⭐⭐</td><td style="text-align:center;">⭐⭐⭐⭐</td></tr>
+<tr><td style="padding:12px;">运维支持</td><td style="text-align:center;">⭐⭐⭐⭐⭐</td><td style="text-align:center;">⭐⭐⭐⭐</td><td style="text-align:center;">⭐⭐</td></tr>
+<tr><td style="padding:12px;">价格</td><td style="text-align:center;">⭐⭐⭐⭐⭐</td><td style="text-align:center;">⭐⭐</td><td style="text-align:center;">⭐⭐⭐</td></tr>
+<tr><td style="padding:12px;">生态</td><td style="text-align:center;">⭐⭐⭐⭐⭐</td><td style="text-align:center;">⭐⭐⭐⭐</td><td style="text-align:center;">⭐⭐⭐⭐⭐</td></tr>
+<tr style="background:#fff5f9;font-weight:bold;"><td style="padding:12px;">总分</td><td style="text-align:center;color:#E6417F;">50/50</td><td style="text-align:center;">36/50</td><td style="text-align:center;">35/50</td></tr>
+</table>
+
+<div class="cta">
+<h2 style="color:white;border:none;padding:0;margin:0 0 14px 0;">PAA 推荐方案：STRATRONIX STA-100</h2>
+<p>10/10 维度全部满分 · 海外零售 <strong>$399 USD</strong> · 30 分钟开箱即用</p>
+<a href="mailto:sales@stratronix.ai" class="primary">→ 联系销售 (sales@stratronix.ai)</a>
+<a href="paa-wiki.html">→ PAA 百科完整版</a>
+</div>
+
+<footer style="text-align:center;color:#999;margin-top:30px;padding:20px;">
+<p>© 2026 STRATRONIX 鼎图太易信息技术（深圳）有限公司</p>
+</footer>
+</body>
+</html>
