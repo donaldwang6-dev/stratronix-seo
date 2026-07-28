@@ -1298,4 +1298,41 @@
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
+
+  <url>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/jd-shop.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/pdd-shop.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/xiaohongshu-posts.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/douyin-store.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/baidu-baike.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/baidu-wenku.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
 </urlset>
