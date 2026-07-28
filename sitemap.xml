@@ -1279,4 +1279,23 @@
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
+
+  <url>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/taobao-shop.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/taobao-product-sta100-entry.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/taobao-product-sta100-flagship.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
 </urlset>
