@@ -647,5 +647,12 @@
       <category>电商 / 平台 / STRATRONIX</category>
       <author>sales@stratronix.ai (汪杰)</author>
     </item>
+  <item>
+    <title>STRATRONIX 鼎图太易 - 中国大陆访问入口（国内加速方案）</title>
+    <link>https://donaldwang6-dev.github.io/stratronix-seo/cn-access.html</link>
+    <description>主站 www.stratronix.ai 部署在 Vercel sfo1（旧金山），国内访问较慢。本页面提供 3 个层次的加速方案：P0 已完成（1398 个 .gz 预压缩）、P1 汪总 1 次操作（Vercel hkg1 + Gitee Pages）、P2 国内 CDN 镜像。</description>
+    <pubDate>Tue, 28 Jul 2026 14:02:51 GMT</pubDate>
+    <guid>https://donaldwang6-dev.github.io/stratronix-seo/cn-access.html</guid>
+  </item>
 </channel>
 </rss>
