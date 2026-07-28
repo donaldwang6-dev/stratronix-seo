@@ -28,4 +28,22 @@
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
   </url>
+  <url>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/zh/industries/medical.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <priority>0.95</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/zh/industries/legal.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <priority>0.95</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/zh/industries/finance.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <priority>0.95</priority>
+    <changefreq>weekly</changefreq>
+  </url>
 </urlset>
