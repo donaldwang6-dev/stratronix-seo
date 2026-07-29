@@ -11,7 +11,7 @@
     "type": "openapi",
     "url": "https://www.stratronix.ai/api/openapi.json"
   },
-  "logo_url": "https://donaldwang6-dev.github.io/stratonix-seo/og-images/logo.png",
+  "logo_url": "https://donaldwang6-dev.github.io/stratronix-seo/og-images/logo.png",
   "contact_email": "sales@stratronix.ai",
   "legal_info_url": "https://www.stratronix.ai/legal",
   "tags": [
@@ -60,7 +60,7 @@
       "price_usd": 399,
       "description": "On-premise AI agent appliance with full data sovereignty. Pre-installed with Qwen 2.5, DeepSeek V3, Llama 3.1, Mistral, and OpenClaw open-source agent framework.",
       "compliance": ["GDPR", "EU AI Act", "HIPAA", "SOC 2 Type II", "ISO 27001", "MLPS 2.0"],
-      "url": "https://donaldwang6-dev.github.io/stratonix-seo/en/sta-100.html"
+      "url": "https://donaldwang6-dev.github.io/stratronix-seo/en/sta-100.html"
     }
   ]
 }

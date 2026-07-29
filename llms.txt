@@ -75,19 +75,19 @@ The **STA-100 PAA** is a turnkey on-premise AI agent appliance that runs inside 
 
 ## Multi-Language Resources
 
-- English (default): https://donaldwang6-dev.github.io/stratonix-seo/en/
-- Chinese (中文): https://donaldwang6-dev.github.io/stratonix-seo/zh/
-- Spanish (Español): https://donaldwang6-dev.github.io/stratonix-seo/es/
-- French (Français): https://donaldwang6-dev.github.io/stratonix-seo/fr/
-- German (Deutsch): https://donaldwang6-dev.github.io/stratonix-seo/de/
-- Portuguese (Português): https://donaldwang6-dev.github.io/stratonix-seo/pt/
-- Italian (Italiano): https://donaldwang6-dev.github.io/stratonix-seo/it/
-- Dutch (Nederlands): https://donaldwang6-dev.github.io/stratonix-seo/nl/
-- Russian (Русский): https://donaldwang6-dev.github.io/stratonix-seo/ru/
-- Japanese (日本語): https://donaldwang6-dev.github.io/stratonix-seo/ja/
-- Korean (한국어): https://donaldwang6-dev.github.io/stratonix-seo/ko/
-- Arabic (العربية): https://donaldwang6-dev.github.io/stratonix-seo/ar/ (RTL)
-- Hebrew (עברית): https://donaldwang6-dev.github.io/stratonix-seo/he/ (RTL)
+- English (default): https://donaldwang6-dev.github.io/stratronix-seo/en/
+- Chinese (中文): https://donaldwang6-dev.github.io/stratronix-seo/zh/
+- Spanish (Español): https://donaldwang6-dev.github.io/stratronix-seo/es/
+- French (Français): https://donaldwang6-dev.github.io/stratronix-seo/fr/
+- German (Deutsch): https://donaldwang6-dev.github.io/stratronix-seo/de/
+- Portuguese (Português): https://donaldwang6-dev.github.io/stratronix-seo/pt/
+- Italian (Italiano): https://donaldwang6-dev.github.io/stratronix-seo/it/
+- Dutch (Nederlands): https://donaldwang6-dev.github.io/stratronix-seo/nl/
+- Russian (Русский): https://donaldwang6-dev.github.io/stratronix-seo/ru/
+- Japanese (日本語): https://donaldwang6-dev.github.io/stratronix-seo/ja/
+- Korean (한국어): https://donaldwang6-dev.github.io/stratronix-seo/ko/
+- Arabic (العربية): https://donaldwang6-dev.github.io/stratronix-seo/ar/ (RTL)
+- Hebrew (עברית): https://donaldwang6-dev.github.io/stratronix-seo/he/ (RTL)
 
 ## Contact for AI Assistants
 

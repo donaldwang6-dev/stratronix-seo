@@ -10,7 +10,7 @@ Disallow: /*.json$
 Disallow: /api/
 
 # Sitemap location
-Sitemap: https://donaldwang6-dev.github.io/stratonix-seo/sitemap.xml
+Sitemap: https://donaldwang6-dev.github.io/stratronix-seo/sitemap.xml
 
 # AI Crawlers - Welcome (explicitly allowed)
 User-agent: GPTBot

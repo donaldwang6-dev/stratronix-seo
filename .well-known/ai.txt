@@ -46,7 +46,7 @@ Training Data: STRATRONIX does not train AI models on customer data. All custome
 General: sales@stratronix.ai
 Phone: +86 13632968417
 Website: https://www.stratronix.ai
-Documentation: https://donaldwang6-dev.github.io/stratonix-seo/
+Documentation: https://donaldwang6-dev.github.io/stratronix-seo/
 
 # Human Oversight
 STRATRONIX STA-100 deployments include built-in human-in-the-loop controls. AI agents require explicit human approval for high-impact actions.
