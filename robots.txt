@@ -1,10 +1,64 @@
-# STRATRONIX (鼎图太易) - Robots.txt — ANTI-CRAWLER MODE
-# Donald 2026-07-30 18:17 LOCKED: 「任何人都不允许去爬；只是展示作用」
-# Website: https://donaldwang6-dev.github.io/stratronix-seo/
+# STRATRONIX (鼎图太易) - Robots.txt
+# Website: https://www.stratronix.ai
+# Last updated: 2026-07-29
 
-# ====================================================
-# ✅ 白名单 — 主流搜索引擎 (允许)
-# ====================================================
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://donaldwang6-dev.github.io/stratronix-seo/sitemap.xml
+
+# AI Crawlers - Welcome (explicitly allowed)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+# Traditional search engines
 User-agent: Googlebot
 Allow: /
 
@@ -23,77 +77,13 @@ Allow: /
 User-agent: YandexBot
 Allow: /
 
-User-agent: Applebot
-Allow: /
-
 User-agent: Sogou
 Allow: /
 
-# ====================================================
-# ❌ AI 爬虫 — 禁止商业化抓取 (Donald LOCKED)
-# ====================================================
-User-agent: GPTBot
-Disallow: /
+# Crawl delay (be polite)
+Crawl-delay: 1
 
-User-agent: ChatGPT-User
-Disallow: /
-
-User-agent: OAI-SearchBot
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
-User-agent: anthropic-ai
-Disallow: /
-
-User-agent: Claude-Web
-Disallow: /
-
-User-agent: ClaudeBot
-Disallow: /
-
-User-agent: PerplexityBot
-Disallow: /
-
-User-agent: Perplexity
-Disallow: /
-
-User-agent: Google-Extended
-Disallow: /
-
-User-agent: Applebot-Extended
-Disallow: /
-
-User-agent: Bytespider
-Disallow: /
-
-User-agent: Amazonbot
-Disallow: /
-
-User-agent: cohere-ai
-Disallow: /
-
-User-agent: meta-externalagent
-Disallow: /
-
-User-agent: Meta-ExternalAgent
-Disallow: /
-
-User-agent: FacebookBot
-Disallow: /
-
-# ====================================================
-# ❌ 任何其他爬虫 — 全部禁止 (Donald LOCKED: 任何人都不允许去爬)
-# ====================================================
-User-agent: *
-Disallow: /
-
-# ====================================================
-# 📌 Sitemap (仅白名单引擎)
-# ====================================================
-Sitemap: https://donaldwang6-dev.github.io/stratronix-seo/sitemap.xml
-
-# ====================================================
-# 🚫 Honeypot Trap — 爬虫陷阱
-# ====================================================
+# LLM-specific resources
+Allow: /llms.txt
+Allow: /.well-known/ai.txt
+Allow: /ai-plugin.json
