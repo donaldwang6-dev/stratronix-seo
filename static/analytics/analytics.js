@@ -6,7 +6,7 @@
 (function(){
   try {
     var SITE = (window.JERRY_ANALYTICS_SITE) || (document.currentScript && document.currentScript.getAttribute('data-site')) || 'stratronix-seo';
-    var ENDPOINT = (window.JERRY_ANALYTICS_ENDPOINT) || 'https://analytics.jerry.stratronix.ai/collect';
+    var ENDPOINT = (window.JERRY_ANALYTICS_ENDPOINT) || 'https://previously-january-theories-vanilla.trycloudflare.com/collect';
     
     var ref = document.referrer || '';
     var path = window.location.pathname;
