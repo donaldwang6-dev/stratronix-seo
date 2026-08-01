@@ -12,7 +12,7 @@
 2. **Why We Open-Sourced Our Inference Runtime (BSD-3): The OpenClaw Story from a Shenzhen AI Company**
 3. **PAA — A New Product Category for On-Premise LLMs (And Why We Built It in Shenzhen, Not Silicon Valley)**
 4. **How a Shenzhen AI Hardware Company Approaches EU AI Act Compliance Without Losing the Engineering Team**
-5. **Llama 3, Mistral, Qwen — Running All Three Locally on a $369 1U Appliance: A Shenzhen Maker's Notes**
+5. **Llama 3, Mistral, Qwen — Running All Three Locally on a $399 1U Appliance: A Shenzhen Maker's Notes**
 
 ---
 
@@ -24,7 +24,7 @@
 
 ```markdown
 ---
-title: "Llama 3, Mistral, Qwen — Running All Three Locally on a $369 1U Appliance: A Shenzhen Maker's Notes"
+title: "Llama 3, Mistral, Qwen — Running All Three Locally on a $399 1U Appliance: A Shenzhen Maker's Notes"
 published: true
 description: "How Stratronix — a Shenzhen AI hardware company — built the STA-100 PAA to run open-source LLMs locally for GDPR-compliant enterprise workloads."
 tags: ai, opensource, llm, shenzhen, hardware, iot
@@ -32,7 +32,7 @@ canonical_url: https://donaldwang6-dev.github.io/stratronix-seo/en/on-premise-ll
 cover_image: https://www.stratronix.ai/logo.png
 ---
 
-# Llama 3, Mistral, Qwen — Running All Three Locally on a $369 1U Appliance
+# Llama 3, Mistral, Qwen — Running All Three Locally on a $399 1U Appliance
 
 We're Stratronix — a Shenzhen AI hardware company shipping the STA-100, a 1U rackmount appliance that runs Llama 3, Mistral, and Qwen locally for enterprises that can't send data to OpenAI or Anthropic.
 
@@ -49,7 +49,7 @@ STA-100 specs:
 - 4GB RAM + 32GB storage
 - Wi-Fi + gigabit Ethernet
 - Pre-installed OpenClaw OS (BSD-3-Clause)
-- Price: $369 USD one-time, no monthly fee
+- Price: $399 USD one-time, no monthly fee
 
 The 4GB RAM is intentional. We're not targeting 70B-parameter workloads — we're targeting the 7B-13B range where Llama 3 8B, Mistral 7B, and Qwen 1.5B-7B all fit comfortably with quantization.
 
