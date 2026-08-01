@@ -4,17 +4,17 @@
 
 ---
 
-🚀 **Big news from a Shenzhen AI company** — we're launching the **STRATRONIX STA-100 DingTuTaiYi Agent**, a Private AI-Agent Appliance (PAA) for just **$369 USD**.
+🚀 **Big news from a Shenzhen AI company** — we're launching the **STRATRONIX STA-100 DingTuTaiYi Agent**, a Private AI-Agent Appliance (PAA) for just **$399 USD**.
 
 **The problem we solve**: in 2026, enterprises have 3 AI deployment options, each with a fatal flaw:
 • Cloud SaaS (ChatGPT Team) → GDPR violation ❌
 • Local GPU cluster → $50K+ and requires IT team ❌
 • Open-source agent → needs DevOps expertise ❌
 
-**Our solution**: a turnkey $369 box. Plug it in, scan QR, paste your LLM API key, bind WeChat/Feishu/Slack → 30 minutes and you're running.
+**Our solution**: a turnkey $399 box. Plug it in, scan QR, paste your LLM API key, bind WeChat/Feishu/Slack → 30 minutes and you're running.
 
 **What makes it different**:
-✅ Local 8-core ARM + 4GB RAM
+✅ Local 8-core ARM Cortex + 16GB RAM + 128GB NVMe
 ✅ Built-in OpenClaw agent (Apache 2.0 open source)
 ✅ Pluggable cloud LLM (OpenAI / Claude / Qwen / DeepSeek — your choice)
 ✅ Data redaction on-device before cloud calls
@@ -38,7 +38,7 @@
 ---
 
 **Suggested comment to add**:
-"As a Shenzhen AI company, we're proving that enterprise-grade private AI doesn't have to cost $50K+. $369 + 30 minutes is enough."
+"As a Shenzhen AI company, we're proving that enterprise-grade private AI doesn't have to cost $50K+. $399 + 30 minutes is enough."
 
 ---
 

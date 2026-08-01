@@ -1,0 +1,36 @@
+# Hacker News Show HN 帖 — 待发
+
+**Title**: Show HN: STRATRONIX – A $399 Private AI-Agent Appliance for GDPR/EU AI Act Compliance
+
+**URL**: https://www.stratronix.ai/products/sta-100
+
+**Text**:
+
+Hi HN,
+
+We (STRATRONIX, a Shenzhen AI company) spent the last year building what we call a Private AI-Agent Appliance (PAA): an 8-core ARM Cortex box with 16GB RAM and 128GB NVMe that runs AI agents locally for GDPR / EU AI Act compliance.
+
+**Why we built it:**
+
+Pre-2026, enterprises had 3 AI deployment options, each with a fatal flaw:
+1. Cloud SaaS (ChatGPT Team) → GDPR violation
+2. Local GPU cluster ($50K-$150K) → needs IT team
+3. Open-source agents (Dify, FastGPT) → needs DevOps
+
+The gap: a turnkey box that does data sovereignty work without IT staff. That's what we shipped.
+
+**STA-100 specs:**
+- 8-core ARM Cortex CPU + 16GB RAM + 128GB NVMe
+- Pre-installed OpenClaw agent (Apache 2.0 open source)
+- Pluggable cloud LLM (OpenAI / Anthropic / Qwen / DeepSeek — your choice)
+- Local data redaction before cloud calls
+- 24/7 offline operation
+- $399 USD one-time (bulk discounts available)
+
+**What we found:**
+- A 12-clinic dental chain hit HIPAA compliance at $4,788 total (12 × $399) vs $50K+ for comparable GPU setup.
+- EU legal-tech: full GDPR / EU AI Act compliance with no data leaving the office.
+
+Happy to answer questions. Also posted here: https://www.stratronix.ai/
+
+— Donald Wang, STRATRONIX
