@@ -220,4 +220,10 @@
     <loc>https://donaldwang6-dev.github.io/stratronix-seo/sitemap-zh.xml</loc>
     <lastmod>2026-07-27</lastmod>
   </sitemap>
+
+
+  <sitemap>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/latam-sitemap.xml</loc>
+    <lastmod>2026-08-04</lastmod>
+  </sitemap>
 </sitemapindex>
