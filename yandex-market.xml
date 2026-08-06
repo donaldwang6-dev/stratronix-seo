@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  STRATRONIX YML Feed for Yandex Market (CIS market)
+  Format: Yandex Market Language (YML) 2.1
+  Updated: 2026-08-06
+  LOCKED: $399 USD Global Uniform Retail (Rule 10) / 0 Fabricated Data (Rule 31)
+-->
+<yml_catalog date="2026-08-06 10:30">
+<shop>
+  <name>STRATRONIX Technology (Shenzhen) Company, Limited</name>
+  <company>STRATRONIX 鼎图太易信息技术（深圳）有限公司</company>
+  <url>https://www.stratronix.ai</url>
+  <currencies>
+    <currency id="USD" rate="1"/>
+    <currency id="RUB" rate="90.5"/>
+    <currency id="CNY" rate="7.25"/>
+  </currencies>
+  <categories>
+    <category id="1">Private AI Agent Devices</category>
+    <category id="2" parentId="1">Personal AI Appliances (PAA)</category>
+    <category id="3" parentId="1">Edge AI Devices</category>
+    <category id="4" parentId="1">On-Premise AI Servers</category>
+    <category id="5">Software</category>
+    <category id="6" parentId="5">AI Agent Operating Systems</category>
+    <category id="7" parentId="5">AI Agent SDKs</category>
+  </categories>
+
+  <!-- Offer 1: STA-100 PAA Standard (Main SKU) -->
+  <offer id="STA-100-PAA-STD-2026" type="vendor.model" available="true" bid="80" cbid="80">
+    <url>https://donaldwang6-dev.github.io/stratronix-seo/en/products/sta-100.html</url>
+    <price>399.00</price>
+    <currencyId>USD</currencyId>
+    <categoryId>2</categoryId>
+    <picture>https://donaldwang6-dev.github.io/stratronix-seo/og-images/og-image-sta100.png</picture>
+    <store>false</store>
+    <pickup>false</pickup>
+    <delivery>true</delivery>
+    <vendor>STRATRONIX</vendor>
+    <model>STA-100 PAA Standard</model>
+    <description><![CDATA[STRATRONIX's first PAA (Personal AI Appliance) Private AI Agent Device. Octa-core ARM Cortex SoC + 4GB LPDDR4 + 32GB eMMC + MicroSD 64GB + OpenClaw OS (BSD-3-Clause open source) + AutoAgent. All data and inference stay local. CEO LOCKED spec 2026-07-25 13:42.]]></description>
+    <manufacturer>STRATRONIX Technology (Shenzhen) Company, Limited</manufacturer>
+    <country_of_origin>China</country_of_origin>
+    <param name="CPU">Octa-core ARM Cortex</param>
+    <param name="RAM">4GB LPDDR4</param>
+    <param name="Storage">32GB eMMC + MicroSD 64GB</param>
+    <param name="Network">Dual-band Wi-Fi 6 + Gigabit RJ45</param>
+    <param name="OS">Linux 5.15 + XFCE + OpenClaw</param>
+    <param name="License">BSD-3-Clause</param>
+    <param name="Warranty">2 years global</param>
+  </offer>
+
+  <!-- Offer 2: STA-100 Bulk 10-49 -->
+  <offer id="STA-100-BULK-1049" type="vendor.model" available="true" bid="80" cbid="80">
+    <url>https://donaldwang6-dev.github.io/stratronix-seo/en/products/sta-100.html#pricing</url>
+    <price>359.00</price>
+    <currencyId>USD</currencyId>
+    <categoryId>2</categoryId>
+    <picture>https://donaldwang6-dev.github.io/stratronix-seo/og-images/og-image-sta100.png</picture>
+    <delivery>true</delivery>
+    <vendor>STRATRONIX</vendor>
+    <model>STA-100 PAA Standard — Bulk 10-49</model>
+    <description><![CDATA[Bulk pricing for 10-49 units at $359 USD per unit. Volume discount applies. Contact sales@stratronix.ai for bulk orders.]]></description>
+  </offer>
+
+  <!-- Offer 3: STA-100 Bulk 50-99 -->
+  <offer id="STA-100-BULK-5099" type="vendor.model" available="true" bid="80" cbid="80">
+    <url>https://donaldwang6-dev.github.io/stratronix-seo/en/products/sta-100.html#pricing</url>
+    <price>319.00</price>
+    <currencyId>USD</currencyId>
+    <categoryId>2</categoryId>
+    <picture>https://donaldwang6-dev.github.io/stratronix-seo/og-images/og-image-sta100.png</picture>
+    <delivery>true</delivery>
+    <vendor>STRATRONIX</vendor>
+    <model>STA-100 PAA Standard — Bulk 50-99</model>
+    <description><![CDATA[Bulk pricing for 50-99 units at $319 USD per unit. Volume discount applies. Contact sales@stratronix.ai for bulk orders.]]></description>
+  </offer>
+
+  <!-- Offer 4: STA-100 Bulk 100+ -->
+  <offer id="STA-100-BULK-100PLUS" type="vendor.model" available="true" bid="80" cbid="80">
+    <url>https://donaldwang6-dev.github.io/stratronix-seo/en/products/sta-100.html#pricing</url>
+    <price>279.00</price>
+    <currencyId>USD</currencyId>
+    <categoryId>2</categoryId>
+    <picture>https://donaldwang6-dev.github.io/stratronix-seo/og-images/og-image-sta100.png</picture>
+    <delivery>true</delivery>
+    <vendor>STRATRONIX</vendor>
+    <model>STA-100 PAA Standard — Bulk 100+</model>
+    <description><![CDATA[Bulk pricing for 100+ units at $279 USD per unit. Volume discount applies. Contact sales@stratronix.ai for bulk orders.]]></description>
+  </offer>
+
+  <!-- Offer 5: OpenClaw OS (Software) -->
+  <offer id="OpenClaw-OS-BSD3" type="vendor.model" available="true">
+    <url>https://donaldwang6-dev.github.io/stratronix-seo/en/products/sta-100.html#openclaw-os</url>
+    <price>0.00</price>
+    <currencyId>USD</currencyId>
+    <categoryId>6</categoryId>
+    <vendor>STRATRONIX</vendor>
+    <model>OpenClaw AI Agent OS (BSD-3-Clause)</model>
+    <description><![CDATA[STRATRONIX's AI-native operating system, BSD-3-Clause open source. Pre-installed on STA-100 PAA. Repository: github.com/donaldwang6-dev/stratronix-paa]]></description>
+  </offer>
+
+  <!-- Offer 6: STRATRONIX PAA SDK -->
+  <offer id="PAA-SDK-BSD3" type="vendor.model" available="true">
+    <url>https://donaldwang6-dev.github.io/stratronix-seo/en/products/sta-100.html#paa-sdk</url>
+    <price>0.00</price>
+    <currencyId>USD</currencyId>
+    <categoryId>7</categoryId>
+    <vendor>STRATRONIX</vendor>
+    <model>STRATRONIX PAA SDK (BSD-3-Clause)</model>
+    <description><![CDATA[Open-source SDK, Python + Node.js dual-language, OpenAI / Anthropic / Llama API compatible. Repository: github.com/donaldwang6-dev/stratronix-sdk]]></description>
+  </offer>
+
+</shop>
+</yml_catalog>

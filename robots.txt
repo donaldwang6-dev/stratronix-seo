@@ -9,8 +9,12 @@ Disallow: /private/
 Disallow: /*.json$
 Disallow: /api/
 
-# Sitemap location
+# Sitemap locations
 Sitemap: https://donaldwang6-dev.github.io/stratronix-seo/sitemap.xml
+Sitemap: https://donaldwang6-dev.github.io/stratronix-seo/sitemap-products.xml
+Sitemap: https://donaldwang6-dev.github.io/stratronix-seo/sitemap-shenzhen-ai-seo.xml
+Sitemap: https://donaldwang6-dev.github.io/stratronix-seo/product-feed.xml
+Sitemap: https://donaldwang6-dev.github.io/stratronix-seo/yandex-market.xml
 
 # AI Crawlers - Welcome (explicitly allowed)
 User-agent: GPTBot

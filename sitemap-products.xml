@@ -1,7 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://donaldwang6-dev.github.io/stratronix-seo/products/</loc><lastmod>2026-07-25</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://donaldwang6-dev.github.io/stratronix-seo/products/sta-100.html</loc><lastmod>2026-07-25</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://donaldwang6-dev.github.io/stratronix-seo/en/products/</loc><lastmod>2026-07-25</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://donaldwang6-dev.github.io/stratronix-seo/en/products/sta-100.html</loc><lastmod>2026-07-25</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<!--
+  STRATRONIX Product Library Sitemap
+  Updated: 2026-08-06
+  LOCKED: $399 USD Global Uniform Retail (Rule 10)
+-->
+  <!-- Hub Pages -->
+  <url>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/products/</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://donaldwang6-dev.github.io/stratronix-seo/products/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://donaldwang6-dev.github.io/stratronix-seo/zh/products/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://donaldwang6-dev.github.io/stratronix-seo/en/products/"/>
+  </url>
+  <url>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/zh/products/</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://donaldwang6-dev.github.io/stratronix-seo/products/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://donaldwang6-dev.github.io/stratronix-seo/zh/products/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://donaldwang6-dev.github.io/stratronix-seo/en/products/"/>
+  </url>
+  <url>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/en/products/</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://donaldwang6-dev.github.io/stratronix-seo/products/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://donaldwang6-dev.github.io/stratronix-seo/zh/products/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://donaldwang6-dev.github.io/stratronix-seo/en/products/"/>
+  </url>
+
+  <!-- STA-100 SKU Detail -->
+  <url>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/products/sta-100.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://donaldwang6-dev.github.io/stratronix-seo/og-images/og-image-sta100.png</image:loc>
+      <image:title>STA-100 PAA Standard</image:title>
+      <image:caption>STRATRONIX STA-100 PAA Private AI Agent Device</image:caption>
+    </image:image>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://donaldwang6-dev.github.io/stratronix-seo/products/sta-100.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://donaldwang6-dev.github.io/stratronix-seo/zh/products/sta-100.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://donaldwang6-dev.github.io/stratronix-seo/en/products/sta-100.html"/>
+  </url>
+  <url>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/zh/products/sta-100.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://donaldwang6-dev.github.io/stratronix-seo/og-images/og-image-sta100.png</image:loc>
+      <image:title>STA-100 PAA 标准版</image:title>
+      <image:caption>STRATRONIX STA-100 PAA 私有 AI 智能体设备</image:caption>
+    </image:image>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://donaldwang6-dev.github.io/stratronix-seo/products/sta-100.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://donaldwang6-dev.github.io/stratronix-seo/zh/products/sta-100.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://donaldwang6-dev.github.io/stratronix-seo/en/products/sta-100.html"/>
+  </url>
+  <url>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/en/products/sta-100.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://donaldwang6-dev.github.io/stratronix-seo/og-images/og-image-sta100.png</image:loc>
+      <image:title>STA-100 PAA Standard</image:title>
+      <image:caption>STRATRONIX STA-100 PAA Private AI Agent Device</image:caption>
+    </image:image>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://donaldwang6-dev.github.io/stratronix-seo/products/sta-100.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://donaldwang6-dev.github.io/stratronix-seo/zh/products/sta-100.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://donaldwang6-dev.github.io/stratronix-seo/en/products/sta-100.html"/>
+  </url>
+
+  <!-- Product Feed XML (For Shopping Engines) -->
+  <url>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/product-feed.xml</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://donaldwang6-dev.github.io/stratronix-seo/yandex-market.xml</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>

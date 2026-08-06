@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  STRATRONIX Product Feed — Google Shopping / Bing Shopping / Microsoft Advertising
+  Format: RSS 2.0 with Google Product namespace (g:)
+  Updated: 2026-08-06
+  LOCKED: $399 USD Global Uniform Retail (Rule 10) / 0 Fabricated Data (Rule 31)
+  Manufacturer: STRATRONIX Technology (Shenzhen) Company, Limited
+-->
+<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
+<channel>
+<title>STRATRONIX Product Feed</title>
+<link>https://donaldwang6-dev.github.io/stratronix-seo/en/products/</link>
+<description>STRATRONIX PAA (Personal AI Appliance) private AI agent devices</description>
+
+<!-- Product 1: STA-100 PAA Standard (Main SKU) -->
+<item>
+  <g:id>STA-100-PAA-STD-2026</g:id>
+  <g:title>STRATRONIX STA-100 PAA Standard Private AI Agent Device — $399 USD Global Retail</g:title>
+  <g:description>STRATRONIX's first PAA (Personal AI Appliance) Private AI Agent Device. Octa-core ARM Cortex SoC + 4GB LPDDR4 + 32GB eMMC + MicroSD 64GB + OpenClaw OS (BSD-3-Clause open source) + AutoAgent. All data and inference stay local. Global uniform retail price $399 USD. CEO LOCKED spec 2026-07-25 13:42.</g:description>
+  <g:link>https://donaldwang6-dev.github.io/stratronix-seo/en/products/sta-100.html</g:link>
+  <g:image_link>https://donaldwang6-dev.github.io/stratronix-seo/og-images/og-image-sta100.png</g:image_link>
+  <g:additional_image_link>https://donaldwang6-dev.github.io/stratronix-seo/og-images/og-image-product-library.png</g:additional_image_link>
+  <g:brand>STRATRONIX</g:brand>
+  <g:condition>new</g:condition>
+  <g:availability>in_stock</g:availability>
+  <g:price>399.00 USD</g:price>
+  <g:sale_price>399.00 USD</g:sale_price>
+  <g:google_product_category>Electronics &gt; Computers &gt; Computer Servers</g:google_product_category>
+  <g:product_type>Private AI Agent Device &gt; Personal AI Appliance &gt; Edge AI Device</g:product_type>
+  <g:gtin>STR-STA100-2026</g:gtin>
+  <g:mpn>STA-100-PAA-STD-2026</g:mpn>
+  <g:identifier_exists>no</g:identifier_exists>
+  <g:item_group_id>STA-100-PAA</g:item_group_id>
+  <g:shipping>
+    <g:country>CN</g:country>
+    <g:service>Standard</g:service>
+    <g:price>0.00 USD</g:price>
+  </g:shipping>
+  <g:shipping>
+    <g:country>US</g:country>
+    <g:service>Standard</g:service>
+    <g:price>0.00 USD</g:price>
+  </g:shipping>
+  <g:shipping>
+    <g:country>GB</g:country>
+    <g:service>Standard</g:service>
+    <g:price>0.00 USD</g:price>
+  </g:shipping>
+  <g:shipping>
+    <g:country>DE</g:country>
+    <g:service>Standard</g:service>
+    <g:price>0.00 USD</g:price>
+  </g:shipping>
+  <g:shipping>
+    <g:country>FR</g:country>
+    <g:service>Standard</g:service>
+    <g:price>0.00 USD</g:price>
+  </g:shipping>
+  <g:shipping>
+    <g:country>ES</g:country>
+    <g:service>Standard</g:service>
+    <g:price>0.00 USD</g:price>
+  </g:shipping>
+  <g:shipping>
+    <g:country>IT</g:country>
+    <g:service>Standard</g:service>
+    <g:price>0.00 USD</g:price>
+  </g:shipping>
+  <g:shipping>
+    <g:country>JP</g:country>
+    <g:service>Standard</g:service>
+    <g:price>0.00 USD</g:price>
+  </g:shipping>
+  <g:shipping>
+    <g:country>RU</g:country>
+    <g:service>Standard</g:service>
+    <g:price>0.00 USD</g:price>
+  </g:shipping>
+  <g:custom_label_0>PAA-V1</g:custom_label_0>
+  <g:custom_label_1>Data-Local-Inference-Local</g:custom_label_1>
+  <g:custom_label_2>Global-Uniform-Retail-399USD</g:custom_label_2>
+</item>
+
+<!-- Product 2: STA-100 Bulk 10-49 units -->
+<item>
+  <g:id>STA-100-PAA-STD-2026-BULK-1049</g:id>
+  <g:title>STRATRONIX STA-100 PAA Standard — Bulk 10-49 units ($359 USD/unit)</g:title>
+  <g:description>STRATRONIX STA-100 PAA Standard, bulk pricing 10-49 units at $359 USD per unit. Volume discount applies. All data and inference stay local. Contact sales@stratronix.ai for bulk orders.</g:description>
+  <g:link>https://donaldwang6-dev.github.io/stratronix-seo/en/products/sta-100.html#pricing</g:link>
+  <g:image_link>https://donaldwang6-dev.github.io/stratronix-seo/og-images/og-image-sta100.png</g:image_link>
+  <g:brand>STRATRONIX</g:brand>
+  <g:condition>new</g:condition>
+  <g:availability>in_stock</g:availability>
+  <g:price>359.00 USD</g:price>
+  <g:sale_price>359.00 USD</g:sale_price>
+  <g:google_product_category>Electronics &gt; Computers &gt; Computer Servers</g:google_product_category>
+  <g:product_type>Private AI Agent Device &gt; Bulk Order</g:product_type>
+  <g:mpn>STA-100-BULK-1049</g:mpn>
+  <g:identifier_exists>no</g:identifier_exists>
+  <g:item_group_id>STA-100-PAA</g:item_group_id>
+  <g:custom_label_0>PAA-V1-BULK-1049</g:custom_label_0>
+  <g:custom_label_1>Volume-Discount</g:custom_label_1>
+</item>
+
+<!-- Product 3: STA-100 Bulk 50-99 units -->
+<item>
+  <g:id>STA-100-PAA-STD-2026-BULK-5099</g:id>
+  <g:title>STRATRONIX STA-100 PAA Standard — Bulk 50-99 units ($319 USD/unit)</g:title>
+  <g:description>STRATRONIX STA-100 PAA Standard, bulk pricing 50-99 units at $319 USD per unit. Volume discount applies. All data and inference stay local. Contact sales@stratronix.ai for bulk orders.</g:description>
+  <g:link>https://donaldwang6-dev.github.io/stratronix-seo/en/products/sta-100.html#pricing</g:link>
+  <g:image_link>https://donaldwang6-dev.github.io/stratronix-seo/og-images/og-image-sta100.png</g:image_link>
+  <g:brand>STRATRONIX</g:brand>
+  <g:condition>new</g:condition>
+  <g:availability>in_stock</g:availability>
+  <g:price>319.00 USD</g:price>
+  <g:sale_price>319.00 USD</g:sale_price>
+  <g:google_product_category>Electronics &gt; Computers &gt; Computer Servers</g:google_product_category>
+  <g:product_type>Private AI Agent Device &gt; Bulk Order</g:product_type>
+  <g:mpn>STA-100-BULK-5099</g:mpn>
+  <g:identifier_exists>no</g:identifier_exists>
+  <g:item_group_id>STA-100-PAA</g:item_group_id>
+  <g:custom_label_0>PAA-V1-BULK-5099</g:custom_label_0>
+  <g:custom_label_1>Volume-Discount</g:custom_label_1>
+</item>
+
+<!-- Product 4: STA-100 Bulk 100+ units -->
+<item>
+  <g:id>STA-100-PAA-STD-2026-BULK-100PLUS</g:id>
+  <g:title>STRATRONIX STA-100 PAA Standard — Bulk 100+ units ($279 USD/unit)</g:title>
+  <g:description>STRATRONIX STA-100 PAA Standard, bulk pricing 100+ units at $279 USD per unit. Volume discount applies. All data and inference stay local. Contact sales@stratronix.ai for bulk orders.</g:description>
+  <g:link>https://donaldwang6-dev.github.io/stratronix-seo/en/products/sta-100.html#pricing</g:link>
+  <g:image_link>https://donaldwang6-dev.github.io/stratronix-seo/og-images/og-image-sta100.png</g:image_link>
+  <g:brand>STRATRONIX</g:brand>
+  <g:condition>new</g:condition>
+  <g:availability>in_stock</g:availability>
+  <g:price>279.00 USD</g:price>
+  <g:sale_price>279.00 USD</g:sale_price>
+  <g:google_product_category>Electronics &gt; Computers &gt; Computer Servers</g:google_product_category>
+  <g:product_type>Private AI Agent Device &gt; Bulk Order</g:product_type>
+  <g:mpn>STA-100-BULK-100PLUS</g:mpn>
+  <g:identifier_exists>no</g:identifier_exists>
+  <g:item_group_id>STA-100-PAA</g:item_group_id>
+  <g:custom_label_0>PAA-V1-BULK-100PLUS</g:custom_label_0>
+  <g:custom_label_1>Volume-Discount</g:custom_label_1>
+</item>
+
+</channel>
+</rss>
