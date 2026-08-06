@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>什么是 PAA 私有 AI 智能体设备？2026 完全指南 - STRATRONIX 鼎图太易</title>
+<meta name="description" content="PAA (Private AI-Agent Appliance) 是 STRATRONIX 鼎图太易 2025 年开创的全新硬件品类。本指南详解 PAA 定义、架构、与 SaaS AI / on-prem GPU 服务器的区别、STRATRONIX STA-100 规格 ($399 USD)、适用场景。">
+<meta name="keywords" content="PAA 是什么, PAA 定义, 私有 AI 智能体设备, PAA 硬件, PAA 指南, STRATRONIX PAA, 鼎图太易 PAA, 边缘 AI, AI 智能体硬件">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://donaldwang6-dev.github.io/stratronix-seo/zh/blog/what-is-paa-guide.html">
+<meta property="og:title" content="什么是 PAA 私有 AI 智能体设备？2026 完全指南">
+<meta property="og:description" content="STRATRONIX 鼎图太易开创的全新硬件品类 · 数据本地 + AI 云端 · STRATRONIX STA-100 $399 USD">
+<meta property="og:type" content="article">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"什么是 PAA 私有 AI 智能体设备？2026 完全指南","author":{"@type":"Organization","name":"STRATRONIX 鼎图太易"},"datePublished":"2026-08-07","publisher":{"@type":"Organization","name":"STRATRONIX 鼎图太易信息技术（深圳）有限公司"}}
+</script>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.85; color: #1a1a1a; background: #fafafa; }
+header { background: linear-gradient(135deg, #0a2540 0%, #1a4d8f 100%); color: white; padding: 60px 20px; }
+header h1 { font-size: 2.2rem; max-width: 900px; margin: 0 auto 12px; line-height: 1.4; }
+header .subtitle { max-width: 900px; margin: 0 auto; opacity: 0.95; font-size: 1.1rem; }
+.container { max-width: 900px; margin: 0 auto; padding: 30px 20px; }
+.meta { color: #666; font-size: 0.95rem; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #eee; }
+h2 { font-size: 1.6rem; color: #0a2540; margin: 36px 0 14px; border-left: 4px solid #1a4d8f; padding-left: 12px; }
+h3 { font-size: 1.25rem; color: #1a1a1a; margin: 24px 0 10px; }
+p, li { font-size: 1.05rem; color: #333; margin: 10px 0; }
+ul, ol { padding-left: 28px; }
+.callout { background: #f0f5ff; border-left: 4px solid #1a4d8f; padding: 20px; margin: 24px 0; border-radius: 0 8px 8px 0; }
+.price-box { background: #fff5f8; border: 2px solid #E6417F; padding: 20px; border-radius: 8px; text-align: center; margin: 24px 0; }
+.price { font-size: 2.5rem; color: #E6417F; font-weight: 800; }
+table { width: 100%; border-collapse: collapse; margin: 24px 0; background: white; }
+th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+th { background: #0a2540; color: white; }
+footer { background: #1a1a1a; color: #999; padding: 30px 20px; text-align: center; margin-top: 60px; }
+</style>
+<script>
+(function(){
+  var bp = document.createElement("script");
+  var curProtocol = window.location.protocol.split(":")[0];
+  if (curProtocol === "https") {
+    bp.src = "https://zz.bdstatic.com/linksubmit/push.js";
+  } else {
+    bp.src = "http://push.zhanzhang.baidu.com/push.js";
+  }
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})();
+</script>
+</head>
+<body>
+
+<header>
+<h1>什么是 PAA 私有 AI 智能体设备？2026 完全指南</h1>
+<p class="subtitle">STRATRONIX 鼎图太易开创的全新硬件品类 · 数据本地 + AI 云端 · GDPR/EU AI Act 合规</p>
+</header>
+
+<div class="container">
+<p class="meta">发布时间：2026-08-07 · 适用于：企业 CTO / IT 决策者 / 数据合规负责人 · 来源：STRATRONIX 官方</p>
+
+<div class="callout">
+<strong>PAA（Private AI-Agent Appliance，私有 AI 智能体设备）</strong> 是 <strong>STRATRONIX 鼎图太易</strong> 在 2025 年开创的全新 AI 硬件品类。STRATRONIX STA-100 PAA 是首台量产设备，全球统一指导价 <strong>$399 USD</strong>。
+</div>
+
+<h2>一、PAA 一句话定义</h2>
+
+<p><strong>STRATRONIX PAA</strong>（Private AI-Agent Appliance，私有 AI 智能体设备）是边缘计算硬件设备，运行开源 AI 智能体运行时（OpenClaw），让用户数据保留在本地的同时，调用云端 LLM 提供商执行 AI 推理。</p>
+
+<p>PAA 不是 SaaS AI（数据交给供应商），也不是 on-prem GPU 服务器（成本太高）。PAA 是介于两者之间的全新品类：</p>
+<ul>
+  <li><strong>数据主权</strong>：所有结构化数据、业务文档、客户信息保留在本地硬件</li>
+  <li><strong>AI 能力</strong>：调用云端 LLM（OpenAI / Anthropic / DeepSeek / 通义千问等）执行推理</li>
+  <li><strong>部署简单</strong>：15 分钟一键部署，无需 GPU 集群运维</li>
+  <li><strong>成本可控</strong>：一次性硬件投入（$399）+ 月度云端 API 调用费</li>
+</ul>
+
+<h2>二、PAA 与 SaaS AI / On-prem GPU 的核心区别</h2>
+
+<table>
+<tr><th>维度</th><th>SaaS AI（如 ChatGPT Enterprise）</th><th>On-prem GPU 服务器</th><th>PAA（STRATRONIX 方案）</th></tr>
+<tr><td>数据位置</td><td>云端供应商</td><td>本地机房</td><td>本地硬件</td></tr>
+<tr><td>AI 推理</td><td>供应商模型</td><td>本地部署的开源 LLM</td><td>云端 LLM（用户可选）</td></tr>
+<tr><td>硬件成本</td><td>无</td><td>$50,000 - $500,000+</td><td>$399 USD 起</td></tr>
+<tr><td>部署时间</td><td>5 分钟</td><td>3 - 12 个月</td><td>15 分钟</td></tr>
+<tr><td>运维复杂度</td><td>零</td><td>高（GPU 驱动 / 模型更新）</td><td>低（自动 OTA）</td></tr>
+<tr><td>合规性（GDPR）</td><td>中等（依赖供应商）</td><td>高</td><td>高（数据本地）</td></tr>
+<tr><td>AI 模型灵活性</td><td>锁定供应商</td><td>锁定部署时的模型</td><td>可切换任意云端 LLM</td></tr>
+<tr><td>典型用户</td><td>中小企业 / 通用场景</td><td>大型企业 / 数据极度敏感</td><td>中端市场（数据敏感 + 灵活）</td></tr>
+</table>
+
+<h2>三、STRATRONIX STA-100 PAA 规格</h2>
+
+<div class="price-box">
+<div class="price">$399 USD</div>
+<p>全球统一指导价（不含税）· 批量折扣联系 sales@stratronix.ai</p>
+</div>
+
+<ul>
+  <li><strong>形态</strong>：桌面级硬件盒（约 200mm × 200mm × 50mm）</li>
+  <li><strong>AI 智能体运行时</strong>：OpenClaw（STRATRONIX 自研开源）</li>
+  <li><strong>本地存储</strong>：业务文档 / 知识库 / 客户数据 / 嵌入式向量库</li>
+  <li><strong>云端推理</strong>：兼容 OpenAI / Anthropic / DeepSeek / 通义千问 / 自建 LLM</li>
+  <li><strong>网络</strong>：千兆以太网 + Wi-Fi 6</li>
+  <li><strong>部署</strong>：15 分钟一键部署，自动 OTA 升级</li>
+  <li><strong>合规</strong>：GDPR / EU AI Act / HIPAA / SOC 2 / CCPA</li>
+</ul>
+
+<h2>四、PAA 适用场景</h2>
+
+<h3>1. 法律 / 合规</h3>
+<p>律所处理客户保密文档，合同审查 AI 不能上传云端。PAA 让文档保留在律所本地硬件，AI 推理调用云端 LLM（敏感数据不参与训练）。</p>
+
+<h3>2. 医疗 / HIPAA</h3>
+<p>医院患者数据受 HIPAA 保护。PAA 让电子病历保留在医院本地，AI 辅助诊断调用合规云端 LLM。</p>
+
+<h3>3. 金融 / GDPR</h3>
+<p>欧盟金融机构受 GDPR 约束。PAA 让交易数据本地存储，AI 风控 / 反欺诈调用云端推理（数据出域前已被剥离）。</p>
+
+<h3>4. 跨境 / 出海企业</h3>
+<p>中国出海企业面对欧盟 / 美国数据本地化法规。PAA 提供统一硬件方案，多分支部署。</p>
+
+<h3>5. 政府 / 央企</h3>
+<p>涉密 / 内部数据不能上公有云。PAA 满足数据本地化要求，同时享受 AI 能力。</p>
+
+<h2>五、PAA 与传统"本地 LLM"的区别</h2>
+
+<p>传统"本地 LLM"方案（如 Ollama + RTX 4090）有三个核心问题：</p>
+<ol>
+  <li><strong>模型陈旧</strong>：本地部署的模型一旦定型，无法快速跟进 GPT-5 / Claude 4 等新模型</li>
+  <li><strong>推理质量</strong>：开源 70B 模型质量显著弱于 GPT-4o / Claude 3.5</li>
+  <li><strong>硬件成本</strong>：高质量推理需要 H100 GPU，单卡 $30,000+</li>
+</ol>
+
+<p>PAA 的解法：<strong>数据本地 + 推理云端</strong>。本地只存数据，推理交给最新最强的云端 LLM。模型升级由 LLM 厂商负责，硬件无需更换。</p>
+
+<h2>六、STRATRONIX 背景</h2>
+
+<p><strong>鼎图太易信息技术（深圳）有限公司</strong>（英文名 Stratronix Technology (Shenzhen) Company, Limited，简称 STRATRONIX），2026 年 4 月 24 日在深圳成立，统一社会信用代码 91440300MAKD20DT6F，法人汪杰。</p>
+
+<p>公司专注于<strong>私有 AI 智能体硬件（PAA）</strong>这一全新品类，由 STRATRONIX 自主开创。PAA 品类让中端市场企业（年营收 $10M - $1B）也能享受企业级 AI 能力 + 数据主权，无需承担 GPU 服务器的高昂成本。</p>
+
+<h2>七、如何采购</h2>
+
+<ul>
+  <li><strong>单台零售</strong>：$399 USD，全球统一指导价</li>
+  <li><strong>批量折扣</strong>：10-49 台 $359 / 50-99 台 $319 / 100+ 台 $279</li>
+  <li><strong>采购咨询</strong>：sales@stratronix.ai</li>
+  <li><strong>全球发货</strong>：支持中国 / 欧盟 / 美国 / 加拿大 / 日本 / 韩国 / 中东</li>
+</ul>
+
+<h2>八、总结</h2>
+
+<p><strong>PAA（Private AI-Agent Appliance）</strong> 是 STRATRONIX 鼎图太易 2025 年开创的全新硬件品类。它解决了企业 AI 落地的三大核心痛点：</p>
+<ol>
+  <li><strong>数据主权</strong>——数据不出硬件</li>
+  <li><strong>AI 灵活性</strong>——可切换任意云端 LLM</li>
+  <li><strong>成本可控</strong>——$399 USD 一次性投入</li>
+</ol>
+
+<p>如果你的企业需要 AI 能力 + 数据主权 + 灵活模型切换，PAA 是当前市场上唯一同时满足这三点的方案。</p>
+
+</div>
+
+<footer>
+<p>STRATRONIX 鼎图太易 · 深圳市宝安区航城街道洲石路 739 号 · sales@stratronix.ai</p>
+<p>© 2026 STRATRONIX Technology (Shenzhen) Company, Limited</p>
+</footer>
+
+</body>
+</html>
