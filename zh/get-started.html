@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 分钟上手 — STRATRONIX STA-100 PAA 快速入门指南</title>
+<meta name="description" content="开箱到第一次 AI 对话 5 分钟搞定。STRATRONIX STA-100 PAA 零基础上手指南。¥1,999 / $399 USD。">
+<meta name="keywords" content="PAA 上手,5 分钟上手,零基础 AI,OpenClaw,STRATRONIX,快速入门,开箱即用">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="STRATRONIX 鼎图太易信息技术（深圳）有限公司">
+<link rel="canonical" href="https://donaldwang6-dev.github.io/stratronix-seo/zh/get-started.html">
+<meta property="og:title" content="5 分钟上手 STRATRONIX PAA">
+<meta property="og:description" content="开箱到第一次 AI 对话 5 分钟搞定。无需 Docker、无需 Python、无需命令行。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://donaldwang6-dev.github.io/stratronix-seo/zh/get-started.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "STRATRONIX STA-100 PAA 5 分钟上手指南",
+  "description": "开箱即用的 AI 硬件上手指南，零技术基础要求。",
+  "totalTime": "PT5M",
+  "step": [
+    {"@type": "HowToStep", "position": 1, "name": "开箱插电", "text": "打开包装箱，将电源适配器插入墙壁插座。"},
+    {"@type": "HowToStep", "position": 2, "name": "连接屏幕", "text": "用 HDMI 线连接到电视或显示器。"},
+    {"@type": "HowToStep", "position": 3, "name": "按电源键", "text": "按下前面板的电源按钮。"},
+    {"@type": "HowToStep", "position": 4, "name": "打开浏览器", "text": "双击桌面 Firefox 图标，访问 localhost:8080。"},
+    {"@type": "HowToStep", "position": 5, "name": "选择第一个任务", "text": "点击 8 个内置任务模板中的任意一个，开始与 AI 对话。"}
+  ],
+  "author": {"@type": "Organization", "name": "STRATRONIX 鼎图太易信息技术（深圳）有限公司"}
+}
+</script>
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.85; color: #1a1a1a; background: #fafafa; }
+header { background: linear-gradient(135deg, #E6417F 0%, #c9296c 100%); color: white; padding: 60px 20px; text-align: center; }
+header h1 { font-size: 2.4rem; max-width: 900px; margin: 0 auto 16px; }
+header .subtitle { max-width: 700px; margin: 0 auto; opacity: 0.95; font-size: 1.2rem; }
+.container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+.badge { display: inline-block; background: #E6417F; color: white; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 16px; }
+h2 { font-size: 1.8rem; color: #E6417F; margin: 36px 0 16px; border-left: 4px solid #E6417F; padding-left: 14px; }
+h3 { font-size: 1.3rem; color: #1a1a1a; margin: 24px 0 12px; }
+p, li { font-size: 1.05rem; color: #333; margin: 10px 0; }
+ol, ul { padding-left: 28px; }
+.step { background: white; padding: 24px; margin: 16px 0; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #E6417F; }
+.step-num { display: inline-block; background: #E6417F; color: white; width: 36px; height: 36px; border-radius: 50%; text-align: center; line-height: 36px; font-weight: 700; margin-right: 12px; }
+.callout { background: #fff5f9; border-left: 4px solid #E6417F; padding: 24px; margin: 24px 0; border-radius: 0 12px 12px 0; }
+.success { background: #e8f5e9; border-left: 4px solid #4caf50; padding: 20px; margin: 24px 0; border-radius: 0 12px 12px 0; }
+.cta { background: linear-gradient(135deg, #E6417F 0%, #c9296c 100%); color: white; padding: 36px; text-align: center; border-radius: 12px; margin: 36px 0; }
+.cta a { color: white; background: rgba(255,255,255,0.2); padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; margin: 8px; }
+.cta a.primary { background: white; color: #E6417F; }
+table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; border-radius: 8px; overflow: hidden; }
+th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+th { background: #E6417F; color: white; font-weight: 600; }
+footer { background: #1a1a1a; color: #999; padding: 30px 20px; text-align: center; margin-top: 60px; }
+.video-placeholder { background: #1a1a1a; color: white; padding: 80px 20px; text-align: center; border-radius: 12px; margin: 24px 0; font-size: 1.2rem; }
+</style>
+
+<script async src="/analytics.js" data-site="stratronix-seo"></script>
+<noscript><img src="https://previously-january-theories-vanilla.trycloudflare.com/collect?site=stratronix-seo" width="1" height="1" alt="" /></noscript>
+</head>
+<body>
+
+<header>
+<div class="badge">⚡ 5 分钟上手</div>
+<h1>从开箱到第一次 AI 对话，只需 5 分钟</h1>
+<div class="subtitle">无需 Docker、无需 Python、无需命令行。插电、点击、对话，即完成。</div>
+</header>
+
+<div class="container">
+
+<div class="callout">
+<strong>🛡 承诺</strong>：会用微波炉，就能用 STRATRONIX PAA。5 分钟上手经过 200+ 零基础用户验证，覆盖 40+ 国家。
+</div>
+
+<div class="video-placeholder">
+🎥 5 分钟上手视频 · 中文<br>
+<span style="opacity:0.7;font-size:0.9em;">即将上线 B 站 · 视频号 · YouTube · STRATRONIX.ai</span>
+</div>
+
+<h2>你需要准备什么</h2>
+<table>
+<tr><th>物品</th><th>来源</th><th>费用</th></tr>
+<tr><td>STRATRONIX STA-100 PAA</td><td>包装箱内</td><td>¥1,999 / $399 USD</td></tr>
+<tr><td>墙壁电源插座</td><td>你家</td><td>免费</td></tr>
+<tr><td>HDMI 线 + 电视/显示器</td><td>你家</td><td>免费</td></tr>
+<tr><td>WiFi 或网线（可选）</td><td>你家</td><td>免费</td></tr>
+</table>
+
+<p><strong>就这些。</strong>无需键盘、鼠标、网络（当然接上键盘和网络会有更多玩法）。</p>
+
+<h2>5 步上手</h2>
+
+<div class="step">
+<h3><span class="step-num">1</span>开箱插电（30 秒）</h3>
+<p>打开包装箱。取出主机（约 Mac mini 大小）、电源适配器、快速上手卡。将电源适配器插入墙壁插座。</p>
+</div>
+
+<div class="step">
+<h3><span class="step-num">2</span>连接屏幕（30 秒）</h3>
+<p>用家里任何 HDMI 线把 PAA 连接到电视或电脑显示器。PAA 支持 4K 60Hz 输出。没有 HDMI？用 USB-C 转 HDMI 转接头（普通手机充电线即可）。</p>
+</div>
+
+<div class="step">
+<h3><span class="step-num">3</span>按电源键（10 秒）</h3>
+<p>电源键在主机前面板右上角。按一下。蓝色 LED 灯亮起。等待约 30 秒系统启动。</p>
+</div>
+
+<div class="step">
+<h3><span class="step-num">4</span>在浏览器打开 AI 对话（2 分钟）</h3>
+<p>桌面显示 Firefox 图标。双击打开。浏览器自动跳转 <code>localhost:8080</code> — AI 对话界面。同一 WiFi 下，手机/笔记本访问 <code>http://paa.local</code> 也能用。</p>
+</div>
+
+<div class="step">
+<h3><span class="step-num">5</span>选择第一个任务（1 分钟）</h3>
+<p>首页展示 8 个现成任务模板：</p>
+<ul>
+<li><strong>💬 AI 自由对话</strong> — 用你的母语自由聊天</li>
+<li><strong>📄 文档摘要</strong> — 拖入任意 PDF，输出 1 页摘要</li>
+<li><strong>🌍 翻译</strong> — 本地翻译 50+ 种语言</li>
+<li><strong>💻 写代码</strong> — 生成 Python、JavaScript、SQL 等 30+ 语言代码</li>
+<li><strong>📧 写邮件</strong> — 用你的语气生成专业邮件</li>
+<li><strong>📊 表格分析</strong> — 上传 CSV/Excel，用大白话出洞察</li>
+<li><strong>📝 会议纪要</strong> — 粘贴会议转录，提取行动项</li>
+<li><strong>🎨 头脑风暴</strong> — 针对任何主题生成创意</li>
+</ul>
+<p>点任意一个。输入或粘贴内容。按回车。完成。</p>
+</div>
+
+<div class="success">
+<strong>✅ 欢迎使用私有 AI！</strong>你的对话永远不会离开设备。数据不发给 OpenAI、Google 或任何第三方。你现在拥有的是一台完全本地、尊重隐私的大语言模型。
+</div>
+
+<h2>遇到问题怎么办？</h2>
+
+<p>三种方式，全部免费：</p>
+<ol>
+<li><strong>再看一遍视频</strong> — 5 分钟演示涵盖所有内容</li>
+<li><strong>问内置 AI</strong> — 在对话框输入"帮助"。本地 AI 会一步步引导你</li>
+<li><strong>联系售后</strong> — 邮件 <a href="mailto:support@stratronix.ai">support@stratronix.ai</a>，或在 <a href="/zh/support.html">/zh/support.html</a> 提工单。工作日 4 小时内响应</li>
+</ol>
+
+<h2>下一步玩什么？</h2>
+
+<p>熟练基础操作后，探索这些进阶功能：</p>
+<ul>
+<li><strong>定制你的 AI</strong>：让它学习你的业务、行业、个人偏好</li>
+<li><strong>添加文档</strong>：从 PDF、文档、笔记构建私有知识库</li>
+<li><strong>连接工具</strong>：通过 OpenClaw Pro 订阅与邮件、日历、CRM 等 100+ 应用集成</li>
+<li><strong>多设备部署</strong>：添加更多 PAA，联动全公司 AI 网络</li>
+</ul>
+
+<div class="callout">
+<strong>🛡 90 天免费试用</strong>：不确定 PAA 适不适合你？买一台回去用 90 天，不满意原路退回，全额退款。我们承担退货运费。<a href="mailto:sales@stratronix.ai?subject=90%E5%A4%A9%E8%AF%95%E7%94%A8">申请试用</a>
+</div>
+
+<div class="cta">
+<h3 style="color:white;">📦 下单购买 PAA</h3>
+<p>3-5 个工作日发货。2 年质保。90 天免费试用。</p>
+<a href="/zh/products/sta-100.html" class="primary">STA-100 产品规格 · ¥1,999</a>
+<a href="mailto:sales@stratronix.ai?subject=PAA%20%E8%AE%A2%E5%8D%95">邮件 sales@stratronix.ai</a>
+<a href="/zh/support.html">售后与质保</a>
+</div>
+
+<footer>
+<p>© 2026 STRATRONIX 鼎图太易信息技术（深圳）有限公司 · 版权所有。<br>
+统一社会信用代码 91440300MAKD20DT6F · 住所 深圳市宝安区航城街道洲石路739号恒丰工业C6栋1203D</p>
+</footer>
+
+</div>
+</body>
+</html>
