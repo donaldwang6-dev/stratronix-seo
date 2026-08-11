@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STA-100 工作台 · STRATRONIX 商务版</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* === STRATRONIX Business Edition === */
+  /* 商务风 = 深蓝 + 金色 + 衬线 + STRATRONIX 粉点缀 */
+  :root {
+    /* Brand LOCKED */
+    --brand-pink: #E6417F;       /* 仅作 CTA / 强调 */
+    --brand-pink-hover: #C9296C;
+    --brand-pink-soft: rgba(230, 65, 127, 0.08);
+    
+    /* 商务主色（深蓝 = 权威）*/
+    --biz-blue: #0A2540;         /* 主标题 / 主CTA / 主色 */
+    --biz-blue-hover: #061A2E;
+    --biz-blue-soft: rgba(10, 37, 64, 0.04);
+    
+    /* 金色 = 权威点缀 */
+    --biz-gold: #C9A961;
+    --biz-gold-soft: rgba(201, 169, 97, 0.15);
+    
+    /* 商务中性色 */
+    --bg-primary: #FFFFFF;
+    --bg-sidebar: #F8F9FA;
+    --bg-card: #FFFFFF;
+    --bg-section: #FAFBFC;
+    --bg-hover: #F4F6F8;
+    
+    --border-color: #E5E7EB;
+    --border-soft: #EEF0F3;
+    --border-accent: #0A2540;
+    
+    --text-primary: #0A2540;
+    --text-secondary: #4A5568;
+    --text-tertiary: #718096;
+    --text-muted: #A0AEC0;
+    
+    /* 阴影（极轻，商务克制）*/
+    --shadow-xs: 0 1px 2px rgba(10, 37, 64, 0.04);
+    --shadow-sm: 0 2px 4px rgba(10, 37, 64, 0.05);
+    --shadow-md: 0 4px 12px rgba(10, 37, 64, 0.08);
+    
+    /* Spacing（更多留白 = 商务奢侈感）*/
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-2xl: 48px;
+    --space-3xl: 64px;
+    
+    /* Radius（更方正 = 商务稳重）*/
+    --radius-sm: 2px;
+    --radius-md: 4px;
+    --radius-lg: 6px;
+  }
+  
+  /* === 衬线字体（商务权威感）== */
+  .serif {
+    font-family: "Playfair Display", "Noto Serif SC", Georgia, "Times New Roman", serif;
+  }
+  .sans {
+    font-family: "Inter", "Noto Sans SC", -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  }
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    font-family: "Inter", "Noto Sans SC", -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 14px;
+    line-height: 1.6;
+    overflow: hidden;
+    height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .app { display: flex; height: 100vh; }
+  
+  /* === Sidebar === */
+  .sidebar {
+    width: 240px;
+    background: var(--bg-sidebar);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+  }
+  
+  .brand {
+    padding: var(--space-xl) var(--space-lg);
+    border-bottom: 2px solid var(--biz-blue);
+    position: relative;
+  }
+  .brand::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: var(--space-lg);
+    width: 32px;
+    height: 2px;
+    background: var(--biz-gold);
+  }
+  .brand-logo {
+    font-family: "Playfair Display", "Noto Serif SC", Georgia, serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--biz-blue);
+    letter-spacing: 1px;
+  }
+  .brand-logo span { color: var(--brand-pink); }
+  .brand-sub {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    margin-top: 6px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  
+  .nav { padding: var(--space-lg) var(--space-md); flex: 1; }
+  .nav-item {
+    display: flex;
+    align-items: center;
+    padding: 11px var(--space-md);
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    margin-bottom: 2px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 150ms;
+    font-weight: 500;
+  }
+  .nav-item:hover {
+    background: var(--bg-hover);
+    color: var(--biz-blue);
+  }
+  .nav-item.active {
+    background: var(--biz-blue);
+    color: white;
+    font-weight: 600;
+    box-shadow: var(--shadow-sm);
+  }
+  .nav-icon {
+    width: 16px;
+    margin-right: var(--space-md);
+    opacity: 0.7;
+    font-size: 14px;
+  }
+  .nav-item.active .nav-icon { opacity: 1; }
+  .nav-badge {
+    margin-left: auto;
+    background: var(--biz-gold);
+    color: white;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 2px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .nav-dot {
+    margin-left: auto;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--brand-pink);
+    box-shadow: 0 0 0 4px var(--brand-pink-soft);
+  }
+  
+  .user-card {
+    margin: var(--space-md);
+    padding: var(--space-md);
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+  }
+  .user-status {
+    font-size: 10px;
+    color: var(--text-tertiary);
+    margin-bottom: var(--space-xs);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .user-ping {
+    color: var(--brand-pink);
+    font-weight: 600;
+  }
+  .user-name {
+    font-family: "Playfair Display", "Noto Serif SC", serif;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: var(--space-xs);
+    font-size: 15px;
+  }
+  .user-account {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    margin-top: 2px;
+  }
+  
+  /* === Main === */
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .topbar {
+    height: 64px;
+    background: white;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    padding: 0 var(--space-2xl);
+    gap: var(--space-md);
+  }
+  .search {
+    flex: 1;
+    max-width: 480px;
+    background: var(--bg-section);
+    border: 1px solid var(--border-soft);
+    border-bottom: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 10px var(--space-md);
+    color: var(--text-tertiary);
+    font-size: 13px;
+  }
+  .search-kbd {
+    background: white;
+    border: 1px solid var(--border-color);
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    margin-left: var(--space-md);
+    color: var(--text-tertiary);
+    font-family: monospace;
+  }
+  .icon-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-md);
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 150ms;
+    font-size: 15px;
+  }
+  .icon-btn:hover {
+    background: var(--bg-hover);
+    color: var(--biz-blue);
+    border-color: var(--border-color);
+  }
+  .lang-btn {
+    padding: 8px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    cursor: pointer;
+    letter-spacing: 1px;
+  }
+  .lang-btn:hover {
+    border-color: var(--biz-blue);
+    color: var(--biz-blue);
+  }
+  
+  .content {
+    flex: 1;
+    padding: var(--space-2xl) var(--space-2xl);
+    overflow-y: auto;
+    background: var(--bg-primary);
+    max-width: 1600px;
+    width: 100%;
+  }
+  
+  /* === Breadcrumb === */
+  .breadcrumb {
+    color: var(--text-tertiary);
+    font-size: 12px;
+    margin-bottom: var(--space-md);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .breadcrumb span {
+    color: var(--biz-blue);
+    font-weight: 600;
+  }
+  
+  .page-title {
+    font-family: "Playfair Display", "Noto Serif SC", Georgia, serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+    color: var(--biz-blue);
+    letter-spacing: -0.5px;
+  }
+  .page-subtitle {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: var(--space-2xl);
+    font-weight: 400;
+  }
+  
+  /* === Banner === */
+  .banner {
+    background: linear-gradient(135deg, var(--biz-blue) 0%, var(--biz-blue-hover) 100%);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl) var(--space-xl);
+    margin-bottom: var(--space-2xl);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+  }
+  .banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 240px;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 0%, rgba(201, 169, 97, 0.15) 100%);
+    pointer-events: none;
+  }
+  .banner-text { flex: 1; color: white; }
+  .banner-title {
+    font-family: "Playfair Display", "Noto Serif SC", serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: var(--space-xs);
+    letter-spacing: -0.3px;
+  }
+  .banner-desc {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 400;
+  }
+  .banner-meta {
+    margin-top: var(--space-md);
+    font-size: 11px;
+    color: var(--biz-gold);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-top: 1px solid rgba(201, 169, 97, 0.3);
+    padding-top: var(--space-md);
+  }
+  
+  /* === Toggle Switch（商务版）== */
+  .switch {
+    position: relative;
+    width: 52px;
+    height: 28px;
+    background: var(--biz-gold);
+    border-radius: 14px;
+    cursor: pointer;
+    transition: background 150ms;
+    flex-shrink: 0;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+  .switch::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    top: 2px;
+    right: 2px;
+    box-shadow: var(--shadow-sm);
+    transition: all 150ms;
+  }
+  
+  /* === Stats Cards === */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+  }
+  .stat-card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl);
+    transition: all 200ms;
+    cursor: pointer;
+    box-shadow: var(--shadow-xs);
+    position: relative;
+    overflow: hidden;
+  }
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: transparent;
+    transition: background 150ms;
+  }
+  .stat-card:hover {
+    border-color: var(--biz-blue);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+  .stat-card:hover::before {
+    background: var(--biz-blue);
+  }
+  .stat-value {
+    font-family: "Playfair Display", "Noto Serif SC", serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--biz-blue);
+    line-height: 1;
+    margin-bottom: var(--space-sm);
+    letter-spacing: -1px;
+  }
+  .stat-label {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    margin-top: 0;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  /* === Two-column === */
+  .two-col {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-2xl);
+  }
+  
+  .card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-xs);
+  }
+  
+  .card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .card-title {
+    font-family: "Playfair Display", "Noto Serif SC", serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--biz-blue);
+    letter-spacing: -0.3px;
+  }
+  .card-action {
+    font-size: 12px;
+    color: var(--biz-blue);
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .card-action:hover { color: var(--brand-pink); }
+  
+  /* === News Items === */
+  .news-item {
+    display: flex;
+    gap: var(--space-lg);
+    padding: var(--space-lg) 0;
+    border-bottom: 1px solid var(--border-soft);
+    cursor: pointer;
+    transition: all 150ms;
+  }
+  .news-item:last-of-type { border-bottom: none; }
+  .news-item:hover {
+    background: var(--bg-hover);
+    margin: 0 calc(-1 * var(--space-lg));
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+  }
+  .news-num {
+    width: 36px;
+    height: 36px;
+    background: white;
+    color: var(--biz-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Playfair Display", "Noto Serif SC", serif;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+    border: 1.5px solid var(--biz-blue);
+  }
+  .news-content { flex: 1; }
+  .news-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text-primary);
+    line-height: 1.4;
+  }
+  .news-desc {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  .news-meta {
+    display: flex;
+    gap: var(--space-sm);
+    margin-top: var(--space-sm);
+    align-items: center;
+  }
+  .news-tag {
+    font-size: 10px;
+    padding: 3px 8px;
+    background: var(--bg-section);
+    color: var(--biz-blue);
+    border-radius: 2px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid var(--border-color);
+  }
+  .news-source {
+    font-size: 11px;
+    color: var(--text-tertiary);
+  }
+  
+  .more-btn {
+    width: 100%;
+    text-align: center;
+    padding: var(--space-md);
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--biz-blue);
+    font-size: 12px;
+    margin-top: var(--space-lg);
+    cursor: pointer;
+    transition: all 150ms;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .more-btn:hover {
+    background: var(--biz-blue);
+    color: white;
+    border-color: var(--biz-blue);
+  }
+  
+  /* === Industry News List === */
+  .ind-news-item {
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--border-soft);
+    cursor: pointer;
+    transition: all 150ms;
+  }
+  .ind-news-item:last-of-type { border-bottom: none; }
+  .ind-news-item:hover {
+    background: var(--bg-hover);
+    margin: 0 calc(-1 * var(--space-md));
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+  }
+  .ind-news-time {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    margin-bottom: var(--space-xs);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .ind-news-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1.5;
+    margin-bottom: var(--space-sm);
+    transition: color 150ms;
+  }
+  .ind-news-item:hover .ind-news-title {
+    color: var(--biz-blue);
+  }
+  .ind-news-foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .ind-news-rel {
+    font-size: 10px;
+    color: var(--biz-gold);
+    background: var(--biz-gold-soft);
+    padding: 2px 8px;
+    border-radius: 2px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .ind-news-link {
+    font-size: 11px;
+    color: var(--biz-blue);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .ind-news-link:hover { color: var(--brand-pink); }
+  
+  /* === OEM Tool === */
+  .oem-tool {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-top: 3px solid var(--biz-blue);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-xs);
+  }
+  .oem-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .oem-title {
+    font-family: "Playfair Display", "Noto Serif SC", serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--biz-blue);
+    letter-spacing: -0.3px;
+  }
+  .oem-todo {
+    background: var(--biz-blue);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 2px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .oem-tags {
+    display: flex;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+    flex-wrap: wrap;
+  }
+  .oem-tag {
+    padding: 8px 16px;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-size: 12px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 150ms;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  .oem-tag.active {
+    background: var(--biz-blue);
+    color: white;
+    border-color: var(--biz-blue);
+  }
+  .oem-tag:hover:not(.active) {
+    border-color: var(--biz-blue);
+    color: var(--biz-blue);
+  }
+  .oem-controls {
+    display: flex;
+    gap: var(--space-md);
+    align-items: stretch;
+  }
+  .oem-select {
+    flex: 1;
+    padding: 12px var(--space-md);
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  .oem-select:hover { border-color: var(--biz-blue); }
+  .start-btn {
+    background: var(--brand-pink);
+    color: white;
+    padding: 12px var(--space-2xl);
+    border-radius: var(--radius-md);
+    border: none;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 150ms;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .start-btn:hover {
+    background: var(--brand-pink-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(230, 65, 127, 0.25);
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-logo serif">STA<span>·</span>100</div>
+      <div class="brand-sub">Cycling Intelligence</div>
+    </div>
+    
+    <nav class="nav">
+      <a class="nav-item active">
+        <span class="nav-icon">▣</span>
+        概览
+      </a>
+      <a class="nav-item">
+        <span class="nav-icon">◆</span>
+        智能体
+        <span class="nav-badge">24</span>
+      </a>
+      <a class="nav-item">
+        <span class="nav-icon">●</span>
+        客户
+      </a>
+      <a class="nav-item">
+        <span class="nav-icon">▤</span>
+        报价单
+      </a>
+      <a class="nav-item">
+        <span class="nav-icon">▦</span>
+        订单
+      </a>
+      <a class="nav-item">
+        <span class="nav-icon">≡</span>
+        单据
+      </a>
+      <a class="nav-item">
+        <span class="nav-icon">▥</span>
+        产品库
+      </a>
+      <a class="nav-item">
+        <span class="nav-icon">◫</span>
+        供应商
+      </a>
+      <a class="nav-item">
+        <span class="nav-icon">▣</span>
+        数据库
+      </a>
+      <a class="nav-item">
+        <span class="nav-icon">◈</span>
+        行业新闻
+        <span class="nav-dot"></span>
+      </a>
+      <a class="nav-item">
+        <span class="nav-icon">⊙</span>
+        设置
+      </a>
+    </nav>
+    
+    <div class="user-card">
+      <div class="user-status">● Online · EU-Node</div>
+      <div class="user-name">Donald</div>
+      <div class="user-account">Local Account · 38ms</div>
+    </div>
+  </aside>
+  
+  <!-- Main -->
+  <main class="main">
+    <div class="topbar">
+      <div class="search">⌕ 搜索任何内容... <span class="search-kbd">⌘K</span></div>
+      <button class="icon-btn">↻</button>
+      <button class="icon-btn">◐</button>
+      <button class="icon-btn">▦</button>
+      <button class="lang-btn">EN</button>
+    </div>
+    
+    <div class="content">
+      <div class="breadcrumb">STA-100 / 工作台 / <span>概览 OVERVIEW</span></div>
+      <h1 class="page-title">概览</h1>
+      <p class="page-subtitle">面向骑行行业的智能商业工作台 · 实时数据 · 自动化运营</p>
+      
+      <!-- Banner -->
+      <div class="banner">
+        <div class="banner-text">
+          <div class="banner-title">每日行业资讯推送</div>
+          <div class="banner-desc">订阅后，每天 09:00 自动收到骑行行业最新动态、竞品分析与政策预警</div>
+          <div class="banner-meta">▸ NEXT UPDATE 2026-08-12 · 09:00 · ACTIVE 23 DAYS</div>
+        </div>
+        <div class="switch"></div>
+      </div>
+      
+      <!-- Stats -->
+      <div class="stats">
+        <div class="stat-card">
+          <div class="stat-value">8</div>
+          <div class="stat-label">今日待办</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">3</div>
+          <div class="stat-label">今日会议</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">12</div>
+          <div class="stat-label">今日文档</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">24</div>
+          <div class="stat-label">进行订单</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">47</div>
+          <div class="stat-label">今日对话</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">15</div>
+          <div class="stat-label">行业资讯</div>
+        </div>
+      </div>
+      
+      <!-- Two columns -->
+      <div class="two-col">
+        <div class="card">
+          <div class="card-head">
+            <div class="card-title">为你推荐</div>
+            <div class="card-action">设置 ⚙</div>
+          </div>
+          
+          <div class="news-item">
+            <div class="news-num">01</div>
+            <div class="news-content">
+              <div class="news-title">2026 全球电助力自行车市场报告：欧洲增长 32%</div>
+              <div class="news-desc">最新市场报告显示，电助力自行车在欧洲市场销量同比增长 32%，主要受城市通勤需求和环保政策推动</div>
+              <div class="news-meta">
+                <span class="news-tag">市场</span>
+                <span class="news-source">来源：Bike Europe</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="news-item">
+            <div class="news-num">02</div>
+            <div class="news-content">
+              <div class="news-title">禧玛诺新款 Di3 电子变速器上市，专为城市车设计</div>
+              <div class="news-desc">禧玛诺发布专为城市电助力车设计的 Di3 电子变速系统，售价 €399 起，预计 9 月在欧洲市场正式开售</div>
+              <div class="news-meta">
+                <span class="news-tag">新品</span>
+                <span class="news-source">来源：Shimano 官方</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="news-item">
+            <div class="news-num">03</div>
+            <div class="news-content">
+              <div class="news-title">海关新规：欧盟反倾销税上调至 48%，影响中国出口</div>
+              <div class="news-desc">欧盟正式对中国电助力自行车征收 48% 反倾销税，新税率于 8 月 15 日生效，建议提前调整出口策略</div>
+              <div class="news-meta">
+                <span class="news-tag">政策</span>
+                <span class="news-source">来源：中国海关</span>
+              </div>
+            </div>
+          </div>
+          
+          <button class="more-btn">查看更多推荐</button>
+        </div>
+        
+        <div class="card">
+          <div class="card-head">
+            <div class="card-title">行业新闻</div>
+            <div class="card-action">MORE →</div>
+          </div>
+          
+          <div class="ind-news-item">
+            <div class="ind-news-time">2 小时前</div>
+            <div class="ind-news-title">Specialized 发布全新 Vado SL 2 电助力城市车</div>
+            <div class="ind-news-foot">
+              <span class="ind-news-rel">相关度 92%</span>
+              <a class="ind-news-link">查看 →</a>
+            </div>
+          </div>
+          
+          <div class="ind-news-item">
+            <div class="ind-news-time">5 小时前</div>
+            <div class="ind-news-title">Bafang 中置电机在欧洲市场份额突破 25%</div>
+            <div class="ind-news-foot">
+              <span class="ind-news-rel">相关度 88%</span>
+              <a class="ind-news-link">查看 →</a>
+            </div>
+          </div>
+          
+          <div class="ind-news-item">
+            <div class="ind-news-time">昨天</div>
+            <div class="ind-news-title">Giant 集团 Q2 财报：电助力车销量增长 41%</div>
+            <div class="ind-news-foot">
+              <span class="ind-news-rel">相关度 85%</span>
+              <a class="ind-news-link">查看 →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- OEM Tool -->
+      <div class="oem-tool">
+        <div class="oem-head">
+          <div class="oem-title">OEM 工厂智能匹配</div>
+          <div class="oem-todo">规则 TODO</div>
+        </div>
+        
+        <div class="oem-tags">
+          <span class="oem-tag active">公路整车</span>
+          <span class="oem-tag">E-bike 电池</span>
+          <span class="oem-tag">中置电机</span>
+          <span class="oem-tag">头盔 MIPS</span>
+        </div>
+        
+        <div class="oem-controls">
+          <select class="oem-select">
+            <option>全部骑行类目</option>
+          </select>
+          <select class="oem-select">
+            <option>Top 3 推荐</option>
+          </select>
+          <button class="start-btn">开始匹配 →</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
