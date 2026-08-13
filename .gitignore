@@ -1,8 +1,11 @@
+# Build / generation scripts (no commit)
+events/iot-expo-2026/_gen_*.sh
+**/_gen_*.sh
+j-anubis-pow.py
+j_anubis_pow.py
+j-auto-register.py
+j-codeberg-reg.py
+j-imap-activate.py
 *.pyc
 __pycache__/
 test-*.py
-j-anubis-pow.py
-j_anubis_pow.py
-j-codeberg-reg.py
-j-auto-register.py
-j-imap-activate.py
