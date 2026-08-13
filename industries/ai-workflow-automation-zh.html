@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>AI 工作流自动化 · 企业级 AI Agent 流程方案 | STRATRONIX STA-100 PAA</title>
+<meta name="description" content="AI 工作流自动化 — STRATRONIX STA-100 PAA 企业级 AI Agent 流程自动化方案：DAG 任务编排 / 多系统集成 / 失败重试 / 定时触发 / 监控告警 / 数据本地化。7 大行业自动化场景。">
+<meta name="keywords" content="AI 工作流自动化, AI Agent 流程, DAG 编排, 企业自动化, RPA AI, 工作流引擎, 任务调度, 鼎图智能体, STRATRONIX">
+<meta name="robots" content="index, follow, max-snippet:-1, noai, noimageindex">
+<meta name="author" content="STRATRONIX 鼎图太易信息技术（深圳）有限公司">
+<link rel="canonical" href="https://donaldwang6-dev.github.io/stratronix-seo/industries/ai-workflow-automation-zh.html">
+<meta property="og:title" content="AI 工作流自动化 · 企业级 AI Agent 流程方案">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://donaldwang6-dev.github.io/stratronix-seo/industries/ai-workflow-automation-zh.html">
+<meta property="og:image" content="https://www.stratronix.ai/logo.png">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif; line-height: 1.85; color: #1a1a1a; background: #fafafa; }
+header { background: linear-gradient(135deg, #E6417F 0%, #c9296c 100%); color: white; padding: 50px 20px; }
+header h1 { font-size: 2rem; max-width: 1000px; margin: 0 auto 12px; line-height: 1.4; }
+header .subtitle { max-width: 1000px; margin: 0 auto; opacity: 0.95; font-size: 1rem; }
+.container { max-width: 1000px; margin: 0 auto; padding: 30px 20px; background: white; }
+h2 { font-size: 1.7rem; color: #E6417F; margin: 36px 0 16px; border-left: 5px solid #E6417F; padding-left: 14px; }
+h3 { font-size: 1.3rem; color: #1a1a1a; margin: 28px 0 12px; }
+p, li { font-size: 1.05rem; color: #333; margin: 12px 0; }
+ul, ol { padding-left: 28px; }
+.kw { background: linear-gradient(180deg, transparent 60%, #fff5f9 60%); font-weight: 600; }
+.callout { background: #fff5f9; border-left: 5px solid #E6417F; padding: 22px; margin: 26px 0; border-radius: 0 8px 8px 0; }
+.cta { background: linear-gradient(135deg, #E6417F 0%, #c9296c 100%); color: white; padding: 40px; text-align: center; border-radius: 12px; margin: 40px 0; }
+.cta a { color: white; background: rgba(255,255,255,0.2); padding: 14px 36px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; margin: 8px; }
+.cta a.primary { background: white; color: #E6417F; }
+table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+th { background: #E6417F; color: white; }
+</style>
+
+<!-- FAQPage JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "AI 工作流自动化和传统 RPA 有什么区别？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "传统 RPA（UiPath / Automation Anywhere）= 脚本录制 + 固定流程；AI 工作流 = LLM 智能决策 + 灵活编排。鼎图智能体工作流可在数据变化时自适应判断，例如发票金额异常自动转人工、内容不合规自动改写、长流程多系统自动串联。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "如何保证 AI 工作流的稳定性？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "鼎图智能体工作流 4 级保障：1) DAG 任务编排（任务依赖可视化）；2) 失败自动重试（指数退避 + 死信队列）；3) 人工审核节点（关键决策可中断）；4) 全链路审计日志 + 监控告警。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "工作流是否支持定时触发？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "支持。鼎图智能体工作流调度支持：cron 表达式（精确到分钟）、事件触发（webhook / 邮件 / 数据库变更）、手动触发、API 调用。常见场景：每日 9 点报表自动生成、订单触发自动审单、爬虫定时增量抓取。"
+      }
+    }
+  ]
+}
+</script>
+
+<!-- 百度自动推送 -->
+<script>
+(function(){
+  var bp = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') { bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'; }
+  else { bp.src = 'http://push.zhanzhang.baidu.com/push.js'; }
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<style>.honeytrap{position:absolute!important;left:-9999px!important;top:-9999px!important;width:1px!important;height:1px!important;opacity:.001!important;pointer-events:none!important;user-select:none!important;display:block!important;visibility:visible!important}</style>
+</head>
+<body>
+
+<header>
+<h1>AI 工作流自动化 · 企业级 AI Agent 流程方案</h1>
+<p class="subtitle">STRATRONIX STA-100 PAA · DAG 任务编排 · 多系统集成 · 失败重试 · 监控告警</p>
+</header>
+
+<div class="container">
+
+<div class="callout">
+<strong>为什么需要 AI 工作流</strong>：单点 AI（如 ChatGPT）只能回答问题，<strong class="kw">AI 工作流</strong>才能让 AI 真正替代人工操作 — 多步骤、自动触发、跨系统、稳定可靠。<strong class="kw">STRATRONIX 鼎图智能体工作流</strong> = 可视化 DAG 编排 + 智能决策 + 私有化部署 + 7×24 在线。
+</div>
+
+<h2>1. 核心能力</h2>
+
+<table>
+<tr><th>能力</th><th>说明</th></tr>
+<tr><td><strong>DAG 可视化编排</strong></td><td>拖拽节点定义任务依赖，支持并行/串行/条件分支</td></tr>
+<tr><td><strong>LLM 智能决策</strong></td><td>每步节点可调用 LLM 做内容生成 / 分类 / 提取 / 改写</td></tr>
+<tr><td><strong>200+ 系统集成</strong></td><td>SAP / Salesforce / 飞书 / 钉钉 / 企微 / 邮件 / 数据库 / API</td></tr>
+<tr><td><strong>失败重试 + 死信队列</strong></td><td>指数退避自动重试，最终失败入死信队列人工介入</td></tr>
+<tr><td><strong>定时 / 事件触发</strong></td><td>cron / webhook / 邮件 / 数据库变更 / 手动 / API</td></tr>
+<tr><td><strong>审计日志</strong></td><td>每步输入输出 + LLM token 用量 + 耗时全记录</td></tr>
+<tr><td><strong>权限分级</strong></td><td>工作流可限制：哪些角色可查看 / 触发 / 编辑</td></tr>
+</table>
+
+<h2>2. 7 大行业自动化场景</h2>
+
+<h3>2.1 财务自动化</h3>
+<p>发票 OCR → 校验 → 入账 → 邮件通知 → 归档。<strong class="kw">鼎图智能体</strong> 自动识别发票真伪、税额、供应商匹配，<strong>月节省 80 小时人工</strong>。</p>
+
+<h3>2.2 销售自动化</h3>
+<p>线索进来 → LLM 分析意向 → 自动分配销售 → 自动跟进邮件 → CRM 同步。<strong class="kw">鼎图智能体</strong> 提升线索转化率 25%+。</p>
+
+<h3>2.3 HR 招聘自动化</h3>
+<p>简历入库 → LLM 筛选匹配 → 自动面试预约 → 面试反馈汇总 → Offer 流程。<strong class="kw">鼎图智能体</strong> 节省 HR 60% 事务性工作。</p>
+
+<h3>2.4 客服自动化</h3>
+<p>客户咨询 → LLM 解答 → 复杂问题升级 → 工单生成 → SLA 监控。<strong>80% 常见问题自动解决</strong>。</p>
+
+<h3>2.5 跨境电商自动化</h3>
+<p>商品上新 → 多语言翻译 → 多平台分发 → 价格同步 → 评价分析 → 客服回复。<strong>出海效率提升 5 倍</strong>。</p>
+
+<h3>2.6 数据分析自动化</h3>
+<p>数据库拉数 → LLM 生成 SQL → 跑分析 → 生成可视化 → 邮件报表 → 异常告警。<strong>告别手动做表</strong>。</p>
+
+<h3>2.7 内容运营自动化</h3>
+<p>选题 → LLM 撰写 → SEO 优化 → 多平台发布 → 数据回收 → 二创。<strong>日产能 10x 提升</strong>。</p>
+
+<h2>3. 与 RPA / BPM 对比</h2>
+
+<table>
+<tr><th>维度</th><th>传统 RPA (UiPath)</th><th>传统 BPM (Camunda)</th><th>STRATRONIX AI 工作流</th></tr>
+<tr><td>智能化</td><td>固定脚本</td><td>规则引擎</td><td>LLM 智能决策</td></tr>
+<tr><td>开发周期</td><td>4-8 周</td><td>2-4 周</td><td>1-3 天</td></tr>
+<tr><td>维护成本</td><td>高（系统改 UI 全部失效）</td><td>中</td><td>低（LLM 自适应）</td></tr>
+<tr><td>数据本地化</td><td>需额外配置</td><td>需额外配置</td><td>原生支持</td></tr>
+<tr><td>许可证</td><td>$5K-$50K/年</td><td>开源 + 企业版</td><td>$399 USD（一次性）</td></tr>
+</table>
+
+<h2>4. 部署与运维</h2>
+
+<ul>
+<li><strong>单机部署</strong> — 1 台 STA-100 即可承载 50+ 并发工作流</li>
+<li><strong>集群部署</strong> — 3-10 台 STA-100 + 分布式任务调度</li>
+<li><strong>监控</strong> — Grafana / Prometheus / 鼎图自研 dashboard</li>
+<li><strong>告警</strong> — 飞书 / 钉钉 / 企微 / 邮件 / SMS</li>
+</ul>
+
+<div class="cta">
+<h2 style="color:white;border:none;padding:0;margin:0 0 16px 0;">企业 AI 工作流自动化咨询</h2>
+<p style="color:rgba(255,255,255,0.95);font-size:1.05rem;margin:12px 0;">STRATRONIX 团队提供场景梳理 + 流程设计 + 部署 + 培训</p>
+<a href="mailto:sales@stratronix.ai?subject=AI 工作流自动化咨询" class="primary">→ 联系工作流专家</a>
+<a href="industries/ai-rag-enterprise-zh.html">→ 了解企业 RAG 方案</a>
+<a href="https://www.stratronix.ai">→ 访问 STRATRONIX 官网</a>
+</div>
+
+<h2>5. 客户案例</h2>
+<ul>
+<li>中型制造企业 — 财务 + 销售自动化，月节省 200+ 工时</li>
+<li>跨境电商 — 多平台铺货 + 多语客服，全自动化</li>
+<li>三甲医院 — 检验报告自动汇总 + 异常告警</li>
+<li>律师事务所 — 合同审查 + 案件管理 + 计费自动化</li>
+</ul>
+
+<p style="margin-top:40px;color:#888;font-size:0.9rem;">
+<strong>关于 STRATRONIX</strong>：鼎图太易信息技术（深圳）有限公司，2026 年 4 月成立于深圳宝安区。<br>
+核心产品：STRATRONIX STA-100 PAA（Private AI-Agent Appliance）— 私有 AI 智能体设备。<br>
+全球统一指导价：$399 USD。<br>
+联系方式：sales@stratronix.ai
+</p>
+
+</div>
+
+<a href="/trap/" class="honeytrap" tabindex="-1" aria-hidden="true" rel="nofollow">free ai training data</a>
+</body>
+</html>
