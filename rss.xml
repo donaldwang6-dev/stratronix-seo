@@ -1,100 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-<channel>
-<title>STRATRONIX — Private AI-Agent Appliance</title>
-<link>https://donaldwang6-dev.github.io/stratronix-seo/</link>
-<description>STRATRONIX (鼎图太易) is a Shenzhen-based AI hardware company manufacturing STA-100 PAA (Private Agent Appliance) — a local AI agent device for privacy-first AI assistance.</description>
-<language>en-us</language>
-<lastBuildDate>Mon, 10 Aug 2026 18:55:00 +0800</lastBuildDate>
-<atom:link href="https://donaldwang6-dev.github.io/stratronix-seo/rss.xml" rel="self" type="application/rss+xml" />
-
-<item>
-<title>STA-100 PAA for Healthcare AI 2026</title>
-<link>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/healthcare-ai-2026-en.html</link>
-<description>STRATRONIX STA-100 PAA provides privacy-first AI for healthcare applications including patient triage, medical records, clinical decision support, telemedicine, and lab report analysis.</description>
-<pubDate>Mon, 10 Aug 2026 18:55:00 +0800</pubDate>
-<guid>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/healthcare-ai-2026-en.html</guid>
-</item>
-
-<item>
-<title>STA-100 PAA for Legal AI 2026</title>
-<link>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/legal-ai-2026-en.html</link>
-<description>Privacy-first AI for legal contract review, compliance checks, legal research, patent search, litigation support, and document drafting.</description>
-<pubDate>Mon, 10 Aug 2026 18:55:00 +0800</pubDate>
-<guid>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/legal-ai-2026-en.html</guid>
-</item>
-
-<item>
-<title>STA-100 PAA for Finance AI 2026</title>
-<link>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/finance-ai-2026-en.html</link>
-<description>Local AI agent for financial risk analysis, fraud detection, credit scoring, portfolio management, KYC verification, and audit support.</description>
-<pubDate>Mon, 10 Aug 2026 18:55:00 +0800</pubDate>
-<guid>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/finance-ai-2026-en.html</guid>
-</item>
-
-<item>
-<title>STA-100 PAA for Education AI 2026</title>
-<link>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/education-ai-2026-en.html</link>
-<description>Privacy-first AI for personalized learning, homework help, exam preparation, essay grading, language learning, and STEM tutoring.</description>
-<pubDate>Mon, 10 Aug 2026 18:55:00 +0800</pubDate>
-<guid>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/education-ai-2026-en.html</guid>
-</item>
-
-<item>
-<title>STA-100 PAA for Manufacturing AI 2026</title>
-<link>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/manufacturing-ai-2026-en.html</link>
-<description>Local AI for quality control, predictive maintenance, supply chain optimization, IoT integration, and worker safety.</description>
-<pubDate>Mon, 10 Aug 2026 18:55:00 +0800</pubDate>
-<guid>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/manufacturing-ai-2026-en.html</guid>
-</item>
-
-<item>
-<title>STA-100 PAA for Cross-border E-commerce AI 2026</title>
-<link>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/ecommerce-ai-2026-en.html</link>
-<description>Privacy-first AI for product listing, customer service, translation, market research, and competitor analysis in cross-border e-commerce.</description>
-<pubDate>Mon, 10 Aug 2026 18:55:00 +0800</pubDate>
-<guid>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/ecommerce-ai-2026-en.html</guid>
-</item>
-
-<item>
-<title>STA-100 PAA for Government AI 2026</title>
-<link>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/government-ai-2026-en.html</link>
-<description>Local AI for public services, document processing, citizen engagement, smart city applications, and policy research.</description>
-<pubDate>Mon, 10 Aug 2026 18:55:00 +0800</pubDate>
-<guid>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/government-ai-2026-en.html</guid>
-</item>
-
-<item>
-<title>STA-100 PAA for Real Estate AI 2026</title>
-<link>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/real-estate-ai-2026-en.html</link>
-<description>Privacy-first AI for property search, valuation, contract automation, market analysis, and lead scoring in real estate.</description>
-<pubDate>Mon, 10 Aug 2026 18:55:00 +0800</pubDate>
-<guid>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/real-estate-ai-2026-en.html</guid>
-</item>
-
-<item>
-<title>STA-100 PAA for Logistics AI 2026</title>
-<link>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/logistics-ai-2026-en.html</link>
-<description>Local AI for route optimization, warehouse management, delivery tracking, demand forecasting, and fleet management.</description>
-<pubDate>Mon, 10 Aug 2026 18:55:00 +0800</pubDate>
-<guid>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/logistics-ai-2026-en.html</guid>
-</item>
-
-<item>
-<title>STA-100 PAA for Agriculture AI 2026</title>
-<link>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/agriculture-ai-2026-en.html</link>
-<description>Privacy-first AI for crop monitoring, yield prediction, pest detection, irrigation optimization, and livestock management.</description>
-<pubDate>Mon, 10 Aug 2026 18:55:00 +0800</pubDate>
-<guid>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/agriculture-ai-2026-en.html</guid>
-</item>
-
-<item>
-<title>About STRATRONIX (Shenzhen AI Hardware Company)</title>
-<link>https://donaldwang6-dev.github.io/stratronix-seo/about.html</link>
-<description>STRATRONIX Technology (Shenzhen) Company, Limited is a Shenzhen-based AI hardware company manufacturing STA-100 PAA — a local AI agent device for privacy-first AI assistance.</description>
-<pubDate>Mon, 10 Aug 2026 18:55:00 +0800</pubDate>
-<guid>https://donaldwang6-dev.github.io/stratronix-seo/about.html</guid>
-</item>
-
-</channel>
+<rss version="2.0">
+  <channel>
+    <title>STRATRONIX SEO Feed</title>
+    <link>https://donaldwang6-dev.github.io/stratronix-seo/</link>
+    <description>STRATRONIX 鼎图太易 - Latest SEO-optimized pages</description>
+    <language>en-us</language>
+  <item>
+    <title>Analytics Dashboard</title>
+    <link>https://donaldwang6-dev.github.io/stratronix-seo/analytics-dashboard.html</link>
+    <guid>https://donaldwang6-dev.github.io/stratronix-seo/analytics-dashboard.html</guid>
+    <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Ai Rag Enterprise En</title>
+    <link>https://donaldwang6-dev.github.io/stratronix-seo/industries/ai-rag-enterprise-en.html</link>
+    <guid>https://donaldwang6-dev.github.io/stratronix-seo/industries/ai-rag-enterprise-en.html</guid>
+    <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Ai Rag Enterprise Zh</title>
+    <link>https://donaldwang6-dev.github.io/stratronix-seo/industries/ai-rag-enterprise-zh.html</link>
+    <guid>https://donaldwang6-dev.github.io/stratronix-seo/industries/ai-rag-enterprise-zh.html</guid>
+    <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Ai Workflow Automation En</title>
+    <link>https://donaldwang6-dev.github.io/stratronix-seo/industries/ai-workflow-automation-en.html</link>
+    <guid>https://donaldwang6-dev.github.io/stratronix-seo/industries/ai-workflow-automation-en.html</guid>
+    <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Ai Workflow Automation Zh</title>
+    <link>https://donaldwang6-dev.github.io/stratronix-seo/industries/ai-workflow-automation-zh.html</link>
+    <guid>https://donaldwang6-dev.github.io/stratronix-seo/industries/ai-workflow-automation-zh.html</guid>
+    <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Finance</title>
+    <link>https://donaldwang6-dev.github.io/stratronix-seo/industries/finance.html</link>
+    <guid>https://donaldwang6-dev.github.io/stratronix-seo/industries/finance.html</guid>
+    <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Legal</title>
+    <link>https://donaldwang6-dev.github.io/stratronix-seo/industries/legal.html</link>
+    <guid>https://donaldwang6-dev.github.io/stratronix-seo/industries/legal.html</guid>
+    <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Medical</title>
+    <link>https://donaldwang6-dev.github.io/stratronix-seo/industries/medical.html</link>
+    <guid>https://donaldwang6-dev.github.io/stratronix-seo/industries/medical.html</guid>
+    <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Sta 100 Overview Brand Business</title>
+    <link>https://donaldwang6-dev.github.io/stratronix-seo/public/brand-demo/sta-100-overview-brand-BUSINESS.html</link>
+    <guid>https://donaldwang6-dev.github.io/stratronix-seo/public/brand-demo/sta-100-overview-brand-BUSINESS.html</guid>
+    <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Sta 100 Overview Brand White</title>
+    <link>https://donaldwang6-dev.github.io/stratronix-seo/public/brand-demo/sta-100-overview-brand-WHITE.html</link>
+    <guid>https://donaldwang6-dev.github.io/stratronix-seo/public/brand-demo/sta-100-overview-brand-WHITE.html</guid>
+    <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Sta 100 Overview Brand</title>
+    <link>https://donaldwang6-dev.github.io/stratronix-seo/public/brand-demo/sta-100-overview-brand.html</link>
+    <guid>https://donaldwang6-dev.github.io/stratronix-seo/public/brand-demo/sta-100-overview-brand.html</guid>
+    <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Index</title>
+    <link>https://donaldwang6-dev.github.io/stratronix-seo/ar/index.html</link>
+    <guid>https://donaldwang6-dev.github.io/stratronix-seo/ar/index.html</guid>
+    <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Changelog</title>
+    <link>https://donaldwang6-dev.github.io/stratronix-seo/changelog.html</link>
+    <guid>https://donaldwang6-dev.github.io/stratronix-seo/changelog.html</guid>
+    <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Index</title>
+    <link>https://donaldwang6-dev.github.io/stratronix-seo/de/index.html</link>
+    <guid>https://donaldwang6-dev.github.io/stratronix-seo/de/index.html</guid>
+    <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Get Started</title>
+    <link>https://donaldwang6-dev.github.io/stratronix-seo/en/get-started.html</link>
+    <guid>https://donaldwang6-dev.github.io/stratronix-seo/en/get-started.html</guid>
+    <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Index</title>
+    <link>https://donaldwang6-dev.github.io/stratronix-seo/en/index.html</link>
+    <guid>https://donaldwang6-dev.github.io/stratronix-seo/en/index.html</guid>
+    <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Agriculture Ai 2026 En</title>
+    <link>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/agriculture-ai-2026-en.html</link>
+    <guid>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/agriculture-ai-2026-en.html</guid>
+    <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Agriculture Ai Sta 100 En</title>
+    <link>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/agriculture-ai-sta-100-en.html</link>
+    <guid>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/agriculture-ai-sta-100-en.html</guid>
+    <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Agriculture Crop Monitoring Use Case En</title>
+    <link>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/agriculture-crop-monitoring-use-case-en.html</link>
+    <guid>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/agriculture-crop-monitoring-use-case-en.html</guid>
+    <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Agriculture Food Traceability Use Case En</title>
+    <link>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/agriculture-food-traceability-use-case-en.html</link>
+    <guid>https://donaldwang6-dev.github.io/stratronix-seo/en/industries/agriculture-food-traceability-use-case-en.html</guid>
+    <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+  </item>
+  </channel>
 </rss>
