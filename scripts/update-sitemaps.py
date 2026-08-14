@@ -67,9 +67,9 @@ with gzip.open(ROOT / "sitemap.xml.gz", "wb", compresslevel=9) as gz:
     gz.write(data)
 print(f"✅ sitemap.xml.gz: {len(data)} → {os.path.getsize(ROOT/'sitemap.xml.gz')} bytes")
 
-# 4. 更新 RSS feed（最近 20 个新页面）
+# 4. 更新 RSS feed（最近 100 个新页面 — 汪总 2026-08-14 07:28 LOCKED 阅读量太少 自己写代码)
 rss_items = []
-for url, mtime in sorted(urls, key=lambda x: x[1], reverse=True)[:20]:
+for url, mtime in sorted(urls, key=lambda x: x[1], reverse=True)[:100]:
     title = url.split("/")[-1].replace(".html", "").replace("-", " ").title()
     rss_items.append(f"""  <item>
     <title>{title}</title>
