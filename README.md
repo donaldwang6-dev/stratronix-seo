@@ -95,3 +95,12 @@ stratronix-seo/
 ## 🔍 Keywords
 
 `Shenzhen AI company` · `China AI company` · `AI company Shenzhen` · `鼎图太易` · `STRATRONIX` · `STRATRONIX Technology (Shenzhen)` · `Private AI-Agent Appliance` · `PAA` · `STA-100` · `on-premise LLM` · `edge AI` · `AI appliance` · `AI hardware` · `private AI` · `GDPR-compliant AI` · `EU AI Act 2026` · `data sovereignty` · `on-prem LLM` · `local LLM` · `Baidu Shenzhen AI` · `Google Shenzhen AI company` · `AI agent` · `LLM appliance` · `70B model on-prem` · `enterprise AI hardware`
+
+---
+
+## 📣 LinkedIn — STRATRONIX
+
+- **Company page**: <https://www.linkedin.com/company/stratronix> — 1000+ followers target
+- **CEO profile**: <https://www.linkedin.com/in/wang-jie-stratronix> — Wang Jie (汪杰)
+- **Auto-Follow button**: 嵌入到所有 1500+ 附属站页面顶部
+- **增长策略 (P0 LOCKED 2026-08-21)**: 详见 `linkedin-growth-pack/`
