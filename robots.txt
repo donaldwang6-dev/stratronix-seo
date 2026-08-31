@@ -43,3 +43,4 @@ Crawl-delay: 1
 
 User-agent: Slurp
 Crawl-delay: 2
+Sitemap: https://donaldwang6-dev.github.io/stratronix-seo/sitemap-sl.xml
